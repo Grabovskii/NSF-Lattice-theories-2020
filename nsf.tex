@@ -1,0 +1,140 @@
+\documentclass[11pt]{article}%{amsart}%{article}
+\renewcommand{\baselinestretch}{1.05}
+\topmargin0.0cm
+\headheight0.0cm
+\headsep0.0cm
+\oddsidemargin0.0cm
+\textheight23.0cm
+\textwidth16.5cm
+\footskip1.0cm
+%\usepackage[russian]{babel} %proof'ы становятся доказательствами, если включить
+\usepackage{amsmath}%
+\usepackage{amsfonts}%
+\usepackage{amssymb}%
+\usepackage{graphicx}
+%\documentclass[a4paper,12pt]{article}
+%вот эти три отвечают каким-то образом за могучий русский язык
+\usepackage[T2A]{fontenc}
+%\usepackage[utf8]{inputenc}
+\usepackage[cp1251]{inputenc}
+
+\usepackage{showlabels}
+
+%\usepackage{enumitem}
+%\setlist[enumerate]{label*=\arabic*.}
+
+\usepackage{amsthm} %for theorem styles
+\usepackage{hyperref} %for reference
+\usepackage{enumerate}
+%\usepackage{mbboard}
+
+\usepackage[all,cmtip]{xy}
+
+%\usepackage[small,nohug,heads=littlevee]{diagrams}
+%\diagramstyle[labelstyle=\scriptstyle]
+
+
+\DeclareMathOperator{\Ker}{Ker} 
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\Imm}{Im} 
+\DeclareMathOperator{\cl}{cl}
+%\DeclareMathOperator{\Sp}{Sp} %линейная оболочка
+\DeclareMathOperator{\Spz}{\overline{Sp}}
+\DeclareMathOperator{\Ree}{Re}
+\DeclareMathOperator{\Int}{int}
+\DeclareMathOperator{\Dom}{dom}
+\DeclareMathOperator{\Sp}{span}
+\DeclareMathOperator{\icr}{icr}
+\DeclareMathOperator{\co}{co}
+\DeclareMathOperator{\re}{Re}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Alt}{Alt}
+\DeclareMathOperator{\Inner}{Inn}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\card}{card}
+\DeclareMathOperator{\trace}{trace}
+\DeclareMathOperator{\Min}{Min}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\charr}{char}
+\DeclareMathOperator{\su}{su}
+\DeclareMathOperator{\sll}{sl}
+\DeclareMathOperator{\Ad}{Ad}
+\DeclareMathOperator{\ad}{ad}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\trdeg}{trdeg}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Ann}{Ann}
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\gl}{gl}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\Ric}{Ric}
+\DeclareMathOperator{\so}{so}
+\DeclareMathOperator{\Hess}{Hess}
+\DeclareMathOperator{\sff}{\mathrm{I\!I}}
+\DeclareMathOperator{\pr}{pr}
+\DeclareMathOperator{\Supp}{Supp}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\codim}{codim}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Cl}{Cl}
+\DeclareMathOperator{\SO}{SO}
+
+%%%%%%%%%%%%%%
+%% МАКРОСЫ
+%%%%%%%%%%%%%%
+\newcommand{\dif}{\left.\frac{d}{dt}\right|_{t=0}}
+\newcommand{\difs}{\left.\frac{d}{ds}\right|_{s=0}}
+\newcommand{\g}{\mathfrak g}
+\newcommand{\h}{\mathfrak h}
+\newcommand{\hh}{\mathcal{H}}
+\newcommand{\frb}{\mathfrak b}
+\newcommand{\pprime}{{\prime\prime}}
+
+
+%------------------------------------------------------------
+\newtheorem{myth}{Theorem}
+\newtheorem{theorem}{Theorem}
+\theoremstyle{definition}
+\newtheorem{example}{Example}
+\theoremstyle{definition}
+\newtheorem{myexample}{Example}
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{mycor}{Corollary}[myth]
+\theoremstyle{definition}\newtheorem{definition}{Definition}
+%\theoremstyle{definition}\newtheorem{definition}{Определение}
+\theoremstyle{definition} \newtheorem{cntex}{Counterexample}
+\theoremstyle{definition}\newtheorem*{acknowledgement}{Acknowledgement}
+\newtheorem{lemma}{Lemma}
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corp}{Corollary}[proposition]
+\theoremstyle{definition}\newtheorem{remark}{Remark}
+\theoremstyle{definition}\newtheorem{quest}{Question}
+\numberwithin{equation}{section}
+\newtheorem{exercise}{Exercise}
+\newtheorem{fur}{Further Search}
+%--------------------------------------------------------
+\begin{document}
+\tableofcontents
+\input{principles}
+\input{Ising_model}
+\input{gff}
+\input{on_model}
+\input{quest}
+
+\begin{thebibliography}{10}
+\bibitem{bratteli} Bratteli, Ola. Inductive limits of finite-dimensional $C^*$-algebras. Transactions of the American Mathematical Society 171 (1972): 195-234.\label{bratteli}
+\bibitem{chari} Chari, Vyjayanthi, and Andrew N. Pressley. A guide to quantum groups. Cambridge university press, 1995.
+\bibitem{friedli} S. Friedli and Y. Velenik. Statistical Mechanics of Lattice Systems: A Concrete Mathematical Introduction. Cambridge University Press, 2017.
+\bibitem{haag} Haag, Rudolf, R. V. Kadison, and Daniel Kastler. "Nets of $C^*$-algebras and classification of states." Communications in Mathematical Physics 16.2 (1970): 81-104.
+\bibitem{israel} Israel, Robert B. Convexity in the theory of lattice gases. Vol. 64. Princeton University Press, 2015.
+\end{thebibliography}
+\end{document}

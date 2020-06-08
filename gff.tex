@@ -1,0 +1,22 @@
+\section{Gaussian free field model}
+I follow closely Chapter 8 from \cite{friedli}. In Gaussian free field model, the space of states at a single site is chosen to be $\Omega_0 := \mathbb R$. Accordingly, the space of states on a region $\Lambda \subseteq \mathbb Z^n$ is given by $\Omega_{\Lambda} := \mathbb R^{\Lambda}$. The Hamiltonian of the model is on the lattice $\Lambda$ is chosen to be
+\[
+\hh := \frac{\beta}{4n} \sum_{i \sim j, \ \{i,j\}\cap \Lambda \neq \emptyset} (\omega_i - \omega_j)^2 + \frac{m^2}{2} \sum_{i \in \mathbb Z^n} \omega_i^2,
+\]
+where $\beta$ is the inverse temperature, $\omega_i \in \Omega_0$ is the assigned spin at site $i \in \mathbb Z^n$, and $m$ is the mass.
+
+A couple of comments on the choice of the Hamiltonian:
+\begin{enumerate}[1)]
+\item The factor $(\omega_i-\omega_j)^2$ tells us that the interaction favors the agreement of neighboring spins;
+\item Since the space of states at single site is non-compact, we penalize large values of spin by adding the factor $m^2/2 \cdot \omega_i^2$ for each one;
+\item Notice the condition under the first summation. It tells us that we also take into the account the boundary of $\Lambda$ (there might be different boundary conditions though).
+\end{enumerate}
+Fix a finite lattice $\Lambda \subset \mathbb Z^n$ and a state $\eta \in \Omega$ (it serves as a boundary condition for $\Lambda$). For a state $\omega_{\Lambda} \in \Omega_{\Lambda}$, by $\mathcal H(\omega_{\Lambda})$ we mean that we plug into the Hamiltionian the state that equals $\omega_{\Lambda}$ on $\Lambda$ and $\eta$ on the complement of $\Lambda$.
+
+In Subsection \ref{ss:gen_princ} we specified a way of choosing $\sigma$-algebras on the spaces of states. Let $\sigma_{\mathbb Z^n}$ be such $\sigma$-algebra on the whole $\mathbb Z^n$. For $A \in \sigma_{\mathbb Z^n}$, the Gibbs measure in this model is defined as
+\[
+\mu(A) := \int_A \frac{e^{-\hh(\omega_{\Lambda})}}{Z} \prod_{i \in \Lambda} d\omega_i,
+\]
+where $d\omega_i$ is the Lebesgue measure on $\mathbb R$ assigned to the site $i \in \mathbb Z^n$ and $Z$ is the obviously chosen partition function. 
+
+There's a way to define Gibbs measures for infinite $\Lambda$ as well (explained in \cite{friedli}, I postpone its description here for a moment). The case of massless GFF is drastically different from the case of massive GFF. For instance, Theorem 8.19 in \cite{friedli} says that there are no infinite-volume Gibbs measures in $n=1$ and $n=2$ cases. Nevertheless, Theorem 8.21 in the same reference tells us that there are infintely many infinite-volume Gibbs measures when $n \geq 3$. In the massive case, the GFF model has infinitely many infinite-volume Gibbs measures for any $n$ (see Theorem 8.28 in \cite{friedli}).

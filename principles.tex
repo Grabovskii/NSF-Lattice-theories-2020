@@ -1,0 +1,72 @@
+\section{Preliminaries}
+\subsection{The main principles of classical lattice models}
+Let $\Omega$ be a finite set (the set of \emph{microstates}), let $\hh : \Omega \rightarrow \mathbb R$ be a \emph{hamiltonian}, a specifically chosen random variable. Let $\mathcal M(\Omega)$ be the space of probability measures on $\Omega$. In this theory, the expectation of a random variable $f : \Omega \rightarrow \mathbb R$ with respect to a measure $\mu$ (if not implicitly understood; it's also called the \emph{thermal average}) is denoted as
+\[
+\left\langle f \right\rangle_{\mu} := \mathbb E_{\mu} f = \int_{\Omega} f d\mu.
+\]
+One of the first questions in statistical mechanics is devoted to the choice of the right measure $\mu$. The choice is governed using Shannon's entropy $S : \mathcal M(\Omega) \rightarrow \mathbb R$, defined as $S(\mu) := -\int_{\Omega}x\log x d\mu(x)$ (there's a way to understand why $S$ has this form; see \cite{friedli}). \emph{The maximum entropy principle says}: for a given model of statistical mechanics, choose $\mu$ that maximizes $S$. For example, if there's no other information avaiable about the system, then the measure that maximizes $S$ is the uniform distribution. There are other two typical situations:
+\begin{enumerate}[(a)]
+\item If we know that $\left\langle \mathcal H\right\rangle = U$ for some fixed $U$ (the \emph{internal energy} of the system), then the measure that maximizes $S$ is 
+\[
+\mu(\omega) = \frac{e^{-\beta H(\omega)}}{Z}, \ \ Z:= \sum_{\omega \in \Omega} e^{-\beta \mathcal H(\omega)} 
+\]
+which is the \emph{Gibbs measure}. This corresponds to the situation when we know the system exchanges its energy with some external thermal reservoir. The result can be obtained using Lagrange multipliers; the parameter $\beta$, called the \emph{inverse temperature}, is uniquely determined by $U$ (and vice versa: $U$ is uniquely determined by $\beta$). In the theory, $\beta = (kT)^{-1}$, where $k$ is the Boltzmann constant and $T$ is the temperature of the system.
+\item If we know additionally that the system exchanges its particles $\mathcal N$ with the external environment, and that the expected value of the particles if $\left\langle \mathcal N \right\rangle = N$, then we obtain a \emph{grand canonical Gibbs distribution} via a similar procedure. It's given by
+\[
+\mu(\omega) := \frac{e^{-\beta(\hh(\omega)-\mu N)}}{Z}, \ \ Z := \sum_{N} e^{\beta \mu N} \sum_{\omega \in \Omega} e^{-\beta \hh (\omega)}.
+\]
+The parameter $\mu$ is identified with the so-called \emph{chemical potential}.
+\end{enumerate}
+
+\subsection{The thermodynamic limit}
+
+\subsection{Quantum lattices}
+I will follow closely the treatment in \cite{israel}. Again, we have a lattice $X \subset \mathbb Z^n$, but to each site $i \in X$ we attach a copy of a finite-dimensional Hilbert space $H_i$. To a finite $X$ we attach the tensor product $H_X := \otimes_{i \in X} H_i$. %For example, in spin-$1/2$ systems each Hilbert space is two-dimensional, with an orthonormal basis corresponding to spins up and down.
+
+For infinite lattices, the author of \cite{israel} suggests proceeding as follows. Let $\mathfrak{A}_X := \End(H_X)$, and for any two finite subsets $X \subseteq Y \subset \mathbb Z^n$, let $\imath : \mathfrak{A}_X \rightarrow \mathfrak{A}_Y$ be the inclusion that sends $A$ to $A \otimes 1$ (where $1$ is viewed as an endomorphism of $\mathfrak{A}_{Y\setminus X}$). For an infinite $\Lambda \subseteq \mathbb Z^n$, the family of all its finite subsets with the inclusions form a direct system. Let $\mathfrak A_{\Lambda} := \varinjlim \mathfrak{A}_X$ be the direct limit taken in the category of $C^*$-algebras over all finite subsets of $\Lambda$. In the literature, this algebra is known as an AF (approximately finite-dimensional) $C^*$-algebra. The first reference in this theory goes back to Bratteli \cite{bratteli}.
+
+Further, for a finite $\Lambda \subset \mathbb Z^n$ and a Hamiltonian $\mathcal H_{\Lambda}$, the partition function is defined as
+\[
+Z = \tr_{\Lambda} e^{-\beta \mathcal H_{\Lambda}}
+\]
+and the expectation of an observable $A \in \mathfrak A_{\Lambda}$ is 
+\[
+\left\langle A \right\rangle_{\Lambda} := Z^{-1} \tr_{\Lambda} (A e^{-\mathcal H_{\Lambda}}).
+\]
+The trace in these formulas is normalized: it's $1/d$ of the usual trace, where $d$ is the dimension of the Hilbert space at one site. An interesting consequence of such normalization is that $\tr$ extends than to a norm-one linear functional on the whole $\mathfrak A:= \mathfrak A_{\mathbb Z^n}$ (see \cite{israel}). The Hamiltonian they choose is given by
+\[
+\mathcal H_{\Lambda} = \sum_{X \subseteq \Lambda} \Phi(X),
+\]
+where $\Phi$ is a so-called \emph{interaction}: it's a function from the non-empty finite subsets of $\mathbb Z^n$ to self-adjoint operators on them, such that $\Phi(X+i) = \Phi(X)$ for any $i \in \mathbb Z^n$ (i.e., it's translational invariant).
+
+The pressure for a finite region $\Lambda$ in the quantum lattice system is given by
+\[
+P_{\Lambda}(\Phi) := |\Lambda|^{-1} \ln \tr e^{-H_{\Lambda}}.
+\]
+One can show that the limit in the sense of van Hove of $P_{\Lambda}$ does exist in the quantum setting as well (\cite{israel}).
+
+\begin{fur}
+Not yet have I delved into the properties of AF $C^*$-algebras. How is the norm defined there at least? Not yet clear.
+\end{fur}
+
+\begin{fur}
+It's said in \cite{bratteli} that one might refer to \cite{haag} for limits of lattices in case the number of states is infinite.
+\end{fur}
+
+\subsection{Relation between classical and quantum lattices}
+I follow \cite{israel} with some minor modifications more appealing to my taste. Let $\Omega_0$ be a finite set of microstates at one site, and let $H_0$ be a Hilbert space of dimension equal to $|\Omega|$ (which is assigned to one site as well). Let $C(\Omega)$ be the space of observables on $\Omega$. Choose an orthonormal basis $e_{\mu}$ of $H_0$ labeled my microstates $\mu \in \Omega_0$. Then we have an injection $\imath : C(\Omega_0) \rightarrow \End(H_0)$ given by
+\[
+[\imath(f)](e_{\mu}) := e_{f(\mu)}.
+\]
+In other words, the classical observables are embedded into the quantum observables as diagonal matrices.
+
+\subsection{Continuous spins: general principles}\label{ss:gen_princ}
+I follow closely Section 6.10 of \cite{friedli}. In case the space of states $\Omega_0$ at a single site is non-compact, the existence of Gibbs measures is no longer guaranteed. For $\Omega_0$ a topological space, one defines the following ingredients. Let $\mathcal B_0$ be the Borel $\sigma$-algebra on $\Omega_0$. For a finite lattice $\Lambda \subset \mathbb Z^n$, we supply the space of states with the $\sigma$-algebra $\mathcal B_{\Lambda} := \bigotimes_{i \in \Lambda} \mathcal B_0$. The natural projections $\pi_{\Lambda} : \Omega \rightarrow \Omega_{\Lambda}$ allow us to define a $\sigma$-algebra on $\Omega$ with base in $\Lambda$:
+\[
+\sigma_{\Lambda} := \pi^{-1}_{\Lambda}(\mathcal B_{\Lambda}).
+\]
+If $S \subseteq \mathbb Z^n$ is a possibly infinite lattice, then we supply it with the $\sigma$-algebra
+\[
+\sigma_{S} := \sigma(\bigcup_{\Lambda \subset S, \ \Lambda \text{ finite}} \sigma_{\Lambda})
+\]
+(by the last equality I mean the smallest $\sigma$-algebra generated by the union).

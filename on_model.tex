@@ -1,0 +1,37 @@
+\section{$\text{O}(N)$-symmetric model}
+I follow Chapter 9 from \cite{friedli}. In $\text{O}(N)$-model, we take $\Omega_0 := S^{N-1}$, so the spins might have an arbitrary direction. For a finite lattice $\Lambda \subseteq \mathbb Z^n$, the Hamiltonian (in the absence of a magnetic field) is usually written as
+\[
+\hh = - \beta \sum_{i\sim j, \ \ \{i,j\}\cap \Lambda \neq \emptyset} \left\langle \omega_i,\omega_j \right\rangle,
+\]
+where $\omega_i \in \Omega_0$ is a spin at site $i$, and the brackets denote the standard inner product in $\mathbb R^N$. For different $N$'s, we obtain some familiar models: for $N=1$ we have the Ising model; for $N=2$ we get the $XY$-model; and for $N=3$ we obtain the Heisenberg model.
+
+The definition of finite-volume Gibbs measures is similar to the case of GFF model. At each site $i$, we have Lebesgue measure $d\omega_i$ on $S^{N-1}$. We fix a boundary condition, which is the choice of a state $\eta \in \Omega$, and then for measurable sets $A$ we set
+\[
+\mu(A) := \int_A \frac{e^{-\hh(\omega_{\Lambda})}}{Z} \prod_{i \in \Lambda} d\omega_i,
+\]
+where $Z$ is the obvious partition function and $\omega_{\Lambda} \in \Omega_{\Lambda}$; by $\hh(\omega_{\Lambda})$ I mean that we plug in a state equal to $\omega_{\Lambda}$ on $\Lambda$ and $\eta$ outside of $\Lambda$.
+
+One might be interested in the following questions with regards to $\text{O}(N)$-models:
+\begin{enumerate}[1)]
+\item Is there an orientational long-range order? In my understanding, the mathematical formalism of this question is whether the correlations $\mathbb E_{\mu}\left\langle \omega_i, \omega_j \right\rangle$ converge to zero as $\|i-j\| \rightarrow \infty$;
+\item Is there a spontaneous magnetization? The formalism in my understanding is: for any infinite-volume Gibbs measure $\mu$, is it true that $\lim_{n \rightarrow \infty} \left\langle \|m_{B(n)}\| \right\rangle_{\mu} \neq 0$? Here $B(n)$ is a cube of size $n$ and $m_{B(n)} := \frac{1}{|B(n)|} \sum_{i \in B(n)} \omega_i$ is the \emph{magnetization density}.
+
+%the expectations $\left\langle \omega_i \right\rangle_\mu$ are equal to the same number for every $i$?
+\end{enumerate}
+The answers to both questions are negative for $N \geq 2$ and $n=1,2$. This is due to the following theorem, which can be also stated for a more general Hamiltonian:
+%One of the questions for $\text{O}(N)$-models is about the \emph{orientational long-range order}. As I understand, it's formalized in the following way: the correlations $\mathbb E_{\mu}\left\langle \omega_i, \omega_j \right\rangle$ converge to zero as $\|i-j\| \rightarrow \infty$. The following theorem is claimed to provide a negative answer in some cases:
+
+%I think that this can be formalized in the followi way that in the Van Hove limit $B(k) \Uparrow \mathbb Z^n$, where $B(k)$ is, say, a cube of size $k$, the corresponding Gibbs measures converge weakly to a measure $\mu$ such that $\left\langle \omega_i\right\rangle_{\mu}$ is the same non-zero number for all $i \in \mathbb Z^n$. The negative answer to this question in some settings is given by the following theorem (for a slightly more general Hamiltonian see \cite{friedli}, Chapter 9):
+
+\begin{theorem}
+(Mermin-Wagner) For $N \geq 2$ and $n=1,2$, all infinite-volume Gibbs measures are invariant under the action of the rotation group.
+\end{theorem}
+
+Maybe, I will write why the answers are negative a bit later. 
+
+%Let's see why this theorem yields negative answers to the above questions. Assume $N \geq 2$ and $n=1$ or $n=2$.
+%\begin{enumerate}[1)]
+%\item Consider the long-range orientability problem. Then... 
+%\item Now consider the spontaneous magnetization problem. The theorem actually says that each $\omega_i$ is distributed uniformly: if $A$ is measurable and $T \in \SO(N)$, then $\mu(\omega_i \in A) = (T\mu)(\omega_i \in A) = \mu(\omega_i \in T^{-1}(A))$. This implies that $\left\langle \omega_i \right\rangle_\mu = 0$.
+%\end{enumerate}
+%It turns out that for $n=1,2$ and $N \geq 2$, the expectation values of the spins are zero: $\left\langle \omega_i \right\rangle_{\mu} = 0$, even at a low temperature and for any measure $\mu$ (see \cite{friedli}).

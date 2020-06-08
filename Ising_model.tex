@@ -1,0 +1,68 @@
+\section{Ising model}
+\subsection{A general description of the IRF version}
+There are two versions of the Ising model: the IRF (interaction-round-a-face) model and the vertex model. In the first one, the energy is assigned to vertices; in the second one, the energy is assigned to the bonds between the sites. 
+
+Let $\Lambda \subseteq \mathbb Z^n$ be a subset of the integer lattice of dimension $n$. We associate with the lattice the space of microstates $\Omega_{\Lambda} := \{-1,+1\}^{\Lambda}$. Therefore, to each node $i \in \Lambda$ there corresponds a \emph{spin} $\omega_i = \pm 1$. For a finite $\Lambda$, the hamiltonian of the model is given by
+\[
+\mathcal H = \sum_{i,j \in \Lambda, \ i \sim j} \omega_i \omega_j - h \sum_{i \in \Lambda} \omega_i,
+\]
+where $h \in \mathbb R$ is some real number that corresponds to the external magnetic field, and $i \sim j$ means the nodes $i$ and $j$ are neighbors on the lattice. We also supply the model with the Gibbs measure defined previously.
+
+\subsection{Transfer matrices in IRF model (not finished)}
+To describe the transfer matrices, I restrict myself to a finite cubic lattice $\Lambda\subset \mathbb Z^2$ with periodic boundary conditions. Then we can assign energy to each face of the lattice:
+\[
+\epsilon(\text{face},\omega) := \sum_{i,j \in \text{face}, \ i \sim j} \omega_i \omega_j - h \sum_{i \in \text{face}} \omega_i.
+\]
+So the Hamiltonian breaks up into the sum of energies over all faces in $\Lambda$: 
+\[
+H(\omega) = \sum_{F \in \{\text{faces of }\Lambda\}} \epsilon(F,\omega).
+\]
+A \emph{Boltzmann weight} is the quantity $R(F,\omega):=\exp(-\beta \epsilon(F,\omega))$ assigned to a face $F$. The partition function can be rewritten as
+\[
+Z = \sum_{\omega \in \Omega}\prod_{F \in \text{faces}} R(F,\omega).
+\]
+
+\subsection{The vertex model and its transfer matrix}
+I follow closely \cite{chari}. Let $\Lambda$ be an $n \times m$ cubic lattice in $\mathbb Z^2$ with periodic boundary conditions. The states are assigned to the bonds between vertices rather than to the vertices themselves in this model. Let $\Omega_0 = \{1,\ldots,n\}$ be the set of possible states of a single bond. For a picture of kind
+\[
+\xymatrix{
+& &\\
+& \bullet \ar@{-}[r]^{k} \ar@{-}[d]^{l} \ar@{-}[u]^{j} \ar@{-}[l]^{i} &\\
+& &
+}
+\]
+let $\varepsilon_{ij}^{kl}$ denote the energy assigned to the site in this setting. We assume that it doesn't depend on the position of the site but only on the states of the bonds around the sit. The Hamiltonian $\mathcal H$ of this model for a particular choice of the state of the lattice is then the sum of $\varepsilon_{ij}^{kl}$ over all vertices. The partition function is given by $Z = \sum_{\omega \in \Omega} \exp(-\beta H(\omega))$. A \emph{Boltzmann weight} is the quantity
+\[
+R_{ij}^{kl} := \exp(-\beta \varepsilon_{ij}^{kl}).
+\]
+\begin{proposition}
+Let $V$ be an $m$-dimensional vector space. There exists an endomorphism $T \in \End(V \otimes V^{m})$, which is called a \emph{transfer matrix}, such that the partition function of the model is given by
+\[
+Z = \tr_{V^{\otimes m}} (\tr_{V} T)^{n}
+\]
+where the trace is the usual one (the sum of diagonal elements).
+\end{proposition}
+\begin{proof}
+Consider a row in the cubic lattice, for a moment assuming that the boundary conditions on the ends (the states $i_1$ and $i_1^\prime$) may not be the same
+\[
+\xymatrix{
+& & & & & & \\
+& \bullet \ar@{-}[l]^{i_1}\ar@{-}[u]^{k_1}\ar@{-}[d]^{l_1} \ar@{-}[r]^{r_1} & \bullet \ar@{-}[u]^{k_2}\ar@{-}[d]^{l_2} \ar@{-}[rr]^{\cdots}&  & \bullet \ar@{-}[u]^{k_{m-1}}\ar@{-}[d]^{l_{m-1}} \ar@{-}[r]^{r_{m-1}} & \bullet\ar@{-}[u]^{k_m}\ar@{-}[d]^{l_m} \ar@{-}[r]^{i_1^\prime} & \\
+& & & & & &
+}
+\]
+Let us fix the end states $i_1$, $i_1^\prime$, $k_1,\ldots,k_m$ and $l_1,\ldots,l_m$. The contribution to $Z$ when only $r_i$'s are running over $\Omega_0$ is given by
+\[
+T^{i_1^\prime l_1 \cdots l_m}_{i_1 k_1 \cdots k_m} := \sum_{r_1,\ldots,r_{m-1}} R_{i_1k_1}^{r_1l_1}\cdots R_{r_{m-1}k_{m}}^{i_1^\prime l_m}.
+\]
+Let $V$ be an $m$-dimensional vector space spanned by some $e_1,\ldots,e_m$. Define an endomorphism $T \in \End(V \otimes V^{\otimes m})$ by setting on the basis elements
+\[
+T(e_{i_1}\otimes e_{k_1} \otimes \cdots \otimes e_{k_m}) = \sum_{i_1^\prime,l_1,\ldots,l_m} T^{i_1^\prime l_1 \cdots l_m}_{i_1 k_1 \cdots k_m} e_{i_1^\prime} \otimes e_{l_1} \otimes \cdots \otimes e_{l_m}.
+\]
+If wee unfreeze the endpoints with states $i_1$ and $i_1^\prime$ and let them run over $\Omega_0$, then we see that the contribution to $Z$ of the whole row (with still fixed states on the vertical bonds and now $i_1 = i_1^\prime$) is given by $\tr_V(T)_{k_1\ldots k_m}^{l_1\ldots l_m}$. Now, if the row was the first one and we consider the next one to it, and let $l_1,\ldots,l_m$ run over $\Omega_0$, then the contribution to $Z$ is
+\[
+\sum_{l_1,\ldots,l_m} \tr_V(T)_{k_1\ldots k_m}^{l_1\ldots l_m} \tr_V(T)_{l_1\ldots l_m}^{j_1\ldots j_m} = [(\tr_V(T))^2]_{k_1\ldots k_m}^{j_1\ldots j_m}
+\]
+(the last equality was not obvious to me due to a mess with indices, but it can be checked easily). Continuing in this fashion, the contribution to $Z$ with fixed states of the vertical bonds on the ends is given by  $[(\tr_V(T))^n]_{k_1\ldots k_m}^{l_1\ldots l_m}$. Now, applying the periodic condition $k_j = l_j$ and summing over all possible states of the ends, we finally find that $Z = \tr_{V^{\otimes m}} [\tr_V(T)]^n$.
+\end{proof}
+I think I can say that a transfer matrix is just a batch of all possible microstates of a row ingeniously packed into a linear endomorphism.
