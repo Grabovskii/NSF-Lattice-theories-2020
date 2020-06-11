@@ -1,5 +1,6 @@
 \section{Appendix}
 \subsection{$C^*$-algebras}
+\subsubsection{Gelfand-Naymark theorems}
 I think a few results from this theory are worth mentioning in the notes. Recall the definition of a $C^*$-algebra itself:
 \begin{definition}
 A (unital) $C^*$-algebra $A$ is a Banach space over $\mathbb C$ that is also a (unital) algebra such that the multiplication is a bounded bilinear map of norm $1$. It's also supplied with an involution $*:A\rightarrow A$ such that $\|a^*a\| = \|a\|^2$ for all $a \in A$. 
@@ -32,3 +33,29 @@ In general, for possibly non-commutative $C^*$-algebras we have
 \begin{fur}
 Might understand the construction of this operator algebra in detail. I've seen that the proof is constructive. That's the matter of finding pure states and defining the corresponding irreducible representations. The direct sum of those will yield the result.
 \end{fur}
+\subsubsection{States, pure states, and associated representations}
+There's a construction that associates a representation to a state, which is called the Gelfand-Segal construction.
+
+\subsubsection{Properties of AF algebras (not finished)}
+\begin{definition}
+A (unital) $C^*$-algebra $A$ is called \emph{approximately finite-dimensional} if $A$ is an inductive limit of a sequence of finite-dimensional (unital) $C^*$-algebras.
+\end{definition}
+I'd like to record some interesting properties of such algebras. They may not be important for our purposes, though. An example of an AF algebra appearing in these notes is the space of observables attached to an infinite sublattice when a Hilbert space at a single site is finite-dimensional.
+\begin{proposition} (see \cite{bratteli})
+Let $A$ be a unital $C^*$-algebra. Then $A$ is an AF-algebra if and only if the following two conditions are fullfilled:
+\begin{enumerate}[(i)]
+\item $A$ is separable;
+\item If $x_1,\ldots,x_n \in A$ and $\varepsilon > 0$, then there exist a finite-dimensional $C^*$-subalgebra $B \subseteq A$ and elements $y_1,\ldots,y_n \in B$ such that $\|x_i-y_i\| < \varepsilon$, $i=1,\ldots,n$.
+\end{enumerate}
+Furthermore, if $A$ is AF, and $A_1$ is a finite-dimensional $C^*$-subalgebra of $A$, there exists an increasing sequence $A_2 \subseteq A_3 \subseteq \cdots $ of finite-dimensional $C^*$-subalgebras such that $A_1 \subseteq A_2$ and $A = \bigcup_{i}A_i$.
+\end{proposition}
+Some aspects of the statement are not clear to me, and if needed, can delve into: so, the closure is not taken in the second bullet, is this right?
+
+A couple of interesting results on pure states:
+\begin{proposition}(see \cite{bratteli})
+Let $A$ be an AF-algebra and let $\omega_1$ and $\omega_2$ be pure states of $A$ such that the associated representations $\pi_1$ and $\pi_2$ are faithful. Then there exists an automorphism $\alpha$ of $A$ such that $\omega_1 = \omega_2 \circ \alpha$.
+\end{proposition}
+The next proposition is basically saying that a state is pure iff its restriction to each finite-dimensional subalgebra is pure.
+\begin{proposition}(see \cite{bratteli})
+Let $A$ be an AF-algebra and let $\omega$ be a state of $A$ such that the associated representation is faithful. Then $\omega$ is pure if and only if there exists an increasing subsequence $A_n$ of finite-dimensional $\ast$-subalgebras of $A$ all containing the identity and such that $A = \varinjlim A_n$ and $\omega | A_n$ is pure for all $n$.
+\end{proposition}

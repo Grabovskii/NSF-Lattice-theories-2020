@@ -4,13 +4,13 @@ Let $\Omega$ be a finite set (the set of \emph{microstates}), let $\hh : \Omega 
 \[
 \left\langle f \right\rangle_{\mu} := \mathbb E_{\mu} f = \int_{\Omega} f d\mu.
 \]
-One of the first questions in statistical mechanics is devoted to the choice of the right measure $\mu$. The choice is governed using Shannon's entropy $S : \mathcal M(\Omega) \rightarrow \mathbb R$, defined as $S(\mu) := -\int_{\Omega}x\log x d\mu(x)$ (there's a way to understand why $S$ has this form; see \cite{friedli}). \emph{The maximum entropy principle says}: for a given model of statistical mechanics, choose $\mu$ that maximizes $S$. For example, if there's no other information avaiable about the system, then the measure that maximizes $S$ is the uniform distribution. There are other two typical situations:
+One of the first questions in statistical mechanics is devoted to the choice of the right measure $\mu$. The choice is governed by Shannon's entropy $S : \mathcal M(\Omega) \rightarrow \mathbb R$, defined as $S(\mu) := -\int_{\Omega}x\log x d\mu(x)$ (there's a way to understand why $S$ has this form; see \cite{friedli}). \emph{The maximum entropy principle says}: for a given model of statistical mechanics, choose $\mu$ that maximizes $S$. For example, if there's no other information available about the system, then the measure that maximizes $S$ is the uniform distribution. There are other two typical situations:
 \begin{enumerate}[(a)]
 \item If we know that $\left\langle \mathcal H\right\rangle = U$ for some fixed $U$ (the \emph{internal energy} of the system), then the measure that maximizes $S$ is 
 \[
 \mu(\omega) = \frac{e^{-\beta H(\omega)}}{Z}, \ \ Z:= \sum_{\omega \in \Omega} e^{-\beta \mathcal H(\omega)} 
 \]
-which is the \emph{Gibbs measure}. This corresponds to the situation when we know the system exchanges its energy with some external thermal reservoir. The result can be obtained using Lagrange multipliers; the parameter $\beta$, called the \emph{inverse temperature}, is uniquely determined by $U$ (and vice versa: $U$ is uniquely determined by $\beta$). In the theory, $\beta = (kT)^{-1}$, where $k$ is the Boltzmann constant and $T$ is the temperature of the system.
+which is the \emph{Gibbs measure}. As the condition says, we either know the system is isolated, or we know the system exchanges its energy with the external environment but on average the internal energy is preserved. The result can be obtained using Lagrange multipliers; the parameter $\beta$, called the \emph{inverse temperature}, is uniquely determined by $U$ (and vice versa: $U$ is uniquely determined by $\beta$). In the theory, $\beta = (kT)^{-1}$, where $k$ is the Boltzmann constant and $T$ is the temperature of the system.
 \item If we know additionally that the system exchanges its particles $\mathcal N$ with the external environment, and that the expected value of the particles if $\left\langle \mathcal N \right\rangle = N$, then we obtain a \emph{grand canonical Gibbs distribution} via a similar procedure. It's given by
 \[
 \mu(\omega) := \frac{e^{-\beta(\hh(\omega)-\mu N)}}{Z}, \ \ Z := \sum_{N} e^{\beta \mu N} \sum_{\omega \in \Omega} e^{-\beta \hh (\omega)}.
@@ -80,6 +80,10 @@ So, we choose morphisms in the category of unital $C^*$-algebras as bounded unit
 \]
 Once $\alpha$ is defined on $\mathfrak A^\prime$ with all the mentioned properties, it automatically extends to the closure. So, for $u \in \mathfrak A_X$ we set $\alpha(u) := \alpha_X(u)$. This is well defined, for $u$ is identified with $u \otimes 1$ in the union. We get automatically that $\alpha$ is a unital $\ast$-homorphism since all $\alpha_X$'s are. It's norm is bounded by $1$, for $\|\alpha(u)\| \leq \|\alpha_X\|\|u\| \leq \|u\|$. Thus $\alpha$ is a morphism in the corresponding category.
 \end{proof}
+
+\begin{ths}
+So, any element of the union itself can be interpreted as an observable on some finite lattice. But when we take the closure of the union, we get infinite sums of operators. The very procedure of the closure is not attached to the nature of the operators (i.e. than they can be fed with states) but only to the relation between operators themselves. Therefore, we need to define what is $\sum_{n=1}^\infty A_n (x)$ for $A_n \in \mathfrak A_{X_n}$. An attempt to fantasy is: for $x \in H_{\Lambda}$, let $\pi_n(x)$ be the projection of $x$ to $H_{X_n}$ ($H_{X_n}$ can be regarded as a subspace of $H_{\Lambda}$). Then we try to set $(\sum A_{n})(x):= \sum A_n(\pi_n(x))$. Then $\sum A_{n}$ is a bounded linear operator, for $\|\sum A_n(\pi_n(x))\| \leq (\sum \|A_n\|)\|x\|$. Hmm, why don't we like it? And yet, what's the difference between this and the G-N theorem? Are there fewer operators than in $\End(H_{\Lambda})$?
+\end{ths}
 
 \subsection{Relation between classical and quantum lattices}
 I follow \cite{israel} with some minor modifications more appealing to my taste. Let $\Omega_0$ be a finite set of microstates at one site, and let $H_0$ be a Hilbert space of dimension equal to $|\Omega|$ (which is assigned to one site as well). Let $C(\Omega)$ be the space of observables on $\Omega$. Choose an orthonormal basis $e_{\mu}$ of $H_0$ labeled my microstates $\mu \in \Omega_0$. Then we have an injection $\imath : C(\Omega_0) \rightarrow \End(H_0)$ given by
