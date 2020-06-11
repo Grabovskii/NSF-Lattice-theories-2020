@@ -2,12 +2,19 @@
 \BOOKMARK [2][-]{subsection.1.1}{The main principles of classical lattice models}{section.1}% 2
 \BOOKMARK [2][-]{subsection.1.2}{The thermodynamic limit}{section.1}% 3
 \BOOKMARK [2][-]{subsection.1.3}{Quantum lattices}{section.1}% 4
-\BOOKMARK [2][-]{subsection.1.4}{Relation between classical and quantum lattices}{section.1}% 5
-\BOOKMARK [2][-]{subsection.1.5}{Continuous spins: general principles}{section.1}% 6
-\BOOKMARK [1][-]{section.2}{Ising model}{}% 7
-\BOOKMARK [2][-]{subsection.2.1}{A general description of the IRF version}{section.2}% 8
-\BOOKMARK [2][-]{subsection.2.2}{Transfer matrices in IRF model \(not finished\)}{section.2}% 9
-\BOOKMARK [2][-]{subsection.2.3}{The vertex model and its transfer matrix}{section.2}% 10
-\BOOKMARK [1][-]{section.3}{Gaussian free field model}{}% 11
-\BOOKMARK [1][-]{section.4}{O\(N\)-symmetric model}{}% 12
-\BOOKMARK [1][-]{section.5}{Questions}{}% 13
+\BOOKMARK [3][-]{subsubsection.1.3.1}{A general set-up}{subsection.1.3}% 5
+\BOOKMARK [3][-]{subsubsection.1.3.2}{The inductive limit in more detail}{subsection.1.3}% 6
+\BOOKMARK [2][-]{subsection.1.4}{Relation between classical and quantum lattices}{section.1}% 7
+\BOOKMARK [2][-]{subsection.1.5}{Continuous spins: general principles}{section.1}% 8
+\BOOKMARK [1][-]{section.2}{Classical lattice models}{}% 9
+\BOOKMARK [2][-]{subsection.2.1}{Ising model}{section.2}% 10
+\BOOKMARK [3][-]{subsubsection.2.1.1}{A general description of the IRF version}{subsection.2.1}% 11
+\BOOKMARK [3][-]{subsubsection.2.1.2}{Transfer matrices in IRF model \(not finished\)}{subsection.2.1}% 12
+\BOOKMARK [3][-]{subsubsection.2.1.3}{The vertex model and its transfer matrix}{subsection.2.1}% 13
+\BOOKMARK [2][-]{subsection.2.2}{Gaussian free field model}{section.2}% 14
+\BOOKMARK [2][-]{subsection.2.3}{O\(N\)-symmetric model}{section.2}% 15
+\BOOKMARK [1][-]{section.3}{Questions}{}% 16
+\BOOKMARK [2][-]{subsection.3.1}{For a discussion}{section.3}% 17
+\BOOKMARK [2][-]{subsection.3.2}{Just for myself}{section.3}% 18
+\BOOKMARK [1][-]{section.4}{Appendix}{}% 19
+\BOOKMARK [2][-]{subsection.4.1}{C*-algebras}{section.4}% 20

@@ -21,9 +21,10 @@ The parameter $\mu$ is identified with the so-called \emph{chemical potential}.
 \subsection{The thermodynamic limit}
 
 \subsection{Quantum lattices}
+\subsubsection{A general set-up}
 I will follow closely the treatment in \cite{israel}. Again, we have a lattice $X \subset \mathbb Z^n$, but to each site $i \in X$ we attach a copy of a finite-dimensional Hilbert space $H_i$. To a finite $X$ we attach the tensor product $H_X := \otimes_{i \in X} H_i$. %For example, in spin-$1/2$ systems each Hilbert space is two-dimensional, with an orthonormal basis corresponding to spins up and down.
 
-For infinite lattices, the author of \cite{israel} suggests proceeding as follows. Let $\mathfrak{A}_X := \End(H_X)$, and for any two finite subsets $X \subseteq Y \subset \mathbb Z^n$, let $\imath : \mathfrak{A}_X \rightarrow \mathfrak{A}_Y$ be the inclusion that sends $A$ to $A \otimes 1$ (where $1$ is viewed as an endomorphism of $\mathfrak{A}_{Y\setminus X}$). For an infinite $\Lambda \subseteq \mathbb Z^n$, the family of all its finite subsets with the inclusions form a direct system. Let $\mathfrak A_{\Lambda} := \varinjlim \mathfrak{A}_X$ be the direct limit taken in the category of $C^*$-algebras over all finite subsets of $\Lambda$. In the literature, this algebra is known as an AF (approximately finite-dimensional) $C^*$-algebra. The first reference in this theory goes back to Bratteli \cite{bratteli}.
+For infinite lattices, the author of \cite{israel} suggests proceeding as follows. Let $\mathfrak{A}_X := \End(H_X)$, and for any two finite subsets $X \subseteq Y \subset \mathbb Z^n$, let $\imath : \mathfrak{A}_X \rightarrow \mathfrak{A}_Y$ be the inclusion that sends $A$ to $A \otimes 1$ (where $1$ is viewed as an endomorphism of $\mathfrak{A}_{Y\setminus X}$). For an infinite $\Lambda \subseteq \mathbb Z^n$, the family of all its finite subsets with the inclusions form a direct system. Let $\mathfrak A_{\Lambda} := \varinjlim \mathfrak{A}_X$ be the direct limit taken in the category of $C^*$-algebras over all finite subsets of $\Lambda$. In the literature, this algebra is known as an AF (approximately finite-dimensional) $C^*$-algebra. The first reference in this theory goes back to Bratteli \cite{bratteli}. See the next subsection for an elaboration on the inductive limit.
 
 Further, for a finite $\Lambda \subset \mathbb Z^n$ and a Hamiltonian $\mathcal H_{\Lambda}$, the partition function is defined as
 \[
@@ -45,13 +46,25 @@ P_{\Lambda}(\Phi) := |\Lambda|^{-1} \ln \tr e^{-H_{\Lambda}}.
 \]
 One can show that the limit in the sense of van Hove of $P_{\Lambda}$ does exist in the quantum setting as well (\cite{israel}).
 
+%\begin{fur}
+%Not yet have I delved into the properties of AF $C^*$-algebras. How is the norm defined there at least? Not yet clear.
+%\end{fur}
+%
+%\begin{fur}
+%It's said in \cite{bratteli} that one might refer to \cite{haag} for limits of lattices in case the number of states is infinite.
+%\end{fur}
+\subsubsection{The inductive limit in more detail}
+For two finite subsets $X \subseteq Y \subset \mathbb Z^n$, the inclusion $\imath : \mathfrak A_{X} \rightarrow \mathfrak A_{Y}$ that sends $A$ to $A \otimes 1$ is injective; therefore, whenever $X \subseteq Y$, we can view $\mathfrak A_{X}$ as a subalgebra of $\mathfrak A_{Y}$. Hence we can take a union of all such subalgebras coming from finite subsets of $\Lambda \subseteq \mathbb Z^n$, and then, to be safe and ensure it's a Banach space, take the closure. So, one can identify
+\[
+\mathfrak A_{\Lambda} = \varinjlim \mathfrak A_{X} = \cl \bigcup_{X \subset \Lambda, \ |X| < \infty} \mathfrak A_{X}
+\]
+From this point of view, it's easy to understand what the norm is. For $A$ from the dense subspace (the union itself), we just set $\|A\|_{\Lambda} := \|A\|_{X}$ if $A \in \mathfrak A_{X}$. The norm extends to the closure by the very process of completeness: for $A \in \mathfrak A_{\Lambda}$, we choose a sequence $A_n \in \mathfrak A_{X_n}$ and then set $\|A\|_{\Lambda} := \lim_{n \rightarrow \infty} \|A_n\|$.
+
+From Appendix on $C^*$ algebras, we see that Gelfand-Naymark theorem ensures there is a Hilbert space $H$ such that $\mathfrak A_{\Lambda} \cong \End(H)$.
 \begin{fur}
-Not yet have I delved into the properties of AF $C^*$-algebras. How is the norm defined there at least? Not yet clear.
+I can elaborate on the construction of this Hilbert space. It's more or less constructive and relies on finding pure states. In particular, it would be interesting to see how this $H$ is related to the infinite tensor product $\otimes_{i \in \Lambda} H_i$: what exactly goes wrong?
 \end{fur}
 
-\begin{fur}
-It's said in \cite{bratteli} that one might refer to \cite{haag} for limits of lattices in case the number of states is infinite.
-\end{fur}
 
 \subsection{Relation between classical and quantum lattices}
 I follow \cite{israel} with some minor modifications more appealing to my taste. Let $\Omega_0$ be a finite set of microstates at one site, and let $H_0$ be a Hilbert space of dimension equal to $|\Omega|$ (which is assigned to one site as well). Let $C(\Omega)$ be the space of observables on $\Omega$. Choose an orthonormal basis $e_{\mu}$ of $H_0$ labeled my microstates $\mu \in \Omega_0$. Then we have an injection $\imath : C(\Omega_0) \rightarrow \End(H_0)$ given by

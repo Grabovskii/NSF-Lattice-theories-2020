@@ -1,5 +1,5 @@
-\section{Ising model}
-\subsection{A general description of the IRF version}
+\subsection{Ising model}
+\subsubsection{A general description of the IRF version}
 There are two versions of the Ising model: the IRF (interaction-round-a-face) model and the vertex model. In the first one, the energy is assigned to vertices; in the second one, the energy is assigned to the bonds between the sites. 
 
 Let $\Lambda \subseteq \mathbb Z^n$ be a subset of the integer lattice of dimension $n$. We associate with the lattice the space of microstates $\Omega_{\Lambda} := \{-1,+1\}^{\Lambda}$. Therefore, to each node $i \in \Lambda$ there corresponds a \emph{spin} $\omega_i = \pm 1$. For a finite $\Lambda$, the hamiltonian of the model is given by
@@ -8,7 +8,7 @@ Let $\Lambda \subseteq \mathbb Z^n$ be a subset of the integer lattice of dimens
 \]
 where $h \in \mathbb R$ is some real number that corresponds to the external magnetic field, and $i \sim j$ means the nodes $i$ and $j$ are neighbors on the lattice. We also supply the model with the Gibbs measure defined previously.
 
-\subsection{Transfer matrices in IRF model (not finished)}
+\subsubsection{Transfer matrices in IRF model (not finished)}
 To describe the transfer matrices, I restrict myself to a finite cubic lattice $\Lambda\subset \mathbb Z^2$ with periodic boundary conditions. Then we can assign energy to each face of the lattice:
 \[
 \epsilon(\text{face},\omega) := \sum_{i,j \in \text{face}, \ i \sim j} \omega_i \omega_j - h \sum_{i \in \text{face}} \omega_i.
@@ -22,7 +22,7 @@ A \emph{Boltzmann weight} is the quantity $R(F,\omega):=\exp(-\beta \epsilon(F,\
 Z = \sum_{\omega \in \Omega}\prod_{F \in \text{faces}} R(F,\omega).
 \]
 
-\subsection{The vertex model and its transfer matrix}
+\subsubsection{The vertex model and its transfer matrix}
 I follow closely \cite{chari}. Let $\Lambda$ be an $n \times m$ cubic lattice in $\mathbb Z^2$ with periodic boundary conditions. The states are assigned to the bonds between vertices rather than to the vertices themselves in this model. Let $\Omega_0 = \{1,\ldots,n\}$ be the set of possible states of a single bond. For a picture of kind
 \[
 \xymatrix{

@@ -1,0 +1,34 @@
+\section{Appendix}
+\subsection{$C^*$-algebras}
+I think a few results from this theory are worth mentioning in the notes. Recall the definition of a $C^*$-algebra itself:
+\begin{definition}
+A (unital) $C^*$-algebra $A$ is a Banach space over $\mathbb C$ that is also a (unital) algebra such that the multiplication is a bounded bilinear map of norm $1$. It's also supplied with an involution $*:A\rightarrow A$ such that $\|a^*a\| = \|a\|^2$ for all $a \in A$. 
+\end{definition}
+A straightforward\footnote{From the boundedness of the multiplication we obtain $\|a\|^2 = \|a^*a\| \leq \|a^*\|\|a\|$, hence $\|a\| \leq \|a\|^*$. Switching to $a \mapsto a^*$, get $\|a\| = \|a\|^*$. For the unit, $\|1\| = \|1\|^2$ since $1^* = 1$.} consequence from the axioms is that $\|a\| = \|a^*\|$ and in the unital case $\|1\| = 1$.
+
+The results of interest, I think, are the following:
+\begin{theorem}
+(Gelfand-Naymark, 1st) We have the following:
+\begin{enumerate}[(i)]
+\item Any possibly non-unital $C^*$-algebra is isomorphic to the space $C_0(\Omega)$ of continuous functions vanishing\footnote{Precisely, a function $\varphi : \Omega \rightarrow \mathbb C$ is vanishing at infinity if for any $\varepsilon >0$ there exists a compact subset $\Delta \subseteq \Omega$ such that $|\phi(t)|< \varepsilon$ when $t \notin \Delta$.} at $\infty$ on some locally compact Hausdorff topological space $\Omega$;
+\item Any unital $C^*$-algebra is isomorphic to $C(\Omega)$ for $\Omega$ a compact Hausdorff space.
+\end{enumerate}
+\end{theorem}
+
+There's an accurate description of both the isomorphism and the space $\Omega$: the space $\Omega$ is the Gelfand spectrum of $A$, and the isomorphism is the Gelfand representation.
+
+Here are the definitions. Let $A$ be a Banach algebra\footnote{I.e. a Banach space that's also an algebra such that the multiplication is a bounded bilinear map with norm $1$.}. Its \emph{Gelfand spectrum} is the space $\Omega \subset A^*$ of all characters\footnote{A character is a non-zero linear functional that preserves the multiplication. It turns out that any character $\chi : A \rightarrow \mathbb C$ has norm $\|\chi\| \leq 1$, so they're automatically continuous, for if $\chi(a) = 1$ for some $a \in A$ with $\|a\| <1$, then let $b:=\sum_{k=1}^\infty a^k$. It follows that $a + ab = b$, hence $1 + \chi(b) = \chi(b)$, which is absurd. } of $A$  that is endowed with $\omega^*$-topology induced from $A^*$. The isomorphism then is the Gelfand representation $\Gamma_A : A \rightarrow C_0(\Omega)$ that sends an element $a \in A$ to a continuous map (vanishing at $\infty$) $\hat a$ such that\footnote{The continuity of $\hat a$ follows right from the definition of $\omega^*$-topology. It indeed vanishes at $\infty$, for $\hat a$ is a continuous map on the compactification $\Omega^\prime := \Omega \cup \{0\}$ such that $\hat{a}(0) = 0$ (look at the formula defining $\hat{a}$), hence for any $\varepsilon > 0$ there's $U_{\varepsilon} \ni 0$ such that $|\hat{a}(\chi)| < \varepsilon$ when $t \in U_{\varepsilon}$. But $U_{\varepsilon}^c$ is compact, as a closed subset of the compact space $\Omega^\prime$, so $\hat a$ vanishes at $\infty$.}
+\begin{proposition}
+The Gelfand spectrum $\Omega$ of a Banach algebra $A$ is a locally compact Hausdorff space; if $A$ is in addition unital, then $\Omega$ is Hausdorff and compact.
+\end{proposition}
+\begin{proof}
+Obviously, $\Omega$ is Hausdorff since $\omega^*$-topology is Hausdorff. Consider $\Omega^\prime := \Omega \cup \{0\}$. If $\chi_\alpha \rightarrow f$ in $\omega^*$-topology, then obviously $f$ preserves multiplication (but it might become zero), so $\Omega^\prime$ is a closed subset of the unit ball in $A^*$. Now it's the consequence of Banach-Alaoglu theorem that $\Omega^\prime$ is compact. Being a subset of a compact Hausdorff space, we see that $\Omega$ is locally compact and Hausdorff. In case $A$ is unital, $0$ is an isolated point of $\Omega^\prime$, for if there was a net $\chi_\alpha \in \Omega$ such that $\chi_\alpha \rightarrow 0$, then $1 = \chi_\alpha(1) \rightarrow 0$, which is a contradiction, and thus $\Omega$ is compact.
+\end{proof}
+
+In general, for possibly non-commutative $C^*$-algebras we have 
+\begin{theorem}
+(Gelfand-Naymark, 2nd) Any $C^*$-algebra is $*$-isometrically isomorphic to $\End(H)$ for some Hilbert space $H$.
+\end{theorem}
+\begin{fur}
+Might understand the construction of this operator algebra in detail. I've seen that the proof is constructive. That's the matter of finding pure states and defining the corresponding irreducible representations. The direct sum of those will yield the result.
+\end{fur}
