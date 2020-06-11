@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.21)  11 JUN 2020 10:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.21)  11 JUN 2020 11:13
 entering extended mode
 **./nsf.tex
 (nsf.tex
@@ -680,7 +680,7 @@ LaTeX Font Info:    Trying to load font information for U+euf on input line 27.
 ("C:\Users\ДмитрийАлександрович\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\ueuf.fd"
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-[2]) [3] (Ising_model.tex <xymatrix 3x3 202> [4] <xymatrix 7x3 619>) (gff.tex [5]) (on_model.tex
+[2] <xymatrix 5x4 328> [3]) (Ising_model.tex [4] <xymatrix 3x3 202> <xymatrix 7x3 619> [5]) (gff.tex [6]) (on_model.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
@@ -689,7 +689,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
 
-[6]) (quest.tex) (appendix.tex
+) (quest.tex [7]) (appendix.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 2.
@@ -702,7 +702,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 2.
 
-[7] [8])
+[8])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 142.
  [9]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 142.
@@ -714,10 +714,10 @@ Package rerunfilecheck Info: File `nsf.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 142.
  ) 
 Here is how much of TeX's memory you used:
- 9997 strings out of 492430
- 138913 string characters out of 3102276
- 280419 words of memory out of 3000000
- 14123 multiletter control sequences out of 15000+200000
+ 10006 strings out of 492430
+ 138976 string characters out of 3102276
+ 279620 words of memory out of 3000000
+ 14130 multiletter control sequences out of 15000+200000
  24697 words of font info for 74 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  31i,15n,33p,3216b,480s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -748,10 +748,12 @@ ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Us
 ers/ДмитрийАлександрович/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
 <C:/Users/ДмитрийАлександрович/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/e
 ufm10.pfb><C:/Users/ДмитрийАлександрович/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/symbols/msbm10.pfb>
-Output written on nsf.pdf (9 pages, 327476 bytes).
+ts/symbols/msbm10.pfb><C:/Users/ДмитрийАлександрович/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
+ublic/xypic/xycmat10.pfb><C:/Users/ДмитрийАлександрович/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/xypic/xycmbt10.pfb>
+Output written on nsf.pdf (9 pages, 341422 bytes).
 PDF statistics:
- 592 PDF objects out of 1000 (max. 8388607)
- 60 named destinations out of 1000 (max. 500000)
+ 607 PDF objects out of 1000 (max. 8388607)
+ 62 named destinations out of 1000 (max. 500000)
  161 words of extra memory for PDF output out of 10000 (max. 10000000)
 
