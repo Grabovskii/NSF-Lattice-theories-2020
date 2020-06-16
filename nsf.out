@@ -6,18 +6,24 @@
 \BOOKMARK [3][-]{subsubsection.1.3.2}{The inductive limit in more detail}{subsection.1.3}% 6
 \BOOKMARK [2][-]{subsection.1.4}{Relation between classical and quantum lattices}{section.1}% 7
 \BOOKMARK [2][-]{subsection.1.5}{Continuous spins: general principles}{section.1}% 8
-\BOOKMARK [1][-]{section.2}{Classical lattice models}{}% 9
-\BOOKMARK [2][-]{subsection.2.1}{Ising model}{section.2}% 10
-\BOOKMARK [3][-]{subsubsection.2.1.1}{A general description of the IRF version}{subsection.2.1}% 11
-\BOOKMARK [3][-]{subsubsection.2.1.2}{Transfer matrices in IRF model \(not finished\)}{subsection.2.1}% 12
-\BOOKMARK [3][-]{subsubsection.2.1.3}{The vertex model and its transfer matrix}{subsection.2.1}% 13
-\BOOKMARK [2][-]{subsection.2.2}{Gaussian free field model}{section.2}% 14
-\BOOKMARK [2][-]{subsection.2.3}{O\(N\)-symmetric model}{section.2}% 15
-\BOOKMARK [1][-]{section.3}{Questions}{}% 16
-\BOOKMARK [2][-]{subsection.3.1}{For a discussion}{section.3}% 17
-\BOOKMARK [2][-]{subsection.3.2}{Just for myself}{section.3}% 18
-\BOOKMARK [1][-]{section.4}{Appendix}{}% 19
-\BOOKMARK [2][-]{subsection.4.1}{C*-algebras}{section.4}% 20
-\BOOKMARK [3][-]{subsubsection.4.1.1}{Gelfand-Naymark theorems}{subsection.4.1}% 21
-\BOOKMARK [3][-]{subsubsection.4.1.2}{States, pure states, and associated representations}{subsection.4.1}% 22
-\BOOKMARK [3][-]{subsubsection.4.1.3}{Properties of AF algebras \(not finished\)}{subsection.4.1}% 23
+\BOOKMARK [1][-]{section.2}{The Main Stage}{}% 9
+\BOOKMARK [2][-]{subsection.2.1}{Statement of the problem and ideas}{section.2}% 10
+\BOOKMARK [2][-]{subsection.2.2}{Tests on quantum Ising model}{section.2}% 11
+\BOOKMARK [3][-]{subsubsection.2.2.1}{The issue with the infinite tensor product}{subsection.2.2}% 12
+\BOOKMARK [3][-]{subsubsection.2.2.2}{The limit and G-F theorem}{subsection.2.2}% 13
+\BOOKMARK [1][-]{section.3}{Classical lattice models}{}% 14
+\BOOKMARK [2][-]{subsection.3.1}{Ising model}{section.3}% 15
+\BOOKMARK [3][-]{subsubsection.3.1.1}{A general description of the IRF version}{subsection.3.1}% 16
+\BOOKMARK [3][-]{subsubsection.3.1.2}{Transfer matrices in IRF model \(not finished\)}{subsection.3.1}% 17
+\BOOKMARK [3][-]{subsubsection.3.1.3}{The vertex model and its transfer matrix}{subsection.3.1}% 18
+\BOOKMARK [2][-]{subsection.3.2}{Gaussian free field model}{section.3}% 19
+\BOOKMARK [2][-]{subsection.3.3}{O\(N\)-symmetric model}{section.3}% 20
+\BOOKMARK [1][-]{section.4}{Questions}{}% 21
+\BOOKMARK [2][-]{subsection.4.1}{For a discussion}{section.4}% 22
+\BOOKMARK [2][-]{subsection.4.2}{Just for myself}{section.4}% 23
+\BOOKMARK [1][-]{section.5}{Appendix}{}% 24
+\BOOKMARK [2][-]{subsection.5.1}{C*-algebras}{section.5}% 25
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Gelfand-Naymark: commutative case}{subsection.5.1}% 26
+\BOOKMARK [3][-]{subsubsection.5.1.2}{States, pure states, and associated representations}{subsection.5.1}% 27
+\BOOKMARK [3][-]{subsubsection.5.1.3}{Gelfand-Naymark: non-commutative case}{subsection.5.1}% 28
+\BOOKMARK [3][-]{subsubsection.5.1.4}{Properties of AF algebras \(not finished\)}{subsection.5.1}% 29

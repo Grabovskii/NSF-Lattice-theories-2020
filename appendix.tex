@@ -1,18 +1,18 @@
 \section{Appendix}
 \subsection{$C^*$-algebras}
-\subsubsection{Gelfand-Naymark theorems}
-I think a few results from this theory are worth mentioning in the notes. Recall the definition of a $C^*$-algebra itself:
+Recall the definition of a $C^*$-algebra:
 \begin{definition}
-A (unital) $C^*$-algebra $A$ is a Banach space over $\mathbb C$ that is also a (unital) algebra such that the multiplication is a bounded bilinear map of norm $1$. It's also supplied with an involution $*:A\rightarrow A$ such that $\|a^*a\| = \|a\|^2$ for all $a \in A$. 
+A (unital) $C^*$-algebra $A$ is a Banach space over $\mathbb C$ that is also a (unital) algebra such that the multiplication is a bounded bilinear map of norm $1$. It's also supplied with an involution\footnote{An involution has the same properties as the usual conjugation operators. So, $(a+b)^* = a^* + b^*$, $(\lambda a)^* = \lambda^* a^*$, $1^* = 1$, $(ab)^* = b^* a^*$, $(a^*)^* = a$.} $*:A\rightarrow A$ such that $\|a^*a\| = \|a\|^2$ for all $a \in A$. 
 \end{definition}
 A straightforward\footnote{From the boundedness of the multiplication we obtain $\|a\|^2 = \|a^*a\| \leq \|a^*\|\|a\|$, hence $\|a\| \leq \|a\|^*$. Switching to $a \mapsto a^*$, get $\|a\| = \|a\|^*$. For the unit, $\|1\| = \|1\|^2$ since $1^* = 1$.} consequence from the axioms is that $\|a\| = \|a^*\|$ and in the unital case $\|1\| = 1$.
 
-The results of interest, I think, are the following:
+\subsubsection{Gelfand-Naymark: commutative case}
+I think it worth mentioning:
 \begin{theorem}
 (Gelfand-Naymark, 1st) We have the following:
 \begin{enumerate}[(i)]
-\item Any possibly non-unital $C^*$-algebra is isomorphic to the space $C_0(\Omega)$ of continuous functions vanishing\footnote{Precisely, a function $\varphi : \Omega \rightarrow \mathbb C$ is vanishing at infinity if for any $\varepsilon >0$ there exists a compact subset $\Delta \subseteq \Omega$ such that $|\phi(t)|< \varepsilon$ when $t \notin \Delta$.} at $\infty$ on some locally compact Hausdorff topological space $\Omega$;
-\item Any unital $C^*$-algebra is isomorphic to $C(\Omega)$ for $\Omega$ a compact Hausdorff space.
+\item Any possibly non-unital commutative $C^*$-algebra is isomorphic to the space $C_0(\Omega)$ of continuous functions vanishing\footnote{Precisely, a function $\varphi : \Omega \rightarrow \mathbb C$ is vanishing at infinity if for any $\varepsilon >0$ there exists a compact subset $\Delta \subseteq \Omega$ such that $|\phi(t)|< \varepsilon$ when $t \notin \Delta$.} at $\infty$ on some locally compact Hausdorff topological space $\Omega$;
+\item Any unital commutative $C^*$-algebra is isomorphic to $C(\Omega)$ for $\Omega$ a compact Hausdorff space.
 \end{enumerate}
 \end{theorem}
 
@@ -23,18 +23,25 @@ Here are the definitions. Let $A$ be a Banach algebra\footnote{I.e. a Banach spa
 The Gelfand spectrum $\Omega$ of a Banach algebra $A$ is a locally compact Hausdorff space; if $A$ is in addition unital, then $\Omega$ is Hausdorff and compact.
 \end{proposition}
 \begin{proof}
-Obviously, $\Omega$ is Hausdorff since $\omega^*$-topology is Hausdorff. Consider $\Omega^\prime := \Omega \cup \{0\}$. If $\chi_\alpha \rightarrow f$ in $\omega^*$-topology, then obviously $f$ preserves multiplication (but it might become zero), so $\Omega^\prime$ is a closed subset of the unit ball in $A^*$. Now it's the consequence of Banach-Alaoglu theorem that $\Omega^\prime$ is compact. Being a subset of a compact Hausdorff space, we see that $\Omega$ is locally compact and Hausdorff. In case $A$ is unital, $0$ is an isolated point of $\Omega^\prime$, for if there was a net $\chi_\alpha \in \Omega$ such that $\chi_\alpha \rightarrow 0$, then $1 = \chi_\alpha(1) \rightarrow 0$, which is a contradiction, and thus $\Omega$ is compact.
+Obviously, $\Omega$ is Hausdorff since $\omega^*$-topology is Hausdorff. Consider $\Omega^\prime := \Omega \cup \{0\}$. If $\chi_\alpha \rightarrow f$ in $\omega^*$-topology, then obviously $f$ preserves multiplication (but it might become zero), so $\Omega^\prime$ is a closed subset of the unit ball in $A^*$. Now it's the consequence of Banach-Alaoglu theorem that $\Omega^\prime$ is compact. Being a closed subset of a compact Hausdorff space, we see that $\Omega$ is locally compact and Hausdorff. In case $A$ is unital, $0$ is an isolated point of $\Omega^\prime$, for if there was a net $\chi_\alpha \in \Omega$ such that $\chi_\alpha \rightarrow 0$, then $1 = \chi_\alpha(1) \rightarrow 0$, which is a contradiction, and thus $\Omega$ is compact.
+\end{proof}
+The beauty of the result and the proof are mesmerizing, so I couldn't resist working out the details. Here I'd like to record a sketch for the unital case (the non-unital has to come from the unital by the process of adjoining an identity). One can find a full proof in \cite{arveson}.
+\begin{proof}[Sketch of the proof of the 1st G-F theorem.]
+First of all, in case of $C^*$-algebras it is automatic that every character preserves the $\ast$-structure. This fact implies that $\Gamma_A$ is a unital $\ast$-homomorphism. Next, one shows that the spectrum $\sigma(a)$ of any $a \in A$ coincides with the range of $\hat{a}$. Indeed, $\lambda \in \sigma(a)$ if and only if $a-\lambda$ is not invertbile, if and only if $a-\lambda$ belongs to some maximal ideal; there is a $1-1$ correspondence between maximal ideals and characters in unital commutative Banach algebras, so we find $\chi$ such that $\chi(a-\lambda) = \lambda$, i.e., $\hat{a}(\chi) = \lambda$. A consequence of this is that the spectral radius $r(a)$ of any $a$ coincides with the norm of $\hat{a}$. Now, if $a$ is self-adjoint, then $\|a\| = r(a) = \|\hat{a}\|$, which means that $\Gamma_A$ works as an isometry on self-adjoint elements. If $a \in A$ is an arbitrary one, then we use the $C^*$-structure and the fact that $a^*a$ is self-adjoint:
+\[
+\|a\|^2 = \|a^* a\| = \|\hat{a}^* \hat{a}\| = \|\hat{a}\|^2.
+\]
+Thus $\Gamma_A$ is an isometric embedding. Its image is a closed subalgebra and contains the identity of $C(\Omega)$. For surjectivity, one applies the Stone-Weierstrass theorem: the functions $\hat{a}$ separate the points (for two different $\chi_1 \neq \chi_2$, just take any $a \in \Ker \chi_1 \setminus \Ker \chi_2$, and then $0 = \hat{a}(\chi_1) \neq \hat{a}(\chi_2)$).
 \end{proof}
 
-In general, for possibly non-commutative $C^*$-algebras we have 
-\begin{theorem}
-(Gelfand-Naymark, 2nd) Any $C^*$-algebra is $*$-isometrically isomorphic to $\End(H)$ for some Hilbert space $H$.
-\end{theorem}
-\begin{fur}
-Might understand the construction of this operator algebra in detail. I've seen that the proof is constructive. That's the matter of finding pure states and defining the corresponding irreducible representations. The direct sum of those will yield the result.
-\end{fur}
 \subsubsection{States, pure states, and associated representations}
 There's a construction that associates a representation to a state, which is called the Gelfand-Segal construction.
+
+\subsubsection{Gelfand-Naymark: non-commutative case}
+For possibly non-commutative $C^*$-algebras we have 
+\begin{theorem}
+(Gelfand-Naymark, 2nd) Any unital $C^*$-algebra is $*$-isometrically isomorphic to $\End(H)$ for some Hilbert space $H$.
+\end{theorem}
 
 \subsubsection{Properties of AF algebras (not finished)}
 \begin{definition}

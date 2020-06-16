@@ -58,9 +58,9 @@ For two finite subsets $X \subseteq Y \subset \mathbb Z^n$, the inclusion $\imat
 \[
 \mathfrak A_{\Lambda} = \varinjlim \mathfrak A_{X} = \cl \left(\bigcup_{X \subset \Lambda, \ |X| < \infty} \mathfrak A_{X}\right)/_{u \sim u \otimes 1}
 \]
-From this point of view, it's easy to understand what the norm is. For $A$ from the dense subspace (the union itself), we just set $\|A\|_{\Lambda} := \|A\|_{X}$ if $A \in \mathfrak A_{X}$. The norm extends to the closure by the very process of completeness: for $A \in \mathfrak A_{\Lambda}$, we choose a sequence $A_n \in \mathfrak A_{X_n}$ and then set $\|A\|_{\Lambda} := \lim_{n \rightarrow \infty} \|A_n\|$.
+From this point of view, it's easy to understand what the norm is. For $A$ from the dense subspace (the union itself), we just set $\|A\|_{\Lambda} := \|A\|_{X}$ if $A \in \mathfrak A_{X}$. The norm extends to the closure by the very process of completeness: for $A \in \mathfrak A_{\Lambda}$, we choose a sequence $A_n \in \mathfrak A_{X_n}$ such that $A_n \rightarrow A$, and then set $\|A\|_{\Lambda} := \lim_{n \rightarrow \infty} \|A_n\|$.
 
-From Appendix on $C^*$ algebras, we see that Gelfand-Naymark theorem ensures there is a Hilbert space $H$ such that $\mathfrak A_{\Lambda} \cong \End(H)$.
+From Appendix on $C^*$-algebras, we see that Gelfand-Naymark theorem ensures there is a Hilbert space $H$ such that $\mathfrak A_{\Lambda} \cong \End(H)$.
 \begin{fur}
 I can elaborate on the construction of this Hilbert space. It's more or less constructive and relies on finding pure states. In particular, it would be interesting to see how this $H$ is related to the infinite tensor product $\otimes_{i \in \Lambda} H_i$: what exactly goes wrong?
 \end{fur}
@@ -69,7 +69,7 @@ In the above set-up, we indeed have $\varinjlim \mathfrak A_{X} = \cl \left(\big
 \end{proposition}
 \begin{proof}
 Denote $\mathfrak A^\prime := \left(\bigcup_{X \subset \Lambda, \ |X|<\infty} \mathfrak A_X\right)/_{u \sim u \otimes 1}$.
-So, we choose morphisms in the category of unital $C^*$-algebras as bounded unital $\ast$-homorphisms with norm less then or equal to one\footnote{Otherwise I don't think there's a way to prove that the map induced on the diagram of the injective limit is a bounded operator}. To prove the statement, all we need to show is that for a unital $C^*$-algebra $A$ and a bunch of morphisms $\alpha_X : \mathfrak A_X \rightarrow \mathfrak A_Y$ where $X \subseteq Y$ and such that $\alpha_X(u) = \alpha_Y(u \otimes 1)$ (but remember that $u$ is identified with $u \otimes 1$ in the union), there's a unique morphism $\alpha : \cl \mathfrak A^\prime \rightarrow A$. In the language of diagrams, this is saying that
+So, we choose morphisms in the category of unital $C^*$-algebras as bounded unital $\ast$-homomorphisms with norm less then or equal to one\footnote{Otherwise I don't think there's a way to prove that the map induced on the diagram of the injective limit is a bounded operator}. To prove the statement, all we need to show is that for a unital $C^*$-algebra $A$ and a bunch of morphisms $\alpha_X : \mathfrak A_X \rightarrow \mathfrak A_Y$ where $X \subseteq Y$ and such that $\alpha_X(u) = \alpha_Y(u \otimes 1)$ (but remember that $u$ is identified with $u \otimes 1$ in the union), there's a unique morphism $\alpha : \cl \mathfrak A^\prime \rightarrow A$. In the language of diagrams, this is saying that
 \[
 \xymatrix{
 & & A & & \\
