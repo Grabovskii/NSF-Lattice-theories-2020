@@ -42,9 +42,17 @@ A:=\begin{pmatrix} a_{11} & a_{12}\\ a_{21} & a_{22}\end{pmatrix}
 \]
 \end{example}
 
-\begin{fur}
-I see so far two ways one can go here, I need to delve into both of them. One way leads to Hilbert-Schmidt operators (if we had a different norm at the begininning), the other (assuming the operator norm), I guess, leads to compact operators. I think we need to study both these cases. Reference \cite{conway} tells how to realize the first way (page 268).
-\end{fur}
+Therefore, for an inifnite sublattice $\Lambda$, the algebra $\mathfrak A_{\Lambda}$ can be identified with the space of matrices of infinite size such that only finitely many entries of each of them are non-zero. \emph{Note} the difference with the attempt to take an infinite tensor product of Hilbert spaces: these infinite matrices naturally act upon the space 
+\[
+T:=\bigoplus_{n=1}^\infty \, \bigotimes_{i \in A \subset \Lambda, \ |A| = n} H_i 
+\]
+It's easy to see that this space has an infinite countable basis. This implies that, whatever norm we put on $T$, the space will not be complete (that's a standard result from functional analysis: in a Banach space, a vector space basis is at least uncountable).
+
+\textbf{Way 1 (just a fantasy)}. Let $\mathfrak A_{\Lambda}^\prime$ be the union of all $\mathfrak A_X$ for $X \subset \Lambda$ and $X$ finite. We can substitute the norm on $\mathfrak A_{\Lambda}^\prime$ with the Hilbert-Schmidt norm (see appendix), and then complete $\mathfrak A_{\Lambda}^\prime$ with respect to it. The elements $A$ of the resulting space can be represented as infinite matrices $(a_{nk})_{k,n = 1}^{\infty}$ such that $\sum_{n,k} |a_{nk}|^2 < \infty$. We can act with these on a completion of $T$.
+
+%\begin{fur}
+%I see so far two ways one can go here, I need to delve into both of them. One way leads to Hilbert-Schmidt operators (if we had a different norm at the begininning), the other (assuming the operator norm), I guess, leads to compact operators. I think we need to study both these cases. Reference \cite{conway} tells how to realize the first way (page 268).
+%\end{fur}
 
 %
 %Therefore, the union is made of infinite matrices with the property that each contains a submatrix of a finite dimension outside of which the matrix entries equal to zero.

@@ -34,14 +34,26 @@ First of all, in case of $C^*$-algebras it is automatic that every character pre
 Thus $\Gamma_A$ is an isometric embedding. Its image is a closed subalgebra and contains the identity of $C(\Omega)$. For surjectivity, one applies the Stone-Weierstrass theorem: the functions $\hat{a}$ separate the points (for two different $\chi_1 \neq \chi_2$, just take any $a \in \Ker \chi_1 \setminus \Ker \chi_2$, and then $0 = \hat{a}(\chi_1) \neq \hat{a}(\chi_2)$).
 \end{proof}
 
-\subsubsection{States, pure states, and associated representations}
-There's a construction that associates a representation to a state, which is called the Gelfand-Segal construction.
-
 \subsubsection{Gelfand-Naymark: non-commutative case}
-For possibly non-commutative $C^*$-algebras we have 
+In this section, I describe the Gelfand-Naymark-Segal construction that is used to show that any $C^*$ algebra can be isometrically represented in some Hilbert space. The construction relies on the notions of states and pure states. I assume everywhere that there's a fixed unital $C^*$-algebra $A$. A good source for the relevant results is \cite{arveson}.
+\begin{definition}
+A state $f$ is a positive linear functional $f$ (i.e., $f(z^*z) \geq 0$ for any $z$) that is normalized at the unit: $f(1) = 1$. 
+\end{definition}
+One can show that states form a convex $\omega^*$-compact set: it coincides with all bounded linear functionals whose norm is $1$ and which is achieved at the identity. By Krein-Millman theorem, this set is the closed convex hull of so-called \emph{extreme points}\footnote{I.e., points that are not interior points of intervals lying inside that set.}. These extreme points are called \emph{pure states}. For any state $f$, one can find a representation $\pi$ in some Hilbert space $H$, and a vector $\xi \in H$ such that 
+\[
+f(x) = (\pi(x)\xi,\xi).
+\]
+Moreover, $\xi$ can be chosen in such a way that the span of $\{\pi(x)\xi \ | \ x \in A\}$ is dense in $H$. The construction also tells us that $\pi$ is irreducible if and only if $f$ is a pure states. The steps to find $\pi$ are the following:
+
+We define $\pi(x)$ for every $x \in A$ as the multiplication by $x$ on the left: $\pi(x)(y) = xy$. Since the chosen state $f$ is positive, it yields a positive sesquilinear form $(x,y) : = f(y^*x)$ on $A$. The form has a kernel $N:= \{(x,x) = 0\}$, so the quotient $A/N$ is a vector space with an inner product. It turns out that $N$ is also a left ideal with respect to the multiplication, hence every $\pi(x)$ lifts to $A/N$. Now, simply complete $A/N$ and extend each $\pi(x)$ to a bounded linear operator on the obtained Hilbert space. The work to be done is to show that every $\pi(x)$ is bounded. But this turns out to be true. The vector $\xi$ is then $\xi : = 1 +N$. If in the end we do not obtain that $\Sp \{\pi(x)\xi \ | \ x\in A\}$ is dense, simply restrict the representation to this subspace.
+
+Next, a series of propositions in \cite{arveson} tells us that for any self-adjoint $x \in A$, we can find a pure state $f$ such that $f(x) = \|x\|$. This makes us think that instead of constructing representations through pure states, we can actually start with elements of $A$. A corollary of this is that for every element $z \in A$, there's an irreducible representation $\pi$ and a vector $\xi$ in its Hilbert space such that $\|\pi(z)\xi\| = \|z\|$. This is enough to prove the Gelfand-Naymark theorem:
 \begin{theorem}
-(Gelfand-Naymark, 2nd) Any unital $C^*$-algebra is $*$-isometrically isomorphic to $\End(H)$ for some Hilbert space $H$.
+(Gelfand-Naymark) For any unital $C^*$-algebra $A$, there's an isometric representation in some Hilbert space.
 \end{theorem}
+\begin{proof}
+As we discussed above, for every non-zero $z \in A$ we pick a representation $\pi_z$ such that $\|\pi_z(z)\xi_z\| = \|z\|$. The direct some of all of these representations is then injective. It's also a result of $C^*$-algebra homomorphisms that injectivity implies that $\pi$ is isometric.
+\end{proof}
 
 \subsubsection{Properties of AF algebras (not finished)}
 \begin{definition}
@@ -66,3 +78,24 @@ The next proposition is basically saying that a state is pure iff its restrictio
 \begin{proposition}(see \cite{bratteli})
 Let $A$ be an AF-algebra and let $\omega$ be a state of $A$ such that the associated representation is faithful. Then $\omega$ is pure if and only if there exists an increasing subsequence $A_n$ of finite-dimensional $\ast$-subalgebras of $A$ all containing the identity and such that $A = \varinjlim A_n$ and $\omega | A_n$ is pure for all $n$.
 \end{proposition}
+
+\subsection{Hilbert-Schmidt operators}
+The results on Hilbert-Schmidt operators can be found in a concise form in \cite{conway} on page 268.
+
+Let $H$ be an infinite-dimensional Hilbert space and $\mathfrak A:= \End(H)$ be the space of bounded linear endomorphisms. If $e_1,\ldots,e_n,\ldots$ is an orthonormal basis of $H$, for $A \in \mathfrak A$ set
+\[
+\|A\|_2 := \sqrt{\sum_i \|Ae_i\|^2}.
+\]
+It turns out that $\|A\|_2$ does not depend on the choice of the orthonormal basis. The operator $A$ is called a \emph{Hilbert-Schmidt operator} if $\|A\|_2 < \infty$. Denote the corresponding space as $\mathfrak A_2$. These operators satisfy the following properties:
+\begin{enumerate}[(a)]
+\item $\|A\| \leq \|A\|_2$;
+\item If $T \in \mathfrak A$ and $A \in \mathfrak A_2$, then
+\[
+\|TA\|_2 \leq \|T\| \|A\|_2, \ \ \|AT\|_2 \leq \|A\|_2 \|T\|;
+\]
+\item $\|A\|_2=\|A^*\|_2$;
+\item $\mathfrak A_2 \triangleleft \mathfrak A$ (non-closed in the operator norm topology in infinite-dimensional case);
+\item The subspace of finite-rank operators is contained in $\mathfrak A_2$ and is dense there;
+\item $A \in \mathfrak A_2$ iff $|A|:= \sqrt{A^*A} \in \mathfrak A_2$. In this case, $\|A\|_2 = \||A|\|_2$;
+\item Hilbert-Schmidt operators are compact. Moreover, if $\lambda_1,\ldots,\lambda_n,\ldots$ are eigenvalues of $|A|$ (each repeated as many times as its multiplicity), then $|A| \in \mathfrak A_2$ if and only if $\sum_{n=1}^\infty \lambda_n^2 < \infty$. In this case, $\|A\|_2 = \sqrt{\sum_{n=1}^\infty \lambda_n^2}$.
+\end{enumerate}

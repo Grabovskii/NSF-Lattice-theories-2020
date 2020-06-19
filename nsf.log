@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.21)  15 JUN 2020 23:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.21)  19 JUN 2020 12:31
 entering extended mode
 **./nsf.tex
 (nsf.tex
@@ -682,7 +682,7 @@ LaTeX Font Info:    Trying to load font information for U+euf on input line 27.
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
 [2] <xymatrix 5x4 328> [3] [4]) (main_stage.tex [5]) (Ising_model.tex [6] <xymatrix 3x3 202> <xymatrix 7x3 619> [7])
-(gff.tex) (on_model.tex
+(gff.tex [8]) (on_model.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
@@ -691,7 +691,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
 
-[8]) (quest.tex) (appendix.tex
+) (quest.tex [9]) (appendix.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 2.
@@ -704,28 +704,21 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 2.
 
-[9] [10]
-Overfull \hbox (6.96228pt too wide) in paragraph at lines 43--44
-[]\T2A/cmr/bx/n/10.95 Theorem 3. \T2A/cmr/m/it/10.95 (Gelfand-Naymark, 2nd) Any uni-tal $\OML/cmm/m/it/10.95 C[]$\T2A/cm
-r/m/it/10.95 -algebra is $\OMS/cmsy/m/n/10.95 $\T2A/cmr/m/it/10.95 -isometrically iso-mor-phic to $[]\OT1/cmr/m/n/10.95
- (\OML/cmm/m/it/10.95 H\OT1/cmr/m/n/10.95 )$
- []
-
-[11])
+[10] [11] [12]) [13]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 148.
- [12]
+ [14]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 148.
  (nsf.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 148.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 148.
 Package rerunfilecheck Info: File `nsf.out' has not changed.
-(rerunfilecheck)             Checksum: 79B63B9EF0C823F6D624D924B73DC3B3;2287.
+(rerunfilecheck)             Checksum: FC460E448E9081970F363ABC5E511202;2251.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 148.
  ) 
 Here is how much of TeX's memory you used:
- 10057 strings out of 492430
- 139596 string characters out of 3102276
- 281132 words of memory out of 3000000
+ 10067 strings out of 492430
+ 139667 string characters out of 3102276
+ 280806 words of memory out of 3000000
  14153 multiletter control sequences out of 15000+200000
  24697 words of font info for 74 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -760,9 +753,9 @@ ufm10.pfb><C:/Users/ДмитрийАлександрович/AppData/Local/Progr
 ts/symbols/msbm10.pfb><C:/Users/ДмитрийАлександрович/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
 ublic/xypic/xycmat10.pfb><C:/Users/ДмитрийАлександрович/AppData/Local/Programs/MiKTeX 2.9/fonts/type
 1/public/xypic/xycmbt10.pfb>
-Output written on nsf.pdf (12 pages, 374594 bytes).
+Output written on nsf.pdf (14 pages, 387282 bytes).
 PDF statistics:
- 714 PDF objects out of 1000 (max. 8388607)
- 88 named destinations out of 1000 (max. 500000)
+ 739 PDF objects out of 1000 (max. 8388607)
+ 98 named destinations out of 1000 (max. 500000)
  233 words of extra memory for PDF output out of 10000 (max. 10000000)
 
