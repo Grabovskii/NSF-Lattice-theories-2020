@@ -71,17 +71,21 @@ What's the dimension of this algebra? Is this a C* algebra? Is it a von Neumann 
 	\begin{equation}
 	p(|v\rangle, m)\equiv(-1)^{\sum_{0\le m'<m} v_{m'}}.
 	\end{equation}
-	We write $d_m$ to mean $I\otimes I\otimes\cdots \otimes c_m \otimes I \otimes \cdots\otimes I$, where $c_m$ is at location $m$,
-	and $I$ is the one site identity. We write $c_m (N) \equiv d_m P_m$, where $P_m$ is the parity operator up to $m$, as defined before.
-	Note that $c_m (N)$ acts on the full space $\{|0\rangle, |1\rangle\}^{\otimes N}$. \emph{I drop now the $(N)$ from the $c$.}
+	In other words, $P_m |v \rangle$ is $|v\rangle$ if the number of $|1\rangle$ strictly preceding $m$th position is even; $-|v\rangle$ if odd.
 	
-	For example let $|w\rangle=|0\rangle\otimes|1\rangle\otimes|1\rangle\otimes|0\rangle\cdots$, and remember that we count locations from $0$.
+	We write $d_m$ to mean $I\otimes I\otimes\cdots \otimes c \otimes I \otimes \cdots\otimes I$, where $c$ is at location $m$,
+	and $I$ is the one site identity. We write $c_m (N) \equiv d_m P_m$, where $P_m$ is the parity operator up to $m$, as defined before.
+	Note that $c_m (N)$ acts on the full space $\{|0\rangle, |1\rangle\}^{\otimes N}$. \emph{I drop now the $(N)$ from the $c_m$.}
+	
+	\begin{example}
+Let $|w\rangle=|0\rangle\otimes|1\rangle\otimes|1\rangle\otimes|0\rangle\cdots$, and remember that we count locations from $0$.
 	Then $c_2|w\rangle=-|0\rangle\otimes|1\rangle\otimes|0\rangle\otimes|0\rangle\otimes\cdots$, with a -1 because the sum of 1s before location 2 is odd.
 	On the other hand $c^\dagger_3|w\rangle = |0\rangle\otimes|1\rangle\otimes|1\rangle\otimes|1\rangle\otimes\cdots$, with a +1 because
 	the sum of 1s before location 3 is even. Obviously  $c_2^\dagger|w\rangle = c_3|w\rangle = 0$ as we can't destroy if there's no particle,
 	and we can't create if there's already a particle, because these are fermions and accept only one particle per location.
+	\end{example}
 	 
-	We write $c^\dagger_m c_m$ to mean the tensor product operator with $c^\dagger_m$ and $c_m$ at location $m$, 
+	We write $c^\dagger_m c_m$ to mean the tensor product operator with $c^\dagger$ and $c$ at location $m$, 
 	identities elsewhere, \emph{and with appropriate parities,} so it's $P_m d^\dagger_m  d_m P_m$. (Careful that $P_m$ and $d_m$ or $d^\dagger_m$ do not commute.)
 	Let 
 	\begin{equation}
@@ -92,7 +96,7 @@ What's the dimension of this algebra? Is this a C* algebra? Is it a von Neumann 
 	
 	\subsubsection{Eigenvalues and Eigenvectors of the Hamiltonian}
 	All this is just matrix diagonalization, but because of the form of the $2^N$ matrix $H$, we can find its
-	eigenvalues and eigenvectors in a compact way, that we know describe.
+	eigenvalues and eigenvectors in a compact way, that we know how to describe.
 	
 	Let $S = \{ f: \{0, 1, \cdots, N - 1\} \rightarrow \{0, 1\}\}$, that can be thought of as binary numbers with $N$ digits.
 	There are $2^N$ functions $f$ in $S$ and for each, the number
