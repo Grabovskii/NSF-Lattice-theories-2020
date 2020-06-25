@@ -18,12 +18,23 @@
 \BOOKMARK [3][-]{subsubsection.3.1.3}{The vertex model and its transfer matrix}{subsection.3.1}% 18
 \BOOKMARK [2][-]{subsection.3.2}{Gaussian free field model}{section.3}% 19
 \BOOKMARK [2][-]{subsection.3.3}{O\(N\)-symmetric model}{section.3}% 20
-\BOOKMARK [1][-]{section.4}{Questions}{}% 21
-\BOOKMARK [2][-]{subsection.4.1}{For a discussion}{section.4}% 22
-\BOOKMARK [2][-]{subsection.4.2}{Just for myself}{section.4}% 23
-\BOOKMARK [1][-]{section.5}{Appendix}{}% 24
-\BOOKMARK [2][-]{subsection.5.1}{C*-algebras}{section.5}% 25
-\BOOKMARK [3][-]{subsubsection.5.1.1}{Gelfand-Naymark: commutative case}{subsection.5.1}% 26
-\BOOKMARK [3][-]{subsubsection.5.1.2}{Gelfand-Naymark: non-commutative case}{subsection.5.1}% 27
-\BOOKMARK [3][-]{subsubsection.5.1.3}{Properties of AF algebras \(not finished\)}{subsection.5.1}% 28
-\BOOKMARK [2][-]{subsection.5.2}{Hilbert-Schmidt operators}{section.5}% 29
+\BOOKMARK [1][-]{section.4}{Free Bosons}{}% 21
+\BOOKMARK [2][-]{subsection.4.1}{Truncated Free Bosons}{section.4}% 22
+\BOOKMARK [2][-]{subsection.4.2}{Infinite Free Bosons}{section.4}% 23
+\BOOKMARK [1][-]{section.5}{Free Fermions}{}% 24
+\BOOKMARK [2][-]{subsection.5.1}{Finite Chain}{section.5}% 25
+\BOOKMARK [3][-]{subsubsection.5.1.1}{Eigenvalues and Eigenvectors of the Hamiltonian}{subsection.5.1}% 26
+\BOOKMARK [3][-]{subsubsection.5.1.2}{Fermionic Density}{subsection.5.1}% 27
+\BOOKMARK [2][-]{subsection.5.2}{Infinite Chain}{section.5}% 28
+\BOOKMARK [1][-]{section.6}{Pure Gauge in 1D}{}% 29
+\BOOKMARK [1][-]{section.7}{Pure Gauge in 2D}{}% 30
+\BOOKMARK [1][-]{section.8}{Gauge and Matter in 1D}{}% 31
+\BOOKMARK [1][-]{section.9}{Questions}{}% 32
+\BOOKMARK [2][-]{subsection.9.1}{For a discussion}{section.9}% 33
+\BOOKMARK [2][-]{subsection.9.2}{Just for myself}{section.9}% 34
+\BOOKMARK [1][-]{section.10}{Appendix}{}% 35
+\BOOKMARK [2][-]{subsection.10.1}{C*-algebras}{section.10}% 36
+\BOOKMARK [3][-]{subsubsection.10.1.1}{Gelfand-Naymark: commutative case}{subsection.10.1}% 37
+\BOOKMARK [3][-]{subsubsection.10.1.2}{Gelfand-Naymark: non-commutative case}{subsection.10.1}% 38
+\BOOKMARK [3][-]{subsubsection.10.1.3}{Properties of AF algebras \(not finished\)}{subsection.10.1}% 39
+\BOOKMARK [2][-]{subsection.10.2}{Hilbert-Schmidt operators}{section.10}% 40

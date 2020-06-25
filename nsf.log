@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.21)  19 JUN 2020 14:57
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.21)  24 JUN 2020 22:38
 entering extended mode
 **./nsf.tex
 (nsf.tex
@@ -669,19 +669,20 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 Package xypdf Info: Line width: 0.43799pt on input line 128.
 
-(nsf.toc)
+(nsf.toc [1
+
+{C:/Users/ДмитрийАлександрович/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}])
 \tf@toc=\write5
 \openout5 = `nsf.toc'.
 
- (principles.tex [1
 
-{C:/Users/ДмитрийАлександрович/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+(principles.tex [2]
 LaTeX Font Info:    Trying to load font information for U+euf on input line 27.
 
 ("C:\Users\ДмитрийАлександрович\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\ueuf.fd"
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-[2] <xymatrix 5x4 328> [3] [4]) (main_stage.tex [5]) (Ising_model.tex [6] <xymatrix 3x3 202> <xymatrix 7x3 619> [7])
+[3] <xymatrix 5x4 328> [4]) (main_stage.tex [5] [6]) (Ising_model.tex <xymatrix 3x3 202> [7] <xymatrix 7x3 619>)
 (gff.tex [8]) (on_model.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
@@ -691,7 +692,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 1.
 
-[9]) (quest.tex) (appendix.tex
+[9]) (qed.tex [10] [11] [12]) (quest.tex [13]) (appendix.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 2.
@@ -704,25 +705,25 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 2.
 
-[10] [11] [12] [13])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 148.
- [14]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 148.
+[14] [15] [16] [17])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 149.
+ [18]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 149.
  (nsf.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 148.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 148.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 149.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 149.
 Package rerunfilecheck Info: File `nsf.out' has not changed.
-(rerunfilecheck)             Checksum: FC460E448E9081970F363ABC5E511202;2251.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 148.
+(rerunfilecheck)             Checksum: 7430A3EC432024E6CC4C476A172AEA64;2971.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 149.
  ) 
 Here is how much of TeX's memory you used:
- 10068 strings out of 492430
- 139678 string characters out of 3102276
- 281010 words of memory out of 3000000
- 14153 multiletter control sequences out of 15000+200000
+ 10102 strings out of 492430
+ 140117 string characters out of 3102276
+ 280728 words of memory out of 3000000
+ 14165 multiletter control sequences out of 15000+200000
  24697 words of font info for 74 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 31i,15n,33p,3216b,498s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 31i,15n,33p,3216b,480s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\ДмитрийАлександрович\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm0900
 .pk> <C:\Users\ДмитрийАлександрович\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm06
 00.pk> <C:\Users\ДмитрийАлександрович\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm
@@ -733,29 +734,30 @@ labx1200.pk> <C:\Users\ДмитрийАлександрович\AppData\Local\Mi
 600\labx1095.pk> <C:\Users\ДмитрийАлександрович\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/d
 pi600\labx1440.pk><C:/Users/ДмитрийАлександрович/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/cm/cmex10.pfb><C:/Users/ДмитрийАлександрович/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cmextra/cmex9.pfb><C:/Users/ДмитрийАлександрович/AppData/Local/Programs/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ДмитрийАлександрович/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/ДмитрийАлександрович/AppData/Local/Progr
-ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/ДмитрийАлександрович/AppData/Local
-/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/ДмитрийАлександрович/AppData
-/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/ДмитрийАлександрович/A
-ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ДмитрийАлександров
-ич/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ДмитрийАлександ
-рович/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/ДмитрийАлекс�
-�ндрович/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/ДмитрийАле
-ксандрович/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Дмитрий�
-�лександрович/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Дмит
-рийАлександрович/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Users/Д
-митрийАлександрович/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Us
-ers/ДмитрийАлександрович/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
-<C:/Users/ДмитрийАлександрович/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/e
-ufm10.pfb><C:/Users/ДмитрийАлександрович/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/symbols/msbm10.pfb><C:/Users/ДмитрийАлександрович/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
-ublic/xypic/xycmat10.pfb><C:/Users/ДмитрийАлександрович/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/public/xypic/xycmbt10.pfb>
-Output written on nsf.pdf (14 pages, 391126 bytes).
+1/public/amsfonts/cmextra/cmex8.pfb><C:/Users/ДмитрийАлександрович/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cmextra/cmex9.pfb><C:/Users/ДмитрийАлександрович/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ДмитрийАлександрович/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/ДмитрийАлександрович/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/ДмитрийАлександрович/Ap
+pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/ДмитрийАлександров�
+�ч/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/ДмитрийАлександ�
+�ович/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ДмитрийАлекс�
+�ндрович/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ДмитрийАл�
+�ксандрович/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Users/Дмитрий
+Александрович/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Дмит�
+�ийАлександрович/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Дм
+итрийАлександрович/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Use
+rs/ДмитрийАлександрович/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><
+C:/Users/ДмитрийАлександрович/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8
+.pfb><C:/Users/ДмитрийАлександрович/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
+/cmsy9.pfb><C:/Users/ДмитрийАлександрович/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/euler/eufm10.pfb><C:/Users/ДмитрийАлександрович/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/symbols/msbm10.pfb><C:/Users/ДмитрийАлександрович/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/xypic/xycmat10.pfb><C:/Users/ДмитрийАлександрович/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/public/xypic/xycmbt10.pfb>
+Output written on nsf.pdf (18 pages, 440257 bytes).
 PDF statistics:
- 746 PDF objects out of 1000 (max. 8388607)
- 99 named destinations out of 1000 (max. 500000)
- 233 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 859 PDF objects out of 1000 (max. 8388607)
+ 119 named destinations out of 1000 (max. 500000)
+ 321 words of extra memory for PDF output out of 10000 (max. 10000000)
 
