@@ -1,0 +1,148 @@
+%\documentclass{article}
+%\newcommand{\Mod}[1]{\ \left(\mathrm{mod}\ #1\right)}
+%\usepackage{braket}
+
+%\begin{document}
+
+ 	 \section{Additional comments}
+ 	 \subsection{Commutators and Anti-commutators}
+ 	 Let $[A, B] \equiv AB - BA$.
+ 	 In the bosonic truncated example, prove (well, ``prove'' is too strong for this straightforward result, I mean, just note)
+ 	 that $[a, a^\dagger] \neq I$. This is way more general: No operators $A$ and $B$ over a \emph{finite} dimensional
+ 	 Hilbert space can satisfy $[A, B] = I$. (Hint: Use the trace and the circular property of the trace.)
+ 	 For the non-truncated (non-truncated above, it's always truncated below) infinite dimensional bosonic example,
+ 	 note that $[a, a^\dagger] = I$.
+ 	 Physics jargon: This commutator is the
+ 	 starting point for the  ``Heisenberg uncertainty principle'' and some models require it out of principle, hence its importance.
+ 
+ 	 Let $\{A, B\}=AB + BA$. This is physics notation and unfortunately clashes with the set $\{\}$ notation. Some use $[A, B]_+$ but I won't here,
+ 	 at least for now.
+ 	 In the fermionic examples, note that $\{c^\dagger_i, c_j\} = \delta_{i,j}I$,
+ 	 and that $\{c_i, c_j\} = 0$ for finite and infinite number of sites $N$.
+ 	 Remember that for $N$ sites, $c^\dagger_i$ actually acts on a $2^N$ dimensional space, and \emph{includes} the ``fermionic sign,'' that is the parity
+ 	 operator.  (I suppose it'd be too tedious to write $d_iP_i\equiv c_i$.)
+ 
+ 	 \subsection{Quantum Field Theory}
+ 	 You wanted me to explain what QFT means. This is going to be opinionated, so feel free to disagree.
+ 	 I'll give you two ``definitions'': one good that I like and one bad that can be found in some (bad) literature,
+ 	 where people try to ``patch'' it to make it sensible without success. As I'm biased toward the lattice, I'd prefer to work on the lattice definition.
+ 	 A QFT is the double infinity: that is, a model where we have infinite sites with an already infinite (separable) Hilbert space on each single site.
+ 	 For example, take the (already infinite and separable) bosonic example above with one site as defined, and add $N$ sites by tensor product, and take $N$ to infinity. You'll already get the desired commutation $[a_i^\dagger,a_j]=\delta_{i,j}I$, and $[a_i, a_j]=0$.
+ 	 Now for the bad definition: Take the bosonic example above with one site, and instead of adding sites, put a \emph{continuum} variable to each
+ 	 $a$ and $a^\dagger$ and make it $a(x)$, and define an algebra there. You want the following property: $[a(x)^\dagger, a(y)]=\delta(x-y)I$, where you
+ 	 have to define that ``Dirac delta $\delta$'' in some sort of Schwartz space of tempered distributions. You'll see that there's no way
+ 	 to have operators like that, I mean, that obey that commutation relation in the continuum. People have worked to savage this definition, but nothing has worked in the continuum
+ 	 if there are interactions, that is, beyond the simplest quadratic Hamiltonian you can write.
+ 
+ 	 You can also ``define'' QFT in the Lagrangian formalism, with both good and bad definitions: that is, with lattice and continuum definitions.
+ 	 On the lattice, you'll have a countable and infinite number of integrals that you need to make sense of.
+ 	 On the continuum, you'll have a non-countable number of integrals to deal with, and make sense of it.
+ 	 According to A. Jaffe and E. Witten, (the guys that wrote the text for the Yang-Mills millenium problem), Balaban was the one that has had
+ 	 more success with proving existence of YM theories, (existence in lower dimensions than 3+1), and Balaban has worked with the good definition
+ 	 (the lattice one), albeit in the Lagrangian or analysis or partition function formalism, however you want to call it.
+ 
+ 	 \subsection{Hamiltonian versus Lagrangian}
+ 	 We'll use only the Hamiltonian approach and thus mostly algebra (plus topology) as opposed to analysis. But here I write this, just in
+ 	 case, we find that some things are better seen with analysis.
+ 	 How are the Hamiltonian (algebraic) and Lagrangian (analysis, partition function) approaches connected?
+ 	 Answer: By the transfer matrix method; see Hunter L.'s write up on this topic.
+ 	 Are the Hamiltonian and Lagrangian formulations of a given model equivalent?
+ 	 Short Answer: Yes. Longer answer: We would have to define ``equivalent'' something like ``yields the same physics''; we would also have to have a definition
+ 	 of the model in question in at least one approach (Hamiltonian or Lagrangian) and convert to the other using the Transfer Matrix.
+ 	 With all that said, the answer is yes.
+ 
+ 	 \subsection{Mapping from First Quantization to Second Quantization}
+ 	 We won't work in First Quantization but I can write this mapping for a general $H$ or at least for some examples if you are interested in this info.
+ 	 FIXME. TODO.
+ 
+	\section{Pure Gauge in 1D}
+    OK, here I'll borrow from Hunter L.'s 6.2. Lattice $Z(n)$-QED Model in 1-d.
+	I want to do this thing first WITHOUT fermions so just pure gauge; and this may be too trivial given that we're in one dimension.
+	As in the Hamiltonian formalism we don't include physical time this is pure QED in 1+1 (if you read the literature), but it needs
+	to be qualified, actually \emph{doubly} qualified: on the lattice and with a $Z(n)$ group instead of $U(1)$ (we'll go to U(1), soon, though).
+
+	But let's start with all finite, so we have two finite integers: $n$ in $Z(n)$ so our one-site Hilbert space has size $n$, and then we have
+	$N$: the number of sites. Instead of putting our Hilbert space on the sites, we'll put them on the links.
+	We assume periodic boundary conditions (PBC) (for now I think it's probably better than open boundary conditions), and so we
+	have also $N$ links: there's a link connecting the last site with the first, and our lattice looks more like a ring than a line.
+	Now, I need to define some operators. I will define operators on each link, and then think of them as acting on the $n^N$ Hilbert space
+	by tensor product. If I look at the Hamiltonian of $Z(n)$ lattice QED in 1D in Eq.~(6.2) of Hunter's write up, I see that only the last
+	term $E^2_{i,i+1}$ remains. So I have to define this so-called ``electric field'' operator. Here the subindex $i,i+1$ refers to the lattice link that connects sites
+	$i$ with $i+1$; Let's rather write that as $E^2_{i,x}$ where $i,x$ says: the link that starts at site $i$ and goes in the forward $x$ direction.
+	But for simplicity and because we're in 1D, I'll drop the $x$ from the subindex.
+
+	Scaling the Hamiltonian will be very important here. While in the previous examples we had only one term, and so only an overall
+	factor that would make the spectrum be in $[0,1]$ as opposed to $[0,\infty]$ with straightforward conversion between the two
+	definitions, in the following examples, we'll have more than one term in $H$, and therefore, we would get unrelated results
+	if the \emph{relative} scaling of the various Hamiltonian terms is different. I will then choose $E_i$ to be the one with \emph{tilde} in
+	Hunter's writing. Moreover, I restrict this thing to $n$ odd. So here we go: Let $\{|0\rangle, |1\rangle,\cdots,|n-1\rangle\}$ with $n$ odd,
+	be the basis of the Hilbert space on link $i,x$, we then define
+	the non-negative integer $s$ such that $n=2s+1$, and the operator
+	$E_i|k\rangle=(k-s)|k\rangle$, which is of course diagonal, with integer eigenvalues $-s$ to $s$ in steps of 1.
+	We extend this definition by tensor product
+	to the space of $N$ sites and dimension $n^N$. For example if $N=3$, and $|v\rangle=|k_0\rangle|k_1\rangle|k_2\rangle$,
+	then $E_1|v\rangle=(k_1-s)|v\rangle$, and so $E_i$ is a square matrix with $n^N$ rows. Note that in this tensor product extension, there isn't a
+	fermionic sign or Parity operator, because the $E$ operators are bosons and commute on different sites.
+
+	We of course need a Hamiltonian here; Because we don't have fermions, just pure gauge, I'll define it as
+	\begin{equation}
+	H=\sum_{i=0}^{i<N} E_i^2,
+	\end{equation} so that it's just another square matrix with $n^N$ rows, and note that I omitted the identities in the tensor product,
+	because I would have to write $I\otimes I\otimes\cdots E_i^2 \otimes I \otimes I$ with $E_i^2$ at location $i$, instead of just $E_i^2$.
+	Before finding eigenvalues and eigenvectors of $H$, we need to deal with the gauge symmetry.
+
+	\subsection{Gauge Symmetry}
+	Unlike in non-gauge models, here we need to weed out states that don't follow Gauss Law. So, we'll define the Gauss law operator, and
+	consider its kernel as a (Hilbert) subspace of the $n^N$ dimensional Hilbert space considered before.
+	Because this \emph{is} a subspace, things should be fine, and we should reconsider all operators defined before to be constrained to that space.
+	This Hilbert subspace is going to be called ``physical'' as opposed to the original space that contains physical and unphysical states.
+	We will then forget forever the original big space; I say big, because obviously the physical space will be smaller than the original.
+	Let $G$ acting on $N$ sites be
+	\begin{equation}
+	G = \sum_{i=0}^{i=N-1} E_{i+1} - E_i,
+	\end{equation}
+	with $E_N\equiv E_0$.
+	Physical jargon justification: Because we don't have fermions (electric charge in QED) then the divergence of the electric field
+	over a closed loop should give zero. And because on a one dimensional lattice, the only loop seems to be the one going from beginning to end, we
+	get the sum over all sites of the difference.
+
+	The operator $G$ so defined is exactly the zero operator, so we don't have to restrict anything. Oops.
+
+	\subsection{Algebra of Operators}
+	Let me define another operator called $U_i|k\rangle=\ket{k+1 \Mod{n}}$ and I also define $U^\dagger_i|k\rangle=\ket{k - 1 \Mod{n}}$, so
+	that these operators wrap around. Obviously this operator is extended to $N$ sites by tensor products, and is a bosonic operator,
+	which means it commutes on different sites. On the same site, $U^\dagger U = U U^\dagger = I$ so that it is unitary.
+	But note that if $n$ is finite, then (on the same site) $[E, U]\neq U$ due to the ``border'' basis states;
+	note that it's not equal but ``almost'' equal, and by that I mean equal on states of the basis other than the border ones.
+	Now, as for the physical jargon, we need an operator $A$, such that $[E, A] = iI$ where $i=\sqrt{-1}$ (same site here),
+	 so that we need the ``counterpart'' magnetic field $A$
+	to the electric field $E$. We already know (see previous bosonic example, cross ref. here FIXME TODO) that this $A$ doesn't
+	exist if $n$ is finite. But it exists when $n$ is infinite, as we will see.
+	But before that let me define the exponentiation of $E$ as $V=\exp(i \beta E)$ (one site only, and extend by tensor products), and
+	I need to think about the $\beta$ variable, let's set it to one for now $\beta\equiv 1$.
+
+	It may be better to work on just one site with $N=1$ for this. Prove that the $V$ above exists and is unique for $n$ finite.
+	Prove that if $n$ is finite, then there exists a unique $A$ such that $U=\exp(i \alpha A)$, where I need to adjust the constant $\alpha$ which
+	may depend on $n$, and let just set it to 1 $\alpha\equiv1$ for now. This is all on one fixed site.
+	This is just saying that the exponential and logarithm of certain matrices exist.
+	I guess I could put the exercise: Find the generators of the algebra that includes $U, V, E, A$,  and $H$ as defined above, \emph{and} the identity $I$.
+	What's the dimension of this algebra. Note that $H$ is symmetric, and find its eigenvalues.
+
+	Now we take the $n$ to infinity but keep $N$ finite. We can even take $N=1$ for simplicity.
+	Prove that  $[E, A] = iI$ and that equivalently $[E, U]= U$ so that we have the QED ``actual'' commutations.
+	I think we can say that $U$ is a representation of the infinite group $U(1)$, so we have even that.
+	I guess we'd like to show that computations done for $n$ finite converge to this $n$ infinity case that is separable, and does
+	represent QED in one spacial dimension (and is equivalent to QED 1+1 in Lagrangian formalism, where the last 1 is the time dimension).
+
+	What happens if we take both limits $n$ to infinity but also $N$ to infinity? We may want to postpone this question for latter, not sure.
+
+	I'm not sure if going to 2D now, which is the smallest dimension that has plaquettes... or I should perhaps introduce fermions to this 1D case.
+	So the order of the below sections may change.
+
+
+	\section{Pure Gauge in 2D}
+	TBW
+	\section{Gauge and Matter in 1D}
+	TBW
+
+%\end{document}

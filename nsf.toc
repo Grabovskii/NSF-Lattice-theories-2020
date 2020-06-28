@@ -3,7 +3,7 @@
 \contentsline {subsection}{\numberline {1.2}The thermodynamic limit}{3}{subsection.1.2}% 
 \contentsline {subsection}{\numberline {1.3}Quantum lattices}{3}{subsection.1.3}% 
 \contentsline {subsubsection}{\numberline {1.3.1}A general set-up}{3}{subsubsection.1.3.1}% 
-\contentsline {subsubsection}{\numberline {1.3.2}The inductive limit in more detail}{3}{subsubsection.1.3.2}% 
+\contentsline {subsubsection}{\numberline {1.3.2}The inductive limit in more detail}{4}{subsubsection.1.3.2}% 
 \contentsline {subsection}{\numberline {1.4}Relation between classical and quantum lattices}{5}{subsection.1.4}% 
 \contentsline {subsection}{\numberline {1.5}Continuous spins: general principles}{5}{subsection.1.5}% 
 \contentsline {section}{\numberline {2}The Main Stage}{5}{section.2}% 
@@ -15,7 +15,7 @@
 \contentsline {subsection}{\numberline {3.1}Ising model}{7}{subsection.3.1}% 
 \contentsline {subsubsection}{\numberline {3.1.1}A general description of the IRF version}{7}{subsubsection.3.1.1}% 
 \contentsline {subsubsection}{\numberline {3.1.2}Transfer matrices in IRF model (not finished)}{7}{subsubsection.3.1.2}% 
-\contentsline {subsubsection}{\numberline {3.1.3}The vertex model and its transfer matrix}{7}{subsubsection.3.1.3}% 
+\contentsline {subsubsection}{\numberline {3.1.3}The vertex model and its transfer matrix}{8}{subsubsection.3.1.3}% 
 \contentsline {subsection}{\numberline {3.2}Gaussian free field model}{9}{subsection.3.2}% 
 \contentsline {subsection}{\numberline {3.3}$\text {O}(N)$-symmetric model}{10}{subsection.3.3}% 
 \contentsline {section}{\numberline {4}Free Bosons}{10}{section.4}% 
@@ -26,15 +26,25 @@
 \contentsline {subsubsection}{\numberline {5.1.1}Eigenvalues and Eigenvectors of the Hamiltonian}{13}{subsubsection.5.1.1}% 
 \contentsline {subsubsection}{\numberline {5.1.2}Fermionic Density}{13}{subsubsection.5.1.2}% 
 \contentsline {subsection}{\numberline {5.2}Infinite Chain}{13}{subsection.5.2}% 
-\contentsline {section}{\numberline {6}Pure Gauge in 1D}{13}{section.6}% 
-\contentsline {section}{\numberline {7}Pure Gauge in 2D}{14}{section.7}% 
-\contentsline {section}{\numberline {8}Gauge and Matter in 1D}{14}{section.8}% 
-\contentsline {section}{\numberline {9}Questions}{14}{section.9}% 
-\contentsline {subsection}{\numberline {9.1}For a discussion}{14}{subsection.9.1}% 
-\contentsline {subsection}{\numberline {9.2}Just for myself}{14}{subsection.9.2}% 
-\contentsline {section}{\numberline {10}Appendix}{15}{section.10}% 
-\contentsline {subsection}{\numberline {10.1}$C^*$-algebras}{15}{subsection.10.1}% 
-\contentsline {subsubsection}{\numberline {10.1.1}Gelfand-Naymark: commutative case}{15}{subsubsection.10.1.1}% 
-\contentsline {subsubsection}{\numberline {10.1.2}Gelfand-Naymark: non-commutative case}{16}{subsubsection.10.1.2}% 
-\contentsline {subsubsection}{\numberline {10.1.3}Properties of AF algebras (not finished)}{17}{subsubsection.10.1.3}% 
-\contentsline {subsection}{\numberline {10.2}Hilbert-Schmidt operators}{18}{subsection.10.2}% 
+\contentsline {section}{\numberline {6}Pure Gauge in 1D}{15}{section.6}% 
+\contentsline {section}{\numberline {7}Pure Gauge in 2D}{15}{section.7}% 
+\contentsline {section}{\numberline {8}Gauge and Matter in 1D}{15}{section.8}% 
+\contentsline {section}{\numberline {9}Additional comments}{15}{section.9}% 
+\contentsline {subsection}{\numberline {9.1}Commutators and Anti-commutators}{15}{subsection.9.1}% 
+\contentsline {subsection}{\numberline {9.2}Quantum Field Theory}{15}{subsection.9.2}% 
+\contentsline {subsection}{\numberline {9.3}Hamiltonian versus Lagrangian}{16}{subsection.9.3}% 
+\contentsline {subsection}{\numberline {9.4}Mapping from First Quantization to Second Quantization}{16}{subsection.9.4}% 
+\contentsline {section}{\numberline {10}Pure Gauge in 1D}{16}{section.10}% 
+\contentsline {subsection}{\numberline {10.1}Gauge Symmetry}{17}{subsection.10.1}% 
+\contentsline {subsection}{\numberline {10.2}Algebra of Operators}{18}{subsection.10.2}% 
+\contentsline {section}{\numberline {11}Pure Gauge in 2D}{18}{section.11}% 
+\contentsline {section}{\numberline {12}Gauge and Matter in 1D}{18}{section.12}% 
+\contentsline {section}{\numberline {13}Questions}{19}{section.13}% 
+\contentsline {subsection}{\numberline {13.1}For a discussion}{19}{subsection.13.1}% 
+\contentsline {subsection}{\numberline {13.2}Just for myself}{19}{subsection.13.2}% 
+\contentsline {section}{\numberline {14}Appendix}{19}{section.14}% 
+\contentsline {subsection}{\numberline {14.1}$C^*$-algebras}{19}{subsection.14.1}% 
+\contentsline {subsubsection}{\numberline {14.1.1}Gelfand-Naymark: commutative case}{20}{subsubsection.14.1.1}% 
+\contentsline {subsubsection}{\numberline {14.1.2}Gelfand-Naymark: non-commutative case}{21}{subsubsection.14.1.2}% 
+\contentsline {subsubsection}{\numberline {14.1.3}Properties of AF algebras (not finished)}{22}{subsubsection.14.1.3}% 
+\contentsline {subsection}{\numberline {14.2}Hilbert-Schmidt operators}{22}{subsection.14.2}% 
