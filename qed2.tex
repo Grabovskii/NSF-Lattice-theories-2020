@@ -26,6 +26,42 @@
 	The full space on $N$ sites has dimension $(2n)^{N}$, the $2^N$ comes from the fermions (electrons and positrons), 
 	and the $n^N$ from the bosons (phonons). But this space isn't the physical space, and is too big, as we now discuss.
 	
+	A basis element at site $l$ is denoted as $|n_l, b_l\rangle$, where $n_l \in \{0,1\}$ indicates the presence of a fermion at site $l$ and $b_l \in \{0,\ldots,n-1\}$ indicates the state of the boson to the right of the fermion. Such basis is called \emph{computational}.
+	
+	Recall how the operators act at a single site $l$:
+	\begin{enumerate}[(a)]
+	\item $\psi^\dagger_l |0,k\rangle = |1,k\rangle$, $\psi^\dagger_l |1,k\rangle = 0$;
+	\item $\psi_l|0,k\rangle = 0$, $\psi_l|1,k\rangle = |0,k\rangle$;
+	\item $\psi^\dagger_l \psi_l |0, s\rangle = 0$ and $\psi^\dagger_l \psi_l |1,s\rangle = |1,s\rangle$;
+	\item For $n = 2s+1$ odd, $E_{l,l+1}|c,k\rangle = (k-s)|c,k\rangle$. So, $E_{l,l+1}^2|c,k\rangle = (k-s)^2 |c,k\rangle$;
+	\item $U_{l,l+1} |c,k\rangle = |c,k+1\rangle$;
+	\item Consider two consecutive sites $l$ and $l+1$ and let $|n_l,b_l\rangle \otimes |n_{l+1},b_{l+1}\rangle$ be the corresponding state. Then 
+	\[
+	\psi_l^\dagger U_{l,l+1} \psi_{l+1} |n_l,b_l\rangle \otimes |n_{l+1},b_{l+1}\rangle = \begin{cases}
+	0, \ n_{l+1} = 0 \ \text{or} \ n_{l} = 1;\\
+	|1,b_l+1\rangle \otimes |0,b_{l+1}\rangle \ \text{otherwise};
+	\end{cases}
+	\]
+	So, when we have a fermion at site $l+1$ and no fermion at site $l$, the operator $\psi_l^\dagger U_{l,l+1} \psi_{l+1}$ swaps them and increases the state of the boson on the link between them; in all other cases this operator is zero.
+	\item Now let's observe how the Hamiltonian acts on states. For simplicity, consider three sites with periodic boundary conditions, i.e.
+	\[
+	\xymatrix{
+	\bigcirc \ar@{-}[rr]& & \bigcirc \\
+	& \bigcirc\ar@{-}[ru] \ar@{-}[lu] &
+	}
+	%\xymatrix{
+	%\bigcirc \ar@{-}[r] &	\bigcirc \ar@{-}[r] &	\bigcirc 
+	%\ar@{-}@/^1pc/[ll]
+	%}
+	\]
+	Let $|n_0,n_1,n_2,b_0,b_1,b_2\rangle$ be a state. Let's see what parts of $H$ do to this state (in the summation, $l=3$ means $l = 0$, so mod $3$):
+	\[
+-\frac{n}{\pi}\sum_{l=0}^2 (\psi^\dagger_l U_{l,l+1} \psi_{l+1}) |n_0,n_1,n_2,b_0,b_1,b_2\rangle = 
+	\]
+	\end{enumerate}
+	
+	From the letter: in QED fermions (matter) occupy even sites, and anti-fermions (anti-matter) occupy odd sites. The same for QCD, except that fermions in QED are electrons, and fermions in QCD are quarks.
+	
 	\subsection{Gauss Law and Physical Space}
 	Let the Gauss law be
 		\begin{equation}\label{eq:1dQED_Gauss_law}

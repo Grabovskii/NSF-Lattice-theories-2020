@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.21)  5 JUL 2020 20:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.21)  6 JUL 2020 13:01
 entering extended mode
 **./nsf.tex
 (nsf.tex
@@ -706,14 +706,14 @@ LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 2
 ("C:\Users\ДмитрийАлександрович\AppData\Local\Programs\MiKTeX 2.9\tex/latex/cyrillic\t2acmtt.fd"
 File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
-[17]) (qedAdditional.tex [18] [19]
+[17] <xymatrix 3x2 128>) (qedAdditional.tex [18] [19] [20]
 Overfull \hbox (23.50166pt too wide) in paragraph at lines 112--123
 \T2A/cmr/m/n/10.95 Let me de-fine an-other op-er-a-tor called $\OML/cmm/m/it/10.95 U[]\OMS/cmsy/m/n/10.95 j\OML/cmm/m/it
 /10.95 k\OMS/cmsy/m/n/10.95 i \OT1/cmr/m/n/10.95 = []$ \T2A/cmr/m/n/10.95 and I also de-fine $\OML/cmm/m/it/10.95 U[]\OM
 S/cmsy/m/n/10.95 j\OML/cmm/m/it/10.95 k\OMS/cmsy/m/n/10.95 i \OT1/cmr/m/n/10.95 = []$\T2A/cmr/m/n/10.95 ,
  []
 
-[20]) (quest.tex [21]) (appendix.tex
+[21]) (quest.tex [22]) (appendix.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 2.
@@ -726,9 +726,9 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 2.
 
-[22] [23] [24] [25])
+[23] [24] [25]) [26]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 155.
- [26]
+ [27]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 155.
  (nsf.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 155.
@@ -738,8 +738,8 @@ Package rerunfilecheck Info: File `nsf.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 155.
  ) 
 Here is how much of TeX's memory you used:
- 10225 strings out of 492430
- 142347 string characters out of 3102276
+ 10233 strings out of 492430
+ 142403 string characters out of 3102276
  281467 words of memory out of 3000000
  14227 multiletter control sequences out of 15000+200000
  25804 words of font info for 76 fonts, out of 3000000 for 9000
@@ -777,9 +777,9 @@ fonts/euler/eufm10.pfb><C:/Users/ДмитрийАлександрович/AppDat
 public/amsfonts/symbols/msbm10.pfb><C:/Users/ДмитрийАлександрович/AppData/Local/Programs/MiKTeX 2.9/
 fonts/type1/public/xypic/xycmat10.pfb><C:/Users/ДмитрийАлександрович/AppData/Local/Programs/MiKTeX 2
 .9/fonts/type1/public/xypic/xycmbt10.pfb>
-Output written on nsf.pdf (26 pages, 513662 bytes).
+Output written on nsf.pdf (27 pages, 518480 bytes).
 PDF statistics:
- 1061 PDF objects out of 1200 (max. 8388607)
- 167 named destinations out of 1000 (max. 500000)
+ 1074 PDF objects out of 1200 (max. 8388607)
+ 175 named destinations out of 1000 (max. 500000)
  449 words of extra memory for PDF output out of 10000 (max. 10000000)
 
