@@ -42,7 +42,7 @@
 	|1,b_l+1\rangle \otimes |0,b_{l+1}\rangle \ \text{otherwise};
 	\end{cases}
 	\]
-	So, when we have a fermion at site $l+1$ and no fermion at site $l$, the operator $\psi_l^\dagger U_{l,l+1} \psi_{l+1}$ swaps them and increases the state of the boson on the link between them; in all other cases this operator is zero.
+	So, when we have a fermion at site $l+1$ and no fermion at site $l$, the operator $\psi_l^\dagger U_{l,l+1} \psi_{l+1}$ shifts the fermion to site $l$ and increments the state of the boson on the corresponding lift.
 	\item Now let's observe how the Hamiltonian acts on states. For simplicity, consider three sites with periodic boundary conditions, i.e.
 	\[
 	\xymatrix{
@@ -54,11 +54,33 @@
 	%\ar@{-}@/^1pc/[ll]
 	%}
 	\]
-	Let $|n_0,n_1,n_2,b_0,b_1,b_2\rangle$ be a state. Let's see what parts of $H$ do to this state (in the summation, $l=3$ means $l = 0$, so mod $3$):
-	\[
--\frac{n}{\pi}\sum_{l=0}^2 (\psi^\dagger_l U_{l,l+1} \psi_{l+1}) |n_0,n_1,n_2,b_0,b_1,b_2\rangle = 
+	Let $|n_0,n_1,n_2,b_0,b_1,b_2\rangle$ be a state. Let's see what parts of $H$ do to this state. Due to the rotational symmetry, there are actually only four distinct situations (all that matters is the number of fermions). So, 
+	\[\begin{split}
+&-\frac{n}{\pi}\sum_{l=0}^2 (\psi^\dagger_l U_{l,l+1} \psi_{l+1}) |n_0,n_1,n_2,b_0,b_1,b_2\rangle =\\ &= \begin{cases}
+0, \ \ \text{no fermions or exactly three}\\
+\text{Set } n_{l} = 0, \ n_{l-1} = 1, \ b_{l-1} \mapsto b_{l-1} + 1 \ \text{if there is a fermion at site }l \text{ and no fermion at site }l-1
+\end{cases}
+\end{split}
 	\]
 	\end{enumerate}
+	For $2\tilde{m}\sum_{l} (-1)^l \psi_l^\dagger \psi_l$, we have
+	\[
+	(2\tilde{m}\sum_{l} (-1)^l \psi_l^\dagger \psi_l) |n_0,n_1,n_2,b_0,b_1,b_2\rangle  = 2 \tilde{m} \cdot F \cdot |n_0,n_1,n_2,b_0,b_1,b_2\rangle,
+	\]
+	where 
+	\[
+	F = \begin{cases}
+	0, \ \ \text{there are two fermions and one of them is at site }1;\\
+	(-1)^l, \ \ \text{there is only one fermion and located at } l;\\
+	2, \ \ \text{the fermions are at sites }0\text{ and }2;\\
+	
+	\end{cases}
+	\]
+	Lastly,
+	\[
+	\sum_l E^2_{l,l+1} |n_0,n_1,n_2,b_0,b_1,b_2\rangle = 2|n_0,n_1,n_2,b_0,b_1,b_2\rangle.
+	\]
+	
 	
 	From the letter: in QED fermions (matter) occupy even sites, and anti-fermions (anti-matter) occupy odd sites. The same for QCD, except that fermions in QED are electrons, and fermions in QCD are quarks.
 	

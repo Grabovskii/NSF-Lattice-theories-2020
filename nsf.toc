@@ -34,11 +34,11 @@
 \contentsline {section}{\numberline {10}Gauge and Matter in 1D}{17}{section.10}% 
 \contentsline {subsection}{\numberline {10.1}Definitions of the full space}{17}{subsection.10.1}% 
 \contentsline {subsection}{\numberline {10.2}Gauss Law and Physical Space}{18}{subsection.10.2}% 
-\contentsline {subsection}{\numberline {10.3}Limits}{18}{subsection.10.3}% 
+\contentsline {subsection}{\numberline {10.3}Limits}{19}{subsection.10.3}% 
 \contentsline {section}{\numberline {11}Additional comments}{19}{section.11}% 
 \contentsline {subsection}{\numberline {11.1}Commutators and Anti-commutators}{19}{subsection.11.1}% 
 \contentsline {subsection}{\numberline {11.2}Quantum Field Theory}{19}{subsection.11.2}% 
-\contentsline {subsection}{\numberline {11.3}Hamiltonian versus Lagrangian}{19}{subsection.11.3}% 
+\contentsline {subsection}{\numberline {11.3}Hamiltonian versus Lagrangian}{20}{subsection.11.3}% 
 \contentsline {subsection}{\numberline {11.4}Mapping from First Quantization to Second Quantization}{20}{subsection.11.4}% 
 \contentsline {section}{\numberline {12}Pure Gauge in 1D}{20}{section.12}% 
 \contentsline {subsection}{\numberline {12.1}Gauge Symmetry}{21}{subsection.12.1}% 
@@ -47,10 +47,10 @@
 \contentsline {section}{\numberline {14}Gauge and Matter in 1D}{22}{section.14}% 
 \contentsline {section}{\numberline {15}Questions}{22}{section.15}% 
 \contentsline {subsection}{\numberline {15.1}For a discussion}{22}{subsection.15.1}% 
-\contentsline {subsection}{\numberline {15.2}Just for myself}{22}{subsection.15.2}% 
+\contentsline {subsection}{\numberline {15.2}Just for myself}{23}{subsection.15.2}% 
 \contentsline {section}{\numberline {16}Appendix}{23}{section.16}% 
 \contentsline {subsection}{\numberline {16.1}$C^*$-algebras}{23}{subsection.16.1}% 
-\contentsline {subsubsection}{\numberline {16.1.1}Gelfand-Naymark: commutative case}{23}{subsubsection.16.1.1}% 
-\contentsline {subsubsection}{\numberline {16.1.2}Gelfand-Naymark: non-commutative case}{24}{subsubsection.16.1.2}% 
-\contentsline {subsubsection}{\numberline {16.1.3}Properties of AF algebras (not finished)}{25}{subsubsection.16.1.3}% 
+\contentsline {subsubsection}{\numberline {16.1.1}Gelfand-Naymark: commutative case}{24}{subsubsection.16.1.1}% 
+\contentsline {subsubsection}{\numberline {16.1.2}Gelfand-Naymark: non-commutative case}{25}{subsubsection.16.1.2}% 
+\contentsline {subsubsection}{\numberline {16.1.3}Properties of AF algebras (not finished)}{26}{subsubsection.16.1.3}% 
 \contentsline {subsection}{\numberline {16.2}Hilbert-Schmidt operators}{26}{subsection.16.2}% 
