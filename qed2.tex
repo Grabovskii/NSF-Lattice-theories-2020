@@ -1,0 +1,51 @@
+%\documentclass{article}
+%\newcommand{\Mod}[1]{\ \left(\mathrm{mod}\ #1\right)}
+%\usepackage{braket}
+
+%\begin{document}
+	
+	\section{The meaning of Gauge}
+	The Quantum Ising model has a \emph{global} symmetry $\tilde{S}_i = -S_i$, that leaves
+	the form of the Hamiltonian invariant in the new variables, and so it's the same system.
+	By \emph{global} I mean independent of $i$.
+	The Quantum Ising Gauge model (see Hunter L.'s write up) has a \emph{local} symmetry.
+	
+	\section{Gauge and Matter in 1D}
+	\subsection{Definitions of the full space}
+	We consider again a 1D chain, put bosons of dimension $n$ on the links, with group $Z(n)$ and
+	define $E$, $A$, $V$ and $U$ as before. We won't use $A$ and $V$ in the Hamiltonian.
+	This time we add fermions on the sites, where at site $l$, the operator $\psi_\ell^\dagger$
+	creates a fermion, and the operator $\psi_\ell$ destroys a fermion at that site.
+	The fermion operators \emph{anti-commute} on \emph{different} sites.
+	Then let
+		\begin{equation}\label{eq:1dQEDLatticeHamiltonian}
+	H=-\frac{n}{2\pi} \sum_\ell (\psi_\ell^\dagger U_{\ell,\ell+1}\psi_{\ell+1}+H.c.) + 2\tilde{m}\sum_\ell (-1)^\ell \psi_\ell^\dagger\psi_\ell+  \sum_{\ell} E_{\ell,\ell+1}^2,		
+	\end{equation}
+	where $n$ is an odd non-negative integer, and $m$ is a real number.
+	We leave the boundary conditions open for now.
+	The full space on $N$ sites has dimension $(2n)^{N}$, the $2^N$ comes from the fermions (electrons and positrons), 
+	and the $n^N$ from the bosons (phonons). But this space isn't the physical space, and is too big, as we now discuss.
+	
+	\subsection{Gauss Law and Physical Space}
+	Let the Gauss law be
+		\begin{equation}\label{eq:1dQED_Gauss_law}
+	G_\ell := \psi_\ell^\dagger \psi_\ell + \frac{1}{2}((-1)^\ell -1)-(E_{\ell,\ell+1}-E_{\ell-1,\ell}).
+	\end{equation}
+	We restrict the full space to the physical space of states $|\psi\rangle$ that satisfy
+	$G_\ell|\psi\rangle= 0 \Mod{n}$. 
+	The physical space has dimension $n 2^N$; see Hunter L's explanation for why this is the case.
+	
+	\subsection{Limits}
+	Ercolessi et al (see the reference in Hunter's writeup) numerically take both limits \emph{first} the $N\rightarrow\infty$ limit
+   and then the $n\rightarrow\infty$ limit and find a ``phase transition'' at some value of $\tilde{m}$. Order of the limits here FIXME TODO.
+	For now, perhaps is enough to take $N\rightarrow\infty$ for $n$ finite, and prove that the limiting (topological, C*, Von Neuman??)
+	algebra exists, and the limiting $H$ exits.
+	To define a phase transition I need an ``order parameter'' which will be something like a magnetization in a spin model.
+	Let $W=N^{-1}\sum_l E_{l, l+1}^2$ be the ``Wilson loop'' operator. Let $|gs\rangle$ be the ground state of $H$.
+	Let $w_1(\tilde{m}, n, N) = \langle gs | W |gs\rangle$, and let $w(\tilde{m}, n)=\lim_{N\rightarrow\infty} w_1(\tilde{m}, n, N)$.
+	 This quantity $w$ as a function of $\tilde{m}$ will have a first derivative everywhere,
+	except for a value of $\tilde{m}$, where the left and right derivatives both exist but are different.
+	We say that the model goes through a phase transition at that value of $\tilde{m}$. Obviously, that value will be dependent on $n$,
+	and we are interested in $n\rightarrow\infty$.
+	
+%\end{document}

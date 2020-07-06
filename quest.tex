@@ -1,14 +1,21 @@
 \section{Questions}
 \subsection{For a discussion}
+
 \begin{quest}
-What's a momentum space? And what's the meaning of diagonilized Hamiltonian?
+Continuous spectrum corresponds to scattering energies. What are those? How do they differ from energy levels?
 \end{quest}
+%
+%\begin{quest}
+%Inappropriate usage of continuous spectrum? There are no corresponding eigenvectors. If $T$ is a linear operator and $\lambda$ is in its continuous spectrum, then $T-\lambda$ is injective and has a dense range. Also, it seems like that think of eigenkets as belonging to $\Phi^*$, i.e. that they are linear functionals..
+%\end{quest}
+
 \begin{quest}
-It's been confusing to me that $c_m$ is regarded as an operator on a site and as an operator with parity on the tensor product of sites. I changed the notation so that $c$ means the operator on a site and $c_m$ is the operator on the tensor product with parity.
+Rigged Hilbert spaces do not make sense to me. Let's say $(H,\Phi)$ is a rigged Hilbert space. First, the topology on $\Phi$ that they claim to be finer is actually the induced one from $H$. So, $\Phi$ is a pre-Hilbert space, and $H$ is its completion. Now, any continuous linear (or antilinear) functional on $\Phi$ is bounded; therefore, it uniquely extends to a functional on $H$, so $\Phi^*$ is naturally $H^*$. So, what's the point? 
+
+Probably people do not describe it in the right way. I've not seens a description of the topology on $\Phi$. It can't be just stated as "the inclusion map is continuous".
 \end{quest}
-\begin{quest}
-Is there a typo in the definition of $p(|v\rangle, m)$? I feel that $m$ has to be included in the summation, for otherwise $P_m$ commutes with $d_m$.
-\end{quest}
+
+
 \subsection{Just for myself}
 \begin{quest}
 Derive the grand canonical Gibbs distribution to see why the sum is over $N$. It bothers me, I just can't stand this formula before I see its derivation.

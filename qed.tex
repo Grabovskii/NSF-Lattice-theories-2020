@@ -27,6 +27,7 @@ Regarding the dimension, it's clear to me that the algebra is finite-dimensional
 	\begin{statement}
 	Redefine $H_M$ as $H_M := a_M^\dagger a_M$ and extend by zero onto the orthogonal complement of $\mathcal H_{M}$, so $H_M |k \rangle = k |k\rangle$ for $k \leq M-1$. Then $H_M$ converges strongly to some unbounded self-adjoint (hence closed) operator $H_{\infty}$ on a dense subspace of $\mathcal H_{\infty}$.
 	\end{statement}
+	The fact that $H_{\infty}$ is unbounded means that it's not regarded as an observable in the language of $C^*$-algebras. This point of view was adapted by Segal and is also mentioned in the $C^*$-algebras approach in \cite{haag_alg}.
 	\begin{proof}
 The domain of $H_{\infty}$ would be the dense subspace
 \[
@@ -160,14 +161,14 @@ Thus $H_{\infty} = 0$. Note that the sum goes up to $N$, but inside of cosines w
 \begin{statement}
 Define $H_{M}$ without the factor of $1/M$. Then $H_{M}$ converge strongly to an unbounded self-adjoint operator $H_{\infty}$ defined via
 \[
-H_{\infty} |\psi_f\rangle := |I(f)| |\psi_f\rangle, 
+H_{\infty} |\psi_f\rangle := -|I(f)| |\psi_f\rangle, 
 \]
 where by $|I(f)|$ I mean the number of elements in $I(f)$.
 \end{statement}
 \begin{proof}
 We see that
 \[
-\lim_{M \rightarrow \infty} H_M|\psi_f\rangle =  \lim_{M \rightarrow \infty, \ M \geq N} \sum_{m=0}^{m < N} f(m) (-2\cos\frac{2\pi m}{M} ) |\psi_f\rangle = |I(f)||\psi_f\rangle,
+\lim_{M \rightarrow \infty} H_M|\psi_f\rangle =  \lim_{M \rightarrow \infty, \ M \geq N} \sum_{m=0}^{m < N} f(m) (-2\cos\frac{2\pi m}{M} ) |\psi_f\rangle = -|I(f)||\psi_f\rangle,
 \]
 so $H_M|\psi_f\rangle$ is diagonal, though unbounded. We've already encountered an unbounded diagonal operator in the case of infinite free bosons, and we've shown it's self-adjoint\footnote{I mention it carefully since in the theory of unbounded operators not everything that seems symmetric (swings freely in the slots of the inner product) is self-adjoint. The latter condition is stronger.}
 %The formula is clear from the previous statement. The action of this $H_{\infty}$ on a general state is given by
@@ -188,12 +189,16 @@ The last statement actually suggests what a factor we might pick for $H_{M}$'s t
 \begin{statement}
 Now try $H_M$'s via the formula
 \[
-H_M|\psi_f\rangle = \frac{1}{|I(f)|} \left(\sum_{m=0}^{m < M} f(m)e_m\right)|\psi_f\rangle.
+H_M|\psi_f\rangle = -\frac{1}{|I(f)|} \left(\sum_{m=0}^{m < M} f(m)e_m\right)|\psi_f\rangle.
 \]
 Then they converge strongly to the identity operator on $\mathcal H_{\infty}$.
 \end{statement}
 \begin{statement}
 The density operators $D_N$ converge strongly to zero. If we redefine the density operators as $D_N := \sum_{m=0}^{m < N} c_m^\dagger c_m$, then $D_N$ converge strongly to the operator defined as $D_{\infty}|\psi_f\rangle = |I_f||\psi_f\rangle$ (which is unbounded, as shown before). Therefore, if we define $D_{N}$'s as $D_{N}|\psi_f\rangle := \frac{1}{|I_f|}\sum_{m=0}^{m < N} c_m^\dagger c_m$, then they converge to the identity operator.
+\end{statement}
+
+\begin{statement}
+Consider the algebras $\mathcal U_M$ spanned by $c_0,\ldots,c_{M-1}$. Their direct limit $\mathcal U_{\infty} = \lim_{M \rightarrow \infty} \mathcal U_M$ is the closure of their union in the operator norm. Now, the question was: do $H_{\infty}$ and $D_{\infty}$ belong to $\mathcal U_{\infty}$? The unbounded versions of $H_{\infty}$ and $D_{\infty}$ certainly do not. But if we choose a proper normalization (for instance, divide by $|I_f|$), then they do belong, for they are equal to the identity.
 \end{statement}
 
 \emph{(What was written before) }The limit (in operator norm, weak, strong?) of the sequence of operators $H_M$ exits (?), is unique, and let's call it $H_\infty$.

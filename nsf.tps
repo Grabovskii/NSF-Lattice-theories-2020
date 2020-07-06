@@ -11,14 +11,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=36
-NormalPos.right=884
+NormalPos.right=906
 NormalPos.bottom=624
 Class=LaTeXView
 Document=nsf.tex
 
 [Frame0_View0,0]
-TopLine=19
-Cursor=1056
+TopLine=149
+Cursor=5295
 
 [Frame1]
 Flags=0
@@ -29,14 +29,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=36
-NormalPos.right=884
+NormalPos.right=906
 NormalPos.bottom=624
 Class=LaTeXView
 Document=principles.tex
 
 [Frame1_View0,0]
-TopLine=253
-Cursor=8148
+TopLine=322
+Cursor=15919
 
 [Frame2]
 Flags=0
@@ -47,7 +47,7 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=36
-NormalPos.right=884
+NormalPos.right=906
 NormalPos.bottom=624
 Class=LaTeXView
 Document=Ising_model.tex
@@ -65,7 +65,7 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=36
-NormalPos.right=884
+NormalPos.right=906
 NormalPos.bottom=624
 Class=LaTeXView
 Document=..\Functional analysis\banach.tex
@@ -83,13 +83,13 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=36
-NormalPos.right=884
+NormalPos.right=906
 NormalPos.bottom=624
 Class=LaTeXView
 Document=main_stage.tex
 
 [Frame4_View0,0]
-TopLine=46
+TopLine=44
 Cursor=2448
 
 [Frame5]
@@ -101,14 +101,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=36
-NormalPos.right=884
+NormalPos.right=906
 NormalPos.bottom=624
 Class=LaTeXView
-Document=appendix.tex
+Document=qedAdditional.tex
 
 [Frame5_View0,0]
-TopLine=260
-Cursor=12568
+TopLine=29
+Cursor=2840
 
 [Frame6]
 Flags=0
@@ -119,14 +119,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=36
-NormalPos.right=884
+NormalPos.right=906
 NormalPos.bottom=624
 Class=LaTeXView
-Document=qedAdditional.tex
+Document=appendix.tex
 
 [Frame6_View0,0]
-TopLine=177
-Cursor=9888
+TopLine=254
+Cursor=12568
 
 [Frame7]
 Flags=0
@@ -137,14 +137,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=36
-NormalPos.right=884
+NormalPos.right=906
 NormalPos.bottom=624
 Class=LaTeXView
-Document=quest.tex
+Document=on_model.tex
 
 [Frame7_View0,0]
 TopLine=0
-Cursor=613
+Cursor=4
 
 [Frame8]
 Flags=0
@@ -155,14 +155,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=36
-NormalPos.right=884
+NormalPos.right=906
 NormalPos.bottom=624
 Class=LaTeXView
-Document=qed.tex
+Document=qed2.tex
 
 [Frame8_View0,0]
-TopLine=273
-Cursor=8593
+TopLine=62
+Cursor=3243
 
 [Frame9]
 Flags=0
@@ -173,14 +173,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=36
-NormalPos.right=884
+NormalPos.right=906
 NormalPos.bottom=624
 Class=LaTeXView
-Document=gff.tex
+Document=qed.tex
 
 [Frame9_View0,0]
-TopLine=0
-Cursor=4
+TopLine=417
+Cursor=15990
 
 [Frame10]
 Flags=0
@@ -191,16 +191,34 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=36
-NormalPos.right=884
+NormalPos.right=906
 NormalPos.bottom=624
 Class=LaTeXView
-Document=on_model.tex
+Document=quest.tex
 
 [Frame10_View0,0]
+TopLine=10
+Cursor=548
+
+[Frame11]
+Flags=0
+ShowCmd=1
+MinPos.x=-1
+MinPos.y=-1
+MaxPos.x=-1
+MaxPos.y=-1
+NormalPos.left=4
+NormalPos.top=36
+NormalPos.right=906
+NormalPos.bottom=624
+Class=LaTeXView
+Document=gff.tex
+
+[Frame11_View0,0]
 TopLine=0
 Cursor=4
 
 [SessionInfo]
-FrameCount=11
-ActiveFrame=0
+FrameCount=12
+ActiveFrame=1
 
