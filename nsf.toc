@@ -33,7 +33,7 @@
 \contentsline {section}{\numberline {9}The meaning of Gauge}{17}{section.9}% 
 \contentsline {section}{\numberline {10}Gauge and Matter in 1D}{17}{section.10}% 
 \contentsline {subsection}{\numberline {10.1}Definitions of the full space}{17}{subsection.10.1}% 
-\contentsline {subsection}{\numberline {10.2}Gauss Law and Physical Space}{18}{subsection.10.2}% 
+\contentsline {subsection}{\numberline {10.2}Gauss Law and Physical Space}{19}{subsection.10.2}% 
 \contentsline {subsection}{\numberline {10.3}Limits}{19}{subsection.10.3}% 
 \contentsline {section}{\numberline {11}Additional comments}{19}{section.11}% 
 \contentsline {subsection}{\numberline {11.1}Commutators and Anti-commutators}{19}{subsection.11.1}% 
@@ -42,7 +42,7 @@
 \contentsline {subsection}{\numberline {11.4}Mapping from First Quantization to Second Quantization}{20}{subsection.11.4}% 
 \contentsline {section}{\numberline {12}Pure Gauge in 1D}{20}{section.12}% 
 \contentsline {subsection}{\numberline {12.1}Gauge Symmetry}{21}{subsection.12.1}% 
-\contentsline {subsection}{\numberline {12.2}Algebra of Operators}{21}{subsection.12.2}% 
+\contentsline {subsection}{\numberline {12.2}Algebra of Operators}{22}{subsection.12.2}% 
 \contentsline {section}{\numberline {13}Pure Gauge in 2D}{22}{section.13}% 
 \contentsline {section}{\numberline {14}Gauge and Matter in 1D}{22}{section.14}% 
 \contentsline {section}{\numberline {15}Questions}{22}{section.15}% 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.21)  6 JUL 2020 14:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.21)  6 JUL 2020 14:38
 entering extended mode
 **./nsf.tex
 (nsf.tex
@@ -745,6 +745,10 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 155.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 155.
 Package rerunfilecheck Info: File `nsf.out' has not changed.
 (rerunfilecheck)             Checksum: 5830CBDDD4F969D196E7858F1E4D06D8;4092.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 155.
  ) 
 Here is how much of TeX's memory you used:
@@ -787,7 +791,7 @@ fonts/euler/eufm10.pfb><C:/Users/ДмитрийАлександрович/AppDat
 public/amsfonts/symbols/msbm10.pfb><C:/Users/ДмитрийАлександрович/AppData/Local/Programs/MiKTeX 2.9/
 fonts/type1/public/xypic/xycmat10.pfb><C:/Users/ДмитрийАлександрович/AppData/Local/Programs/MiKTeX 2
 .9/fonts/type1/public/xypic/xycmbt10.pfb>
-Output written on nsf.pdf (27 pages, 519869 bytes).
+Output written on nsf.pdf (27 pages, 520215 bytes).
 PDF statistics:
  1074 PDF objects out of 1200 (max. 8388607)
  175 named destinations out of 1000 (max. 500000)
