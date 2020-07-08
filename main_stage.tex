@@ -48,7 +48,9 @@ T:=\bigoplus_{n=1}^\infty \, \bigotimes_{i \in A \subset \Lambda, \ |A| = n} H_i
 \]
 It's easy to see that this space has an infinite countable basis. This implies that, whatever norm we put on $T$, the space will not be complete (that's a standard result from functional analysis: in a Banach space, a vector space basis is at least uncountable).
 
-\textbf{Way 1 (just a fantasy)}. Let $\mathfrak A_{\Lambda}^\prime$ be the union of all $\mathfrak A_X$ for $X \subset \Lambda$ and $X$ finite. We can substitute the norm on $\mathfrak A_{\Lambda}^\prime$ with the Hilbert-Schmidt norm (see appendix), and then complete $\mathfrak A_{\Lambda}^\prime$ with respect to it. The elements $A$ of the resulting space can be represented as infinite matrices $(a_{nk})_{k,n = 1}^{\infty}$ such that $\sum_{n,k} |a_{nk}|^2 < \infty$. We can act with these on a completion of $T$.
+\textbf{Way 1 (just a fantasy)}. Let $\mathfrak A_{\Lambda}^\prime$ be the union of all $\mathfrak A_X$ for $X \subset \Lambda$ and $X$ finite. We can substitute the norm on $\mathfrak A_{\Lambda}^\prime$ with the Hilbert-Schmidt norm (see appendix), and then complete $\mathfrak A_{\Lambda}^\prime$ with respect to it. The elements $A$ of the resulting space can be represented as infinite matrices $(a_{nk})_{k,n = 1}^{\infty}$ such that $\sum_{n,k} |a_{nk}|^2 < \infty$. We can act with these on a completion of $T$. However, it's not a $C^*$-algebra; it is a Banach algebra though. There might be something in this approach.
+
+\textbf{Way 2.} We can complete with respect to the operator norm. I can't prove this, but the evidence is that we obtain the space of compact operators on $\cl T$. That's very good. If our Hamiltonian is normalized in such a way that in the limit it gives a bounded operator, then we can employ the Hilbert-Schmidt theorem and find an orthonormal basis in $\cl T$ of eigen-values of the limiting Hamiltonian. 
 
 %\begin{fur}
 %I see so far two ways one can go here, I need to delve into both of them. One way leads to Hilbert-Schmidt operators (if we had a different norm at the begininning), the other (assuming the operator norm), I guess, leads to compact operators. I think we need to study both these cases. Reference \cite{conway} tells how to realize the first way (page 268).
@@ -60,3 +62,28 @@ It's easy to see that this space has an infinite countable basis. This implies t
 %\begin{fur}
 %I haven't understood yet how the completion of such a space looks like. In the process of looking this up and at the same time I'm pondering over this.
 %\end{fur}
+
+\subsection{Thoughts on $C^*$-algebras approach}
+So the idea was the following: since it's not sometimes clear what a limiting Hilbert space should look like, we can take the limit of the corresponding algebras of observables and then, by Gelfand-Naymark theorem, find an underlying Hilbert space, hopefully a separable one. But the dream will not come true:
+\begin{statement}
+Even in quantum Ising model, the Gelfand-Naymark representation from the proof of the theorem (see Appendix) yields a non-separable Hilbert space when corresponds to an infinite lattice.
+\end{statement}
+\begin{proof}[Evidence]
+Let's have a more careful look at how the representation is constructed. Let $A$ be a unital $C^*$-algebra, let's say. If $A$ is taken as the $C^*$-algebra corresponding to an infinite lattice in quantum Ising model, then $A$ is an AF-algebra (approximately finite). In particular, it is separable and infinite-dimensional. Now, to construct the representation, for every non-zero $z \in A$ we pick a representation $\pi_z$ such that $\|\pi_z(z)\xi_z\| = \|z\|$, where $\xi_z$ is the cyclic vector of $\pi_z$, and then we take the direct sum of those. Clearly, the sum is uncountable, for as a set the algebra $A$ is uncountable, so a basis of the resulting Hilbert space cannot be countable.
+\end{proof}
+So, the proof of Gelfand-Naymark theorem, even though more or less constructive, does not yield a way to construct a separable Hilbert space. The algorithm might be polished, I guess. Which $z \in A$ we might restrict to? Which are sufficient? The problem is that the choice of $z$'s is \emph{set-theoretic}, it's not \emph{functionally-analytic}. 
+
+The $C^*$-algebras approach also has a downside that we lose unbounded observables. For example, in free fermions on infinite chain, if we don't normalize the Hamiltonian, the limit results in an unbounded operator, so the limiting $C^*$-algebra doesn't capture this. We've tried to use different normalizations, but this yielded either the zero operator or the identity, something trivial. One might tweak the eigen-values so that their absolute values are less than $1$; but then, what's the meaning of the limiting observable?
+
+\emph{To sum up, the downside:} the limiting $C^*$-algebra loses both separability of the Hilbert space and does not contain unbounded observables like the total energy of the lattice.
+
+I'd like to mention Segal's article \cite{segal}. From what I understood from his article, it's not necessary to find a faithful representation of the whole limiting $C^*$-algebra. There's the following result, \emph{the upside of the $C^*$-algebras approach}, which is a corollary of a more general statement that can be found in the article:
+\begin{statement}
+Let $A$ be a $C^*$-algebra and $u \in A$ be self-adjoint.Then for any $\alpha$ from the spectrum of $u$, there exists an irreducible representation $\phi$ of $A$ and a non-zero element $x$ of the space on which $A$ is represented such that $\phi(u)x = \alpha x$.
+\end{statement}
+The result is great in a sense that even the continuous spectrum of a self-adjoint element can be realized (at least partly) as a point spectrum. This reminds of the rigged Hilbert space approach that also gives a way to realize the continuum spectrum as a point one (through generalized eigen-values).
+
+
+\begin{fur}
+Segal in \cite{segal} mentions that it's actually not an issue that unbounded operators don't land in the limiting $C^*$-algebras, for they can be treated in terms of bounded operators. What did he mean?
+\end{fur}
