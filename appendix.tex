@@ -99,3 +99,19 @@ It turns out that $\|A\|_2$ does not depend on the choice of the orthonormal bas
 \item $A \in \mathfrak A_2$ iff $|A|:= \sqrt{A^*A} \in \mathfrak A_2$. In this case, $\|A\|_2 = \||A|\|_2$;
 \item Hilbert-Schmidt operators are compact. Moreover, if $\lambda_1,\ldots,\lambda_n,\ldots$ are eigenvalues of $|A|$ (each repeated as many times as its multiplicity), then $|A| \in \mathfrak A_2$ if and only if $\sum_{n=1}^\infty \lambda_n^2 < \infty$. In this case, $\|A\|_2 = \sqrt{\sum_{n=1}^\infty \lambda_n^2}$.
 \end{enumerate}
+\subsection{Quantum physics}
+\subsubsection{Spin}
+I read a chapter on spins in Landau's book \cite{landau}. Here I record what I understand about spins. So, the \emph{spin} of a particle is something that behaves like a classical angular momentum (at least, it has some properties of that). If $\psi(x,y,z)$ is a wave function that depends on three coordinates, then we'd like to include a variable $\sigma$, which corresponds to the spin, and the wave function then depends on four variables: $\psi(x,y,z;\sigma)$. We have a spin operator $S = (S_x,S_y,S_z)$ that we can apply to the wave function. As Landau says, we apply it somehow straight to the variable $\sigma$. What's the meaning of $S\psi$? I guess, this means that we conduct a measurement of the spin of a particle that's in the state $\psi$. There's an heuristic reasoning, which I don't understand, but which yields the following commutation realtions among components of $S$:
+\[
+\{S_y,S_z\} = iS_x, \ \ \{S_z,S_x\} = iS_y, \ \ \{S_x,S_y\} = iS_z,
+\]
+where the bracket denotes, I guess, the anti-commutator.
+They also derive
+\[
+S^2 = s(s+1),
+\]
+where $s$ is the least upper bound of eigenvalues of $S_z$ (then $-s$ is the greatest lower bound of the eigenvalues). From this they derive that $s \in \frac{1}{2}\mathbb{Z}$. As I understand, that relation means
+\[
+S_x^2 + S_y^2 + S_z^2 = s(s+1) I,
+\]
+where $I$ is the identity operator, though it is not clear why we have such an equation. Depending on $s$, the components are realized as square matrices of different sizes. If $s = 1/2$, then the components are $2 \times 2$ matrices (Pauli matrices). For $s = 1$, they are $3 \times 3$ matrices. One can find a relation between $s$ and their sizes. Also, I don't think that the relation between $S^2$ and $s$ can be derived from the commutation relations between components of $S$.

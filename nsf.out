@@ -31,27 +31,32 @@
 \BOOKMARK [1][-]{section.6}{Pure Gauge in 1D}{}% 31
 \BOOKMARK [1][-]{section.7}{Pure Gauge in 2D}{}% 32
 \BOOKMARK [1][-]{section.8}{Gauge and Matter in 1D}{}% 33
-\BOOKMARK [1][-]{section.9}{The meaning of Gauge}{}% 34
-\BOOKMARK [1][-]{section.10}{Gauge and Matter in 1D}{}% 35
-\BOOKMARK [2][-]{subsection.10.1}{Definitions of the full space}{section.10}% 36
-\BOOKMARK [2][-]{subsection.10.2}{Gauss Law and Physical Space}{section.10}% 37
-\BOOKMARK [2][-]{subsection.10.3}{Limits}{section.10}% 38
-\BOOKMARK [1][-]{section.11}{Additional comments}{}% 39
-\BOOKMARK [2][-]{subsection.11.1}{Commutators and Anti-commutators}{section.11}% 40
-\BOOKMARK [2][-]{subsection.11.2}{Quantum Field Theory}{section.11}% 41
-\BOOKMARK [2][-]{subsection.11.3}{Hamiltonian versus Lagrangian}{section.11}% 42
-\BOOKMARK [2][-]{subsection.11.4}{Mapping from First Quantization to Second Quantization}{section.11}% 43
-\BOOKMARK [1][-]{section.12}{Pure Gauge in 1D}{}% 44
-\BOOKMARK [2][-]{subsection.12.1}{Gauge Symmetry}{section.12}% 45
-\BOOKMARK [2][-]{subsection.12.2}{Algebra of Operators}{section.12}% 46
-\BOOKMARK [1][-]{section.13}{Pure Gauge in 2D}{}% 47
-\BOOKMARK [1][-]{section.14}{Gauge and Matter in 1D}{}% 48
-\BOOKMARK [1][-]{section.15}{Questions}{}% 49
-\BOOKMARK [2][-]{subsection.15.1}{For a discussion}{section.15}% 50
-\BOOKMARK [2][-]{subsection.15.2}{Just for myself}{section.15}% 51
-\BOOKMARK [1][-]{section.16}{Appendix}{}% 52
-\BOOKMARK [2][-]{subsection.16.1}{C*-algebras}{section.16}% 53
-\BOOKMARK [3][-]{subsubsection.16.1.1}{Gelfand-Naymark: commutative case}{subsection.16.1}% 54
-\BOOKMARK [3][-]{subsubsection.16.1.2}{Gelfand-Naymark: non-commutative case}{subsection.16.1}% 55
-\BOOKMARK [3][-]{subsubsection.16.1.3}{Properties of AF algebras \(not finished\)}{subsection.16.1}% 56
-\BOOKMARK [2][-]{subsection.16.2}{Hilbert-Schmidt operators}{section.16}% 57
+\BOOKMARK [1][-]{section.9}{Antiferromagnetic spin-12 chain}{}% 34
+\BOOKMARK [1][-]{section.10}{The meaning of Gauge}{}% 35
+\BOOKMARK [1][-]{section.11}{Gauge and Matter in 1D}{}% 36
+\BOOKMARK [2][-]{subsection.11.1}{Definitions of the full space}{section.11}% 37
+\BOOKMARK [2][-]{subsection.11.2}{Gauss Law and Physical Space}{section.11}% 38
+\BOOKMARK [2][-]{subsection.11.3}{Limits}{section.11}% 39
+\BOOKMARK [1][-]{section.12}{Additional comments}{}% 40
+\BOOKMARK [2][-]{subsection.12.1}{Commutators and Anti-commutators}{section.12}% 41
+\BOOKMARK [2][-]{subsection.12.2}{Quantum Field Theory}{section.12}% 42
+\BOOKMARK [2][-]{subsection.12.3}{Hamiltonian versus Lagrangian}{section.12}% 43
+\BOOKMARK [2][-]{subsection.12.4}{Mapping from First Quantization to Second Quantization}{section.12}% 44
+\BOOKMARK [1][-]{section.13}{Pure Gauge in 1D}{}% 45
+\BOOKMARK [2][-]{subsection.13.1}{Gauge Symmetry}{section.13}% 46
+\BOOKMARK [2][-]{subsection.13.2}{Algebra of Operators}{section.13}% 47
+\BOOKMARK [1][-]{section.14}{Pure Gauge in 2D}{}% 48
+\BOOKMARK [1][-]{section.15}{Gauge and Matter in 1D}{}% 49
+\BOOKMARK [1][-]{section.16}{Questions}{}% 50
+\BOOKMARK [2][-]{subsection.16.1}{For a discussion}{section.16}% 51
+\BOOKMARK [2][-]{subsection.16.2}{Just for myself}{section.16}% 52
+\BOOKMARK [2][-]{subsection.16.3}{Notes from conversations}{section.16}% 53
+\BOOKMARK [3][-]{subsubsection.16.3.1}{07/08}{subsection.16.3}% 54
+\BOOKMARK [1][-]{section.17}{Appendix}{}% 55
+\BOOKMARK [2][-]{subsection.17.1}{C*-algebras}{section.17}% 56
+\BOOKMARK [3][-]{subsubsection.17.1.1}{Gelfand-Naymark: commutative case}{subsection.17.1}% 57
+\BOOKMARK [3][-]{subsubsection.17.1.2}{Gelfand-Naymark: non-commutative case}{subsection.17.1}% 58
+\BOOKMARK [3][-]{subsubsection.17.1.3}{Properties of AF algebras \(not finished\)}{subsection.17.1}% 59
+\BOOKMARK [2][-]{subsection.17.2}{Hilbert-Schmidt operators}{section.17}% 60
+\BOOKMARK [2][-]{subsection.17.3}{Quantum physics}{section.17}% 61
+\BOOKMARK [3][-]{subsubsection.17.3.1}{Spin}{subsection.17.3}% 62

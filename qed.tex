@@ -201,6 +201,68 @@ The density operators $D_N$ converge strongly to zero. If we redefine the densit
 Consider the algebras $\mathcal U_M$ spanned by $c_0,\ldots,c_{M-1}$. Their direct limit $\mathcal U_{\infty} = \lim_{M \rightarrow \infty} \mathcal U_M$ is the closure of their union in the operator norm. Now, the question was: do $H_{\infty}$ and $D_{\infty}$ belong to $\mathcal U_{\infty}$? The unbounded versions of $H_{\infty}$ and $D_{\infty}$ certainly do not. But if we choose a proper normalization (for instance, divide by $|I_f|$), then they do belong, for they are equal to the identity.
 \end{statement}
 
+\begin{statement}
+Let $H_N$ be defined with a factor of $1/N$. Let $\lambda_{\min}(N)$ and $\lambda_{\max}(N)$ the respectively the lowest and the highest eigen-values of $H_N$. Then
+\[
+\lim_{N \rightarrow \infty}\lambda_{\min}(N) = \frac{-2}{\pi}, \ \ \lim_{N \rightarrow \infty}\lambda_{\max}(N) = \frac{2}{\pi}.
+\]
+\end{statement}
+\begin{proof}
+Indeed, recall that $I_{\min} = \{m; 0\le m \le N/4\}\cup\{m; 3N/4\le m < N\}$ and $I_{\max}$ is its complement. For $\lambda_{\min}$, we see that
+\[\begin{split}
+\lim_{N \rightarrow \infty}\lambda_{\min}(N) &= -2\lim_{N \rightarrow \infty} \left(\sum_{m=0}^{m \leq N/4} \cos(2\pi m/N) \frac{1}{N} +\sum_{m\geq 3N/4}^{m < N-1} \cos(2\pi m/N) \frac{1}{N}\right) = \\&= -4\lim_{N \rightarrow \infty} \left(\sum_{m=0}^{m \leq N/4} \cos(2\pi m/N) \frac{1}{N}\right) = \frac{-4}{2\pi} \lim_{N \rightarrow \infty} \sum_{m=0}^{m \leq N/4} \cos(x_m) \Delta x_m = \\&=\frac{-2}{\pi} \int_{0}^{\pi/2} \cos(x) \, dx = \frac{-2}{\pi},
+\end{split}
+\]
+where $x_m = (2\pi m)/N$. A similar argument applies for $\lambda_{\max}$.
+\end{proof}
+The gap in this model is clearly $O(N^{-1})$, for we need to add or exclude just one fermion.
+
+\begin{idea}
+(A wrong way but which might be a starting point). For every $H_N$ with a factor of $1/N$, let's order its eigenvalues so that
+\[
+\lambda_{\min}(N) = \lambda_1(N) \leq \lambda_2(N) \leq \cdots \leq \lambda_{2^N}(N) = \lambda_{\max}(N).
+\]
+Define
+\[
+\lambda_{i}(\infty) := \lim_{N \rightarrow \infty}\lambda_i(N).
+\]
+It seems that these values could constitute a countable collection of eigen-values for a dreamed $H_{\infty}$. However, the gap is zero:
+\[
+\lambda_{i+1}(\infty) - \lambda_{i}(\infty) = \lim_{N \rightarrow \infty}(\lambda_{i+1}(N) - \lambda_{i}(N)) = \lim_{N\rightarrow \infty} \frac{-2}{N}\cos(\frac{2\pi m_{i,N}}{N}) = 0,
+\]
+for two neighboring eigenvalues would differ by no more than one fermion.
+\end{idea}
+\begin{idea}
+Since the previous idea doesn't work, let's do the following. Let
+\[
+\mathcal F := \{f : \mathbb N \rightarrow \mathbb N \ | \ f \ \text{is non-decreasing} \}.
+\]
+For every $f \in \mathcal F$, define
+\[
+\lambda_f := \lim_{N \rightarrow \infty} \lambda_{f(N)}(N).
+\]
+How many of such $\lambda_f$'s do we actually have? We've seen that a lot of them might coincide because the order of gaps is $O(N^{-1})$. Being devoid of such knowledge, we proceed further:
+\[
+\mathcal F_{\infty} := \frac{\mathcal F}{f \sim g \ \text{iff} \ \lambda_f = \lambda_g}.
+\]
+Let $\mathcal H_{\infty}$ be a vector space spanned freely by elements of $\mathcal F_{\infty}$. Define a hermitian inner product on $\mathcal H_{\infty}$ by declaring all elements of $\mathcal F_{\infty}$ to be orthonormal. Now, complete $\mathcal H_{\infty}$. We are ready to define the limiting Hamiltonian:
+\[
+H_{\infty} [f] := \lambda_f [f], \ \ [f] \in \mathcal H_{\infty}.
+\]
+The operator $H_{\infty}$ is self-adjoint, for it's diagonal with real eigen-values. It's also bounded, for the eigen-values are less than $1$. Indeed, if the series $\sum_{[f] \in \mathcal F_{\infty}} a_{f} [f]$ converges (as a net), then the series $\sum_{[f] \in \mathcal F_{\infty}} \lambda_fa_{f} [f]$ converges as well, for 
+\[
+\sum_{[f] \in \mathcal F_{\infty}} |\lambda_fa_{f}| \leq \sum_{[f] \in \mathcal F_{\infty}} |a_{f}|.
+\]
+
+The questions to answer rigorously are the following:
+\begin{enumerate}
+\item Is $\mathcal{H}_{\infty}$ separable? I expect that the answer is no;
+\item What's the best way to represent elements of the basis? The elements of the basis do not determine a particular arrangement of fermions but rather a collection of possible arrangements with equal energy density. Is there a way to embed the spaces $\mathcal H_{N}$ into $\mathcal H_{\infty}$?
+\end{enumerate}
+\end{idea}
+
+
+{\scriptsize
 \emph{(What was written before) }The limit (in operator norm, weak, strong?) of the sequence of operators $H_M$ exits (?), is unique, and let's call it $H_\infty$.
  	 	Then $H_\infty$ is self adjoint (is it really?) and its spectrum is $\sigma(H_\infty) = [-2/\pi, 2/\pi]$.
  	 	
@@ -213,7 +275,9 @@ Consider the algebras $\mathcal U_M$ spanned by $c_0,\ldots,c_{M-1}$. Their dire
  	 How does one ``complete'' or ``close'' this algebra?
  	 Does $H_\infty$ belong to this algebra? What about $D_\infty$?
  	 What's the dimension of this algebra? Is this a C* algebra? Is it a von Neumann algebra? Etc.
- 	 Is this algebra a limit in some sense from the sequence of algebras $\mathcal{U}_N$.
+ 	 Is this algebra a limit in some sense from the sequence of algebras $\mathcal{U}_N$.}
+	
+	
 	\section{Pure Gauge in 1D}
 TBW
 	
@@ -223,3 +287,24 @@ TBW
 	TBW
 	
 	
+	\section{Antiferromagnetic spin-$\frac{1}{2}$ chain}
+	I follow \cite{affleck}. He considers the following Hamiltonian\footnote{Being an antiferromagnetic material means that the spins are aligned in opposite directions so that there's no resulting global magnetization.}:
+	\[
+	H = \sum_{i=1}^L S_i^x S_{i+1}^x + S_i^y S_{i+1}^y + \Delta S_i^z S_{i+1}^z,
+	\]
+	where, I guess, $S_i = (S_i^x, S_i^y, S_i^z)^t$ forms the $1/2$-spin operator. According to \cite{landau}, $S = \frac{1}{2}\sigma$, where $\sigma$ is a vector with matrix components, called \emph{Pauli matrices}, which are given by
+	\[
+	\sigma_x = \begin{pmatrix} 0 & 1 \\ 1 & 0\end{pmatrix}, \ \ \sigma_y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}, \ \ \sigma_z = \begin{pmatrix} 1 & 0 \\ 0 & -1\end{pmatrix}.
+	\]
+	Also, $S_{L+1} = S_1$ and $L$ is even. Just for myself, so the Pauli matrices live in $\UU(2)$ (not $\SU(2)$) and their determinants are equal to $-1$.
+	
+	We know the following:
+	\begin{enumerate}
+	\item If $\Delta = 1$, then there's a unique ground state with a gap of $O(L^{-1})$. The author presents a rigorous proof based on Perron-Frobenius theorem, which I, of course, do not understand;
+	\item For $-1 < \Delta \leq 1$ there's a unique ground state and no gap (but this had been known non-rigorously). The author proves rigorously that for $\Delta > -1$, there is either no gap or no unique ground state (but he can't distinguish between these two cases).
+	\item If $\Delta \leq -1$, the system is ferromagnetic.
+	\end{enumerate}
+	There's also a description of expected behavior at higher spins. 
+	\begin{fur}
+As I understand, different spins are realized as different representations of $\SU(2)$. The trivial representation corresponds to the zero spin; the $1/2$-spin corresponds to the identity representation. I've been looking at Woit's book \cite{woit} and at unpublished notes by Noah Miller \cite{miller}. The spin itself (as a number) is realized as a certain eigenvalue of some special matrix.
+	\end{fur}
