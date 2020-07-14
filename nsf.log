@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.21)  12 JUL 2020 22:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.21)  14 JUL 2020 12:56
 entering extended mode
 **./nsf.tex
 (nsf.tex
@@ -739,24 +739,30 @@ LaTeX Font Info:    Trying to load font information for T2A+cmtt on input line 2
 ("C:\Users\ДмитрийАлександрович\AppData\Local\Programs\MiKTeX 2.9\tex/latex/cyrillic\t2acmtt.fd"
 File: t2acmtt.fd 2001/08/11 v1.0a Computer Modern Cyrillic font definitions
 )
-[20] <xymatrix 3x2 128>
-Overfull \hbox (38.00742pt too wide) detected at line 64
+<xymatrix 5x1 186> [20] <xymatrix 5x1 186> <xymatrix 4x1 141> <xymatrix 3x2 128>
+Overfull \hbox (38.00742pt too wide) detected at line 86
 []
  []
 
 
-Overfull \hbox (19.38898pt too wide) detected at line 64
+Overfull \hbox (19.38898pt too wide) detected at line 86
 []
  []
 
-[21]) (qedAdditional.tex [22] [23] [24]
+[21]
+Overfull \hbox (4.54924pt too wide) in paragraph at lines 123--124
+\T2A/cmr/m/n/10.95 is di-ag-o-nal it-self and its ker-nel is spanned by some of the ba-sic kets. If $\OMS/cmsy/m/n/10.95
+ j\OML/cmm/m/it/10.95 n[] n[]  []  n[] b[] b[]  []  b[]\OMS/cmsy/m/n/10.95 i$
+ []
+
+[22] <xymatrix 5x1 186>) (qedAdditional.tex [23] [24] [25]
 Overfull \hbox (23.50166pt too wide) in paragraph at lines 112--123
 \T2A/cmr/m/n/10.95 Let me de-fine an-other op-er-a-tor called $\OML/cmm/m/it/10.95 U[]\OMS/cmsy/m/n/10.95 j\OML/cmm/m/it
 /10.95 k\OMS/cmsy/m/n/10.95 i \OT1/cmr/m/n/10.95 = []$ \T2A/cmr/m/n/10.95 and I also de-fine $\OML/cmm/m/it/10.95 U[]\OM
 S/cmsy/m/n/10.95 j\OML/cmm/m/it/10.95 k\OMS/cmsy/m/n/10.95 i \OT1/cmr/m/n/10.95 = []$\T2A/cmr/m/n/10.95 ,
  []
 
-[25]) (quest.tex [26]) (appendix.tex
+[26]) (quest.tex [27]) (appendix.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 2.
@@ -769,29 +775,25 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 2.
 
-[27] [28] [29] [30]) [31]
+[28] [29] [30] [31]) [32]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 164.
- [32]
+ [33]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 164.
  (nsf.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 164.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 164.
 Package rerunfilecheck Info: File `nsf.out' has not changed.
-(rerunfilecheck)             Checksum: 9AFCEC61ADA763925E4FB74A6CDABF4A;4518.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+(rerunfilecheck)             Checksum: 340BC14E163BB5C6D965FF79BA902219;4609.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 164.
  ) 
 Here is how much of TeX's memory you used:
- 10294 strings out of 492430
- 143063 string characters out of 3102276
+ 10297 strings out of 492430
+ 143102 string characters out of 3102276
  281367 words of memory out of 3000000
- 14258 multiletter control sequences out of 15000+200000
+ 14259 multiletter control sequences out of 15000+200000
  29985 words of font info for 91 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 31i,23n,33p,3216b,480s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 31i,23n,33p,3216b,500s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\ДмитрийАлександрович\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\latt1000
 .pk> <C:\Users\ДмитрийАлександрович\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\lati08
 00.pk> <C:\Users\ДмитрийАлександрович\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm
@@ -822,12 +824,13 @@ fb><C:/Users/ДмитрийАлександрович/AppData/Local/Programs/MiK
 msy8.pfb><C:/Users/ДмитрийАлександрович/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmsy9.pfb><C:/Users/ДмитрийАлександрович/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
 msfonts/euler/eufm10.pfb><C:/Users/ДмитрийАлександрович/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/public/amsfonts/symbols/msbm10.pfb><C:/Users/ДмитрийАлександрович/AppData/Local/Programs/MiKTeX 2.
-9/fonts/type1/public/xypic/xycmat10.pfb><C:/Users/ДмитрийАлександрович/AppData/Local/Programs/MiKTeX
- 2.9/fonts/type1/public/xypic/xycmbt10.pfb>
-Output written on nsf.pdf (32 pages, 570220 bytes).
+1/public/amsfonts/symbols/msam10.pfb><C:/Users/ДмитрийАлександрович/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/ДмитрийАлександрович/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/xypic/xycmat10.pfb><C:/Users/ДмитрийАлександрович/AppData/Local/Pro
+grams/MiKTeX 2.9/fonts/type1/public/xypic/xycmbt10.pfb>
+Output written on nsf.pdf (33 pages, 585173 bytes).
 PDF statistics:
- 1219 PDF objects out of 1440 (max. 8388607)
- 204 named destinations out of 1000 (max. 500000)
- 497 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1235 PDF objects out of 1440 (max. 8388607)
+ 206 named destinations out of 1000 (max. 500000)
+ 505 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -19,12 +19,32 @@
 	The fermion operators \emph{anti-commute} on \emph{different} sites.
 	Then let
 		\begin{equation}\label{eq:1dQEDLatticeHamiltonian}
-	H=-\frac{n}{2\pi} \sum_\ell (\psi_\ell^\dagger U_{\ell,\ell+1}\psi_{\ell+1}+H.c.) + 2\tilde{m}\sqrt{\frac{n}{2\pi}}\sum_\ell (-1)^\ell \psi_\ell^\dagger\psi_\ell+  \sum_{\ell} E_{\ell,\ell+1}^2,		
+	H=-\frac{n}{2\pi} \sum_\ell (\psi_\ell^\dagger U_{\ell,\ell+1}\psi_{\ell+1}+H.c.) + 2m\sqrt{\frac{n}{2\pi}}\sum_\ell (-1)^\ell \psi_\ell^\dagger\psi_\ell+  \sum_{\ell} E_{\ell,\ell+1}^2,		
 	\end{equation}
 	where $n$ is an odd non-negative integer, and $m$ is a real number.
-	We leave the boundary conditions open for now.
+	
+\noindent \textbf{A discussion on the boundary conditions}. I attempted to use the condition
+	\[
+	\xymatrix{
+	\ar@{-}[r]^{-1} & \bigcirc^0 \ar@{-}[r]^{0} &  \bigcirc^1 \ar@{-}[r]^{1} & \cdots & \ar@{-}[l]_{N-2} \bigcirc^{N-1}
+	}
+	\]
+	where the numbers indicate the corresponding indices of links and sites. So, we specify the state on the leftmost link, which is $b_{-1}$, and this determines the states of all the other links in the physical space. However, there is nothing in the Hamiltonian that might change $b_{-1}$, it always stays the same, but all the other $b_i$'s might change (the first term of the Hamiltonian to make sense requires sites on each side of the link). This means that we will never land in the physical space. We might, however, be pleased with something like
+		\[
+	\xymatrix{
+	\square\ar@{-}[r]^{-1} & \bigcirc^0 \ar@{-}[r]^{0} &  \bigcirc^1 \ar@{-}[r]^{1} & \cdots & \ar@{-}[l]_{N-2} \bigcirc^{N-1}
+	}
+	\]
+	with the meaning of $\square$ to be an abyss that swallows any fermion that hops into it. For now, I will attempt the condition
+			\[
+	\xymatrix{
+\bigcirc^0 \ar@{-}[r]^{0} &  \bigcirc^1 \ar@{-}[r]^{1} & \cdots & \ar@{-}[l]_{N-2} \bigcirc^{N-1},
+	}
+	\]
+	so I don't have any boundary links.
+	
 	The full space on $N$ sites has dimension $(2n)^{N}$, the $2^N$ comes from the fermions (electrons and positrons), 
-	and the $n^N$ from the bosons (phonons). But this space isn't the physical space, and is too big, as we now discuss.
+	and the $n^N$ from the bosons (phonons). The actual physical space we work with is specified by the kernel of the Gauss law (see below).
 	
 	A basis element at site $l$ is denoted as $|n_l, b_l\rangle$, where $n_l \in \{0,1\}$ indicates the presence of a fermion at site $l$ and $b_l \in \{0,\ldots,n-1\}$ indicates the state of the boson to the right of the fermion. Such basis is called \emph{computational}.
 	
@@ -35,14 +55,16 @@
 	\item $\psi^\dagger_l \psi_l |0, s\rangle = 0$ and $\psi^\dagger_l \psi_l |1,s\rangle = |1,s\rangle$;
 	\item For $n = 2s+1$ odd, $E_{l,l+1}|c,k\rangle = (k-s)|c,k\rangle$. So, $E_{l,l+1}^2|c,k\rangle = (k-s)^2 |c,k\rangle$;
 	\item $U_{l,l+1} |c,k\rangle = |c,k+1\rangle$;
-	\item Consider two consecutive sites $l$ and $l+1$ and let $|n_l,b_l\rangle \otimes |n_{l+1},b_{l+1}\rangle$ be the corresponding state. Then 
-	\[
-	\psi_l^\dagger U_{l,l+1} \psi_{l+1} |n_l,b_l\rangle \otimes |n_{l+1},b_{l+1}\rangle = \begin{cases}
-	0, \ n_{l+1} = 0 \ \text{or} \ n_{l} = 1;\\
-	|1,b_l+1\rangle \otimes |0,b_{l+1}\rangle \ \text{otherwise};
-	\end{cases}
+	\item Let $|n_0\, n_1\, \ldots \, n_{N-1} \, b_{-1}\, b_0\, \ldots\, b_{N-1}\rangle$ be a state. Then
+	\[\begin{split}
+	\psi_\ell^\dagger U_{\ell,+1} \psi_{\ell+1} |n_0\, n_1\, \ldots \, n_{N-1} \, b_{-1}\, b_0\, \ldots\, b_{N-1}\rangle=\\ = n_{\ell+1} (1-n_\ell) |n_0\, n_1\, \ldots \, n_{\ell}=1 \, n_{\ell+1} = 0\,\ldots \, n_{N-1} \, b_{-1}\, b_0\, \ldots\,b_\ell + 1\,\cdots \, b_{N-1}\rangle.
+	\end{split}
 	\]
-	So, when we have a fermion at site $l+1$ and no fermion at site $l$, the operator $\psi_l^\dagger U_{l,l+1} \psi_{l+1}$ shifts the fermion to site $l$ and increments the state of the boson on the corresponding lift.
+	So, when we have a fermion at site $l+1$ and no fermion at site $l$, the operator $\psi_l^\dagger U_{l,l+1} \psi_{l+1}$ shifts the fermion to site $l$ and increments the state of the boson on the corresponding lift. Similarly, its Hermitian conjugate acts as
+		\[\begin{split}
+	\psi_{\ell+1}^\dagger U_{\ell,\ell+1}^\dagger \psi_{\ell} |n_0\, n_1\, \ldots \, n_{N-1} \, b_{-1}\, b_0\, \ldots\, b_{N-1}\rangle=\\ = n_{\ell} (1-n_{\ell+1}) |n_0\, n_1\, \ldots \, n_{\ell} = 0\, n_{\ell+1} = 1\, \ldots\, n_{N-1} \, b_{-1}\, b_0\, \ldots\,b_\ell -1 \,\cdots \, b_{N-1}\rangle.
+	\end{split}
+	\]
 	\item Now let's observe how the Hamiltonian acts on states. For simplicity, consider three sites with periodic boundary conditions, i.e.
 	\[
 	\xymatrix{
@@ -98,6 +120,26 @@
 	$G_\ell|\psi\rangle= 0 \Mod{n}$. 
 	The physical space has dimension $n 2^N$; see Hunter L's explanation for why this is the case.
 	
+	I wanted to expand a bit on the Gauss law. So, all pieces that comprise $G_\ell$ are diagonal, hence $G_\ell$ is diagonal itself and its kernel is spanned by some of the basic kets. If $|n_0\, n_1\, \ldots \, n_{N-1} \, b_{-1}\, b_0\, \ldots\, b_{N-2}\rangle$ is such, then the action of $G_\ell$ upon it is given by
+	\[\begin{split}
+	G_\ell|n_0\, n_1\, \ldots \, n_{N-1} \, b_{-1}\, b_0\, \ldots\, b_{N-2}\rangle =\\= (n_{\ell} + \frac{1}{2}((-1)^\ell-1) + b_{\ell-1}-b_\ell) |n_0\, n_1\, \ldots \, n_{N-1} \, b_{-1}\, b_0\, \ldots\, b_{N-2}\rangle,
+	\end{split}
+	\]
+We see that $b_\ell$ is determined by $b_{\ell-1}$ via
+	\[
+	b_\ell = b_{\ell-1} + n_{\ell} + \frac{1}{2}((-1)^\ell-1).
+	\]
+	So the physical space is 
+	\[
+	\Sp ( |n_0\, n_1\, \ldots \, n_{N-1} \, b_{-1}\, b_0\, \ldots\, b_{N-2}\rangle \ | \ b_{\ell} =b_{\ell-1} + n_{\ell} + \frac{1}{2}((-1)^\ell-1) \ \text{for every} \ \ell).
+	\]
+	Recursively solving the equation for $b_{\ell}$, we find that
+	\[
+	b_{\ell} = b_{-1} + n_0 + n_1 + \cdots + n_{\ell} - \left[\frac{\ell+1}{2}\right],
+	\]
+	where $[ \, ]$ denotes the integer part.
+	
+	
 	\subsection{Limits}
 	Ercolessi et al \cite{ercolessi} numerically take both limits \emph{first} the $N\rightarrow\infty$ limit
    and then the $n\rightarrow\infty$ limit and find a ``phase transition'' at some value of $\tilde{m}$. Order of the limits here FIXME TODO.
@@ -110,7 +152,30 @@
 	except for a value of $\tilde{m}$, where the left and right derivatives both exist but are different.
 	We say that the model goes through a phase transition at that value of $\tilde{m}$. Obviously, that value will be dependent on $n$,
 	and we are interested in $n\rightarrow\infty$.
-
-
+	
+	\subsection{Idea: an equivalent model without links}
+	Consider QED 1+1 with the Hamiltonian specified in Equation \ref{eq:1dQEDLatticeHamiltonian}, which reads 
+\[
+	H=-\frac{n}{2\pi} \sum_\ell (\psi_\ell^\dagger U_{\ell,\ell+1}\psi_{\ell+1}+H.c.) + 2m\sqrt{\frac{n}{2\pi}}\sum_\ell (-1)^\ell \psi_\ell^\dagger\psi_\ell+  \sum_{\ell} E_{\ell,\ell+1}^2
+\]
+Specifying the state of a boson on one specific link specifies the states of bosons on all the other links. This suggests that we can consider a family of Hamiltonians parametrized by the state of the marked boson. View the chain as before:
+	\[
+	\xymatrix{
+	\ar@{-}[r]^{-1} & \bigcirc^0 \ar@{-}[r]^{0} &  \bigcirc^1 \ar@{-}[r]^{1} & \cdots & \ar@{-}[l]_{N-2} \bigcirc^{N-1}
+	}
+	\]
+	Let $q \in \mathbb Z_n$ be a state on the leftmost link. Recall that the physical space (determined by the Gauss law) is given by
+	\[
+	P = \Sp ( |n_0\, n_1\, \ldots \, n_{N-1} \, b_{-1}\, b_0\, \ldots\, b_{N-2}\rangle \ | \ b_{\ell} =b_{\ell-1} + n_{\ell} + \frac{1}{2}((-1)^\ell-1) \ \text{for every} \ \ell).
+	\]
+	We can split $P$ into the direct sum according to what value of $b_{-1}$ is:
+	\[
+	P = P_0 \oplus P_1 \oplus \cdots \oplus P_{n-1},
+	\]
+	where
+	\[
+	P_j = \Sp( |n_0\, n_1\, \ldots \, n_{N-1} \, b_{-1}\, b_0\, \ldots\, b_{N-2}\rangle \in P \ | \ b_{-1} = j).
+	\]
+	Now, let's observe what is the resction of $H$ to each subspace $P_j$. Denote $H_j := H|_{P_j}$.
 
 %\end{document}
