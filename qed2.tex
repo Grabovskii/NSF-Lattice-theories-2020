@@ -224,6 +224,25 @@ Specifying the state of a boson on one chosen link assigns the states of bosons 
 Does there exist a nice basis in each $P_j$ that allows us to write the action of $H_j$ as if there were no links?
 \end{idea}
 
+\subsubsection{Order of basis}
+I show on an example what the order I choose. For $N=2$ and $n=3$, writing a basic ket as $|n_0\, n_1\, b_{-1}\, b_0\rangle$, we have
+\[
+|0\, 0\, 0\, 2\rangle \prec |0\, 0\, 1\, 0\rangle \prec |0\, 0\, 2\, 1\rangle \prec 
+ |0\, 1\, 0\, 2\rangle \prec |0\, 1\, 1\, 0\rangle \prec |0\,1\, 2\, 1\rangle \prec
+\]\[
+\prec |1\, 0\, 0\, 0\rangle \prec |1\, 0\, 1\, 1\rangle \prec |1\, 0\, 2\, 2\rangle \prec
+|1\, 1\, 0\, 0\rangle \prec |1\, 1\, 1\, 1\rangle \prec |1\, 1\, 2\, 2\rangle.
+\]
+So the rule is: first, split the basis into groups $F(n_0,\ldots,n_{N-1})$, each of which depends only on the states of the sites. We declare that
+\[
+F(n_0,\ldots,n_{N-1}) \prec F(\tilde{n}_0,\ldots,\tilde{n}_{N-1})
+\]
+if and only if, as a binary number,
+\[
+\underline{n_0\cdots n_{N-1}} \leq \underline{\tilde{n}_0\cdots \tilde{n}_{N-1}}.
+\]
+Inside of each group, we order the kets by $b_{-1}$ (the other $b_{\ell}$'s are completely determined by the states on the links and $b_{-1}$).
+
 \subsubsection{Some observations}
 \begin{statement}
 Let $A_{\ell} := \psi_\ell^\dagger U_{\ell,\ell+1} \psi_{\ell+1}$. Fix the states $\underline{n}_0,\ldots,\hat{n}_{\ell},\hat{n}_{\ell+1},\ldots,\underline{n}_{N-1},\underline{b}_{-1},\underline{b}_0,\ldots,\hat{b}_{\ell},\ldots,\underline{b}_{N-2}$ (the hat means that we skip that site or link and I use the underline to mean that the state is fixed).
@@ -233,23 +252,24 @@ V:=V(\underline{n}_0,\ldots,\hat{n}_{\ell},\hat{n}_{\ell+1},\ldots,\underline{n}
 \]
 Basically, I define a subspace in which everything is fixed except that $b_{\ell}$ can vary and $n_{\ell}$ with $n_{\ell+1}$ cannot be equal. Notice that the dimension of this subspace is equal to $2\cdot n$. We might say about the restriction of $A_{\ell}$ to $V$ the following:
 \begin{enumerate}[1)]
-\item Order the basis of $V$ in the following way: first, the group of kets with $n_{\ell} = 0$ precede the group of kets with $n_{\ell} = 1$; inside of each group, we order according to the natural order of $b_{\ell}$'s. As a matrix, $A_{\ell}$ might be represented as
+\item As a matrix, the restriction of $A_{\ell}$ to $V$ might be represented as
 \[
 A_{\ell}|_V = \begin{pmatrix}
 0 & 0 \\
-S & 0
+I & 0
 \end{pmatrix}
 \]
-where $S$ is $n \times n$ matrix given by
-\[
-S = \begin{pmatrix}
-0 & \cdots & 0 &0 & 1\\
-1 & & & &\\
-& 1 & & &\\
-& & \ddots && \\
-& & & 1 & 0
-\end{pmatrix}
-\]
+where $I$ is the identity $n \times n$ matrix.
+%where $S$ is $n \times n$ matrix given by
+%\[
+%S = \begin{pmatrix}
+%0 & \cdots & 0 &0 & 1\\
+%1 & & & &\\
+%& 1 & & &\\
+%& & \ddots && \\
+%& & & 1 & 0
+%\end{pmatrix}
+%\]
 \item We have
 \[
 (A_{\ell} + A_{\ell}^\dagger)^2|_V = AA^\dagger + A^\dagger A= I,

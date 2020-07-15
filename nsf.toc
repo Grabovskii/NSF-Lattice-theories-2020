@@ -38,17 +38,18 @@
 \contentsline {subsection}{\numberline {11.2}Gauss Law and Physical Space}{22}{subsection.11.2}% 
 \contentsline {subsection}{\numberline {11.3}Limits}{23}{subsection.11.3}% 
 \contentsline {subsection}{\numberline {11.4}Idea: an equivalent model without links}{23}{subsection.11.4}% 
-\contentsline {subsubsection}{\numberline {11.4.1}Some observations}{23}{subsubsection.11.4.1}% 
+\contentsline {subsubsection}{\numberline {11.4.1}Order of basis}{23}{subsubsection.11.4.1}% 
+\contentsline {subsubsection}{\numberline {11.4.2}Some observations}{24}{subsubsection.11.4.2}% 
 \contentsline {section}{\numberline {12}Additional comments}{24}{section.12}% 
 \contentsline {subsection}{\numberline {12.1}Commutators and Anti-commutators}{24}{subsection.12.1}% 
-\contentsline {subsection}{\numberline {12.2}Quantum Field Theory}{24}{subsection.12.2}% 
+\contentsline {subsection}{\numberline {12.2}Quantum Field Theory}{25}{subsection.12.2}% 
 \contentsline {subsection}{\numberline {12.3}Hamiltonian versus Lagrangian}{25}{subsection.12.3}% 
 \contentsline {subsection}{\numberline {12.4}Mapping from First Quantization to Second Quantization}{25}{subsection.12.4}% 
 \contentsline {section}{\numberline {13}Pure Gauge in 1D}{25}{section.13}% 
 \contentsline {subsection}{\numberline {13.1}Gauge Symmetry}{26}{subsection.13.1}% 
 \contentsline {subsection}{\numberline {13.2}Algebra of Operators}{27}{subsection.13.2}% 
 \contentsline {section}{\numberline {14}Pure Gauge in 2D}{27}{section.14}% 
-\contentsline {section}{\numberline {15}Gauge and Matter in 1D}{27}{section.15}% 
+\contentsline {section}{\numberline {15}Gauge and Matter in 1D}{28}{section.15}% 
 \contentsline {section}{\numberline {16}Questions}{28}{section.16}% 
 \contentsline {subsection}{\numberline {16.1}For a discussion}{28}{subsection.16.1}% 
 \contentsline {subsection}{\numberline {16.2}Just for myself}{28}{subsection.16.2}% 
