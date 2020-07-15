@@ -21,93 +21,121 @@
 		\begin{equation}\label{eq:1dQEDLatticeHamiltonian}
 	H=-\frac{n}{2\pi} \sum_\ell (\psi_\ell^\dagger U_{\ell,\ell+1}\psi_{\ell+1}+H.c.) + 2m\sqrt{\frac{n}{2\pi}}\sum_\ell (-1)^\ell \psi_\ell^\dagger\psi_\ell+  \sum_{\ell} E_{\ell,\ell+1}^2,		
 	\end{equation}
-	where $n$ is an odd non-negative integer, and $m$ is a real number.
-	
-\noindent \textbf{A discussion on the boundary conditions}. I attempted to use the condition
-	\[
+	where $n$ is an odd non-negative integer, and $m$ is a real number. We use the following version of the chain with a free end on the left that will determine the states of all the other links under the Gauss law:
+	\begin{equation}\label{eq:lchain}
 	\xymatrix{
 	\ar@{-}[r]^{-1} & \bigcirc^0 \ar@{-}[r]^{0} &  \bigcirc^1 \ar@{-}[r]^{1} & \cdots & \ar@{-}[l]_{N-2} \bigcirc^{N-1}
 	}
-	\]
-	where the numbers indicate the corresponding indices of links and sites. So, we specify the state on the leftmost link, which is $b_{-1}$, and this determines the states of all the other links in the physical space. However, there is nothing in the Hamiltonian that might change $b_{-1}$, it always stays the same, but all the other $b_i$'s might change (the first term of the Hamiltonian to make sense requires sites on each side of the link). This means that we will never land in the physical space. We might, however, be pleased with something like
-		\[
-	\xymatrix{
-	\square\ar@{-}[r]^{-1} & \bigcirc^0 \ar@{-}[r]^{0} &  \bigcirc^1 \ar@{-}[r]^{1} & \cdots & \ar@{-}[l]_{N-2} \bigcirc^{N-1}
-	}
-	\]
-	with the meaning of $\square$ to be an abyss that swallows any fermion that hops into it. For now, I will attempt the condition
-			\[
-	\xymatrix{
-\bigcirc^0 \ar@{-}[r]^{0} &  \bigcirc^1 \ar@{-}[r]^{1} & \cdots & \ar@{-}[l]_{N-2} \bigcirc^{N-1},
-	}
-	\]
-	so I don't have any boundary links.
+	\end{equation}
+	
+%\noindent \textbf{A discussion on the boundary conditions}. I attempted to use the condition
+	%\[
+	%\xymatrix{
+	%\ar@{-}[r]^{-1} & \bigcirc^0 \ar@{-}[r]^{0} &  \bigcirc^1 \ar@{-}[r]^{1} & \cdots & \ar@{-}[l]_{N-2} \bigcirc^{N-1}
+	%}
+	%\]
+	%where the numbers indicate the corresponding indices of links and sites. So, we specify the state on the leftmost link, which is $b_{-1}$, and this determines the states of all the other links in the physical space. However, there is nothing in the Hamiltonian that might change $b_{-1}$, it always stays the same, but all the other $b_i$'s might change (the first term of the Hamiltonian to make sense requires sites on each side of the link). This means that we will never land in the physical space. We might, however, be pleased with something like
+		%\[
+	%\xymatrix{
+	%\square\ar@{-}[r]^{-1} & \bigcirc^0 \ar@{-}[r]^{0} &  \bigcirc^1 \ar@{-}[r]^{1} & \cdots & \ar@{-}[l]_{N-2} \bigcirc^{N-1}
+	%}
+	%\]
+	%with the meaning of $\square$ to be an abyss that swallows any fermion that hops into it. For now, I will attempt the condition
+			%\[
+	%\xymatrix{
+%\bigcirc^0 \ar@{-}[r]^{0} &  \bigcirc^1 \ar@{-}[r]^{1} & \cdots & \ar@{-}[l]_{N-2} \bigcirc^{N-1},
+	%}
+	%\]
+	%so I don't have any boundary links.
 	
 	The full space on $N$ sites has dimension $(2n)^{N}$, the $2^N$ comes from the fermions (electrons and positrons), 
 	and the $n^N$ from the bosons (phonons). The actual physical space we work with is specified by the kernel of the Gauss law (see below).
 	
 	A basis element at site $l$ is denoted as $|n_l, b_l\rangle$, where $n_l \in \{0,1\}$ indicates the presence of a fermion at site $l$ and $b_l \in \{0,\ldots,n-1\}$ indicates the state of the boson to the right of the fermion. Such basis is called \emph{computational}.
 	
-	Recall how the operators act at a single site $l$:
+	Recall how the operators act. Let $|n_0 \, n_1\, \ldots \, n_{N-1}\, b_{-1}\, b_0 \, \ldots \, b_{N-2}\rangle$ be an arbitrary basic state. Then
 	\begin{enumerate}[(a)]
-	\item $\psi^\dagger_l |0,k\rangle = |1,k\rangle$, $\psi^\dagger_l |1,k\rangle = 0$;
-	\item $\psi_l|0,k\rangle = 0$, $\psi_l|1,k\rangle = |0,k\rangle$;
-	\item $\psi^\dagger_l \psi_l |0, s\rangle = 0$ and $\psi^\dagger_l \psi_l |1,s\rangle = |1,s\rangle$;
-	\item For $n = 2s+1$ odd, $E_{l,l+1}|c,k\rangle = (k-s)|c,k\rangle$. So, $E_{l,l+1}^2|c,k\rangle = (k-s)^2 |c,k\rangle$;
-	\item $U_{l,l+1} |c,k\rangle = |c,k+1\rangle$;
-	\item Let $|n_0\, n_1\, \ldots \, n_{N-1} \, b_{-1}\, b_0\, \ldots\, b_{N-1}\rangle$ be a state. Then
-	\[\begin{split}
-	\psi_\ell^\dagger U_{\ell,+1} \psi_{\ell+1} |n_0\, n_1\, \ldots \, n_{N-1} \, b_{-1}\, b_0\, \ldots\, b_{N-1}\rangle=\\ = n_{\ell+1} (1-n_\ell) |n_0\, n_1\, \ldots \, n_{\ell}=1 \, n_{\ell+1} = 0\,\ldots \, n_{N-1} \, b_{-1}\, b_0\, \ldots\,b_\ell + 1\,\cdots \, b_{N-1}\rangle.
+	%\item $\psi^\dagger_\ell |0,k\rangle = |1,k\rangle$, $\psi^\dagger_l |1,k\rangle = 0$;
+	\item \[\begin{split}
+	&\psi^\dagger_\ell |n_0 \, n_1\, \ldots \, n_{N-1}\, b_{-1}\, b_0 \, \ldots \, b_{N-2}\rangle =  \\
+&=(-1)^{n_0 + n_1 + \cdots + n_{\ell-1}}(1-n_\ell)|n_0 \, n_1\, \ldots\, n_\ell=1\, \ldots \, n_{N-1}\, b_{-1}\, b_0 \, \ldots \, b_{N-2}\rangle;
 	\end{split}
 	\]
+	\item %$\psi_l|0,k\rangle = 0$, $\psi_l|1,k\rangle = |0,k\rangle$;
+	\[\begin{split}
+	&\psi_\ell |n_0 \, n_1\, \ldots \, n_{N-1}\, b_{-1}\, b_0 \, \ldots \, b_{N-2}\rangle =  \\
+&=(-1)^{n_0 + n_1 + \cdots + n_{\ell-1}}n_\ell|n_0 \, n_1\, \ldots\, n_\ell=0\, \ldots \, n_{N-1}\, b_{-1}\, b_0 \, \ldots \, b_{N-2}\rangle;
+	\end{split}
+	\]
+	\item %$\psi^\dagger_l \psi_l |0, s\rangle = 0$ and $\psi^\dagger_l \psi_l |1,s\rangle = |1,s\rangle$;
+	\[
+	\psi^\dagger_{\ell} \psi_{\ell} |n_0 \, n_1\, \ldots \, n_{N-1}\, b_{-1}\, b_0 \, \ldots \, b_{N-2}\rangle = n_\ell |n_0 \, n_1\, \ldots \, n_{N-1}\, b_{-1}\, b_0 \, \ldots \, b_{N-2}\rangle;
+	\]
+	\item For $n = 2s+1$ odd, %$E_{l,l+1}|c,k\rangle = (k-s)|c,k\rangle$. So, $E_{l,l+1}^2|c,k\rangle = (k-s)^2 |c,k\rangle$;
+	\[
+	E_{\ell,\ell+1} |n_0 \, n_1\, \ldots \, n_{N-1}\, b_{-1}\, b_0 \, \ldots \, b_{N-2}\rangle = (b_{\ell}-s) |n_0 \, n_1\, \ldots \, n_{N-1}\, b_{-1}\, b_0 \, \ldots \, b_{N-2}\rangle;
+	\]
+	\[
+	E_{\ell,\ell+1}^2 |n_0 \, n_1\, \ldots \, n_{N-1}\, b_{-1}\, b_0 \, \ldots \, b_{N-2}\rangle = (b_\ell -s)^2 |n_0 \, n_1\, \ldots \, n_{N-1}\, b_{-1}\, b_0 \, \ldots \, b_{N-2}\rangle;
+	\]
+	\item \[\begin{split}
+	U_{\ell,\ell+1} &|n_0 \, n_1\, \ldots \, n_{N-1}\, b_{-1}\, b_0 \, \ldots \, b_{N-2}\rangle =\\= &|n_0 \, n_1\, \ldots \, n_{N-1}\, b_{-1}\, b_0 \, \ldots \, b_{\ell}+1\, \ldots\, b_{N-2}\rangle
+	\end{split}
+	\]%$U_{l,l+1} |c,k\rangle = |c,k+1\rangle$;
+	\item %Let $|n_0\, n_1\, \ldots \, n_{N-1} \, b_{-1}\, b_0\, \ldots\, b_{N-1}\rangle$ be a state. Then
+	\begin{equation}\label{eq:ham_fir_t}\begin{split}
+	\psi_\ell^\dagger U_{\ell,+1} \psi_{\ell+1} &|n_0\, n_1\, \ldots \, n_{N-1} \, b_{-1}\, b_0\, \ldots\, b_{N-2}\rangle=\\ = n_{\ell+1} (1-n_\ell) &|n_0\, n_1\, \ldots \, n_{\ell}=1 \, n_{\ell+1} = 0\,\ldots \, n_{N-1} \, b_{-1}\, b_0\, \ldots\,b_\ell + 1\,\cdots \, b_{N-2}\rangle.
+	\end{split}
+	\end{equation}
 	So, when we have a fermion at site $l+1$ and no fermion at site $l$, the operator $\psi_l^\dagger U_{l,l+1} \psi_{l+1}$ shifts the fermion to site $l$ and increments the state of the boson on the corresponding lift. Similarly, its Hermitian conjugate acts as
 		\[\begin{split}
-	\psi_{\ell+1}^\dagger U_{\ell,\ell+1}^\dagger \psi_{\ell} |n_0\, n_1\, \ldots \, n_{N-1} \, b_{-1}\, b_0\, \ldots\, b_{N-1}\rangle=\\ = n_{\ell} (1-n_{\ell+1}) |n_0\, n_1\, \ldots \, n_{\ell} = 0\, n_{\ell+1} = 1\, \ldots\, n_{N-1} \, b_{-1}\, b_0\, \ldots\,b_\ell -1 \,\cdots \, b_{N-1}\rangle.
+	\psi_{\ell+1}^\dagger U_{\ell,\ell+1}^\dagger \psi_{\ell} &|n_0\, n_1\, \ldots \, n_{N-1} \, b_{-1}\, b_0\, \ldots\, b_{N-2}\rangle=\\ = n_{\ell} (1-n_{\ell+1}) &|n_0\, n_1\, \ldots \, n_{\ell} = 0\, n_{\ell+1} = 1\, \ldots\, n_{N-1} \, b_{-1}\, b_0\, \ldots\,b_\ell -1 \,\cdots \, b_{N-2}\rangle.
 	\end{split}
 	\]
-	\item Now let's observe how the Hamiltonian acts on states. For simplicity, consider three sites with periodic boundary conditions, i.e.
-	\[
-	\xymatrix{
-	\bigcirc \ar@{-}[rr]& & \bigcirc \\
-	& \bigcirc\ar@{-}[ru] \ar@{-}[lu] &
-	}
-	%\xymatrix{
-	%\bigcirc \ar@{-}[r] &	\bigcirc \ar@{-}[r] &	\bigcirc 
-	%\ar@{-}@/^1pc/[ll]
-	%}
-	\]
-	Let $|n_0,n_1,n_2,b_0,b_1,b_2\rangle$ be a state. Let's see what parts of $H$ do to this state. Due to the rotational symmetry, there are actually only four distinct situations (all that matters is the number of fermions). So, 
-	\[\begin{split}
-&-\frac{n}{\pi}\sum_{l=0}^2 (\psi^\dagger_l U_{l,l+1} \psi_{l+1}) |n_0,n_1,n_2,b_0,b_1,b_2\rangle =\\ &= \begin{cases}
-0, \ \ \text{no fermions or exactly three}\\
-\text{Set } n_{l} = 0, \ n_{l-1} = 1, \ b_{l-1} \mapsto b_{l-1} + 1 \ \text{if there is a fermion at site }l \text{ and no fermion at site }l-1
-\end{cases}
-\end{split}
-	\]
 	\end{enumerate}
-	For $2\tilde{m}\sum_{l} (-1)^l \psi_l^\dagger \psi_l$, we have
-	\[
-	(2\tilde{m}\sum_{l} (-1)^l \psi_l^\dagger \psi_l) |n_0,n_1,n_2,b_0,b_1,b_2\rangle  = 2 \tilde{m} \cdot F \cdot |n_0,n_1,n_2,b_0,b_1,b_2\rangle,
-	\]
-	where 
-	\[
-	F = \begin{cases}
-	0, \ \ \text{there are two fermions and one of them is at site }1;\\
-	(-1)^l, \ \ \text{there is only one fermion and located at } l;\\
-	2, \ \ \text{the fermions are at sites }0\text{ and }2;\\
-	
-	\end{cases}
-	\]
-	Lastly,
-	\[
-	\sum_l E^2_{l,l+1} |n_0,n_1,n_2,b_0,b_1,b_2\rangle = 2|n_0,n_1,n_2,b_0,b_1,b_2\rangle.
-	\]
-	Now let's see what happens for some specific states. If there's only one fermion, then
-	\[
-	H|1,0,0; b_0,b_1,b_2\rangle = |0,0,1; b_0,b_1,b_2+1\rangle + (2\tilde{m}+2)|1,0,0; b_0,b_1,b_2\rangle 
-	\]
-	and the rest is rotationally symmetric.
-	
+	%\item Now let's observe how the Hamiltonian acts on states. 
+	%\[
+	%\xymatrix{
+	%\bigcirc \ar@{-}[rr]& & \bigcirc \\
+	%& \bigcirc\ar@{-}[ru] \ar@{-}[lu] &
+	%}
+	%%\xymatrix{
+	%%\bigcirc \ar@{-}[r] &	\bigcirc \ar@{-}[r] &	\bigcirc 
+	%%\ar@{-}@/^1pc/[ll]
+	%%}
+	%\]
+	%Let $|n_0,n_1,n_2,b_0,b_1,b_2\rangle$ be a state. Let's see what parts of $H$ do to this state. Due to the rotational symmetry, there are actually only four distinct situations (all that matters is the number of fermions). So, 
+	%\[\begin{split}
+%&-\frac{n}{\pi}\sum_{l=0}^2 (\psi^\dagger_l U_{l,l+1} \psi_{l+1}) |n_0,n_1,n_2,b_0,b_1,b_2\rangle =\\ &= \begin{cases}
+%0, \ \ \text{no fermions or exactly three}\\
+%\text{Set } n_{l} = 0, \ n_{l-1} = 1, \ b_{l-1} \mapsto b_{l-1} + 1 \ \text{if there is a fermion at site }l \text{ and no fermion at site }l-1
+%\end{cases}
+%\end{split}
+	%\]
+	%\end{enumerate}
+	%For $2\tilde{m}\sum_{l} (-1)^l \psi_l^\dagger \psi_l$, we have
+	%\[
+	%(2\tilde{m}\sum_{l} (-1)^l \psi_l^\dagger \psi_l) |n_0,n_1,n_2,b_0,b_1,b_2\rangle  = 2 \tilde{m} \cdot F \cdot |n_0,n_1,n_2,b_0,b_1,b_2\rangle,
+	%\]
+	%where 
+	%\[
+	%F = \begin{cases}
+	%0, \ \ \text{there are two fermions and one of them is at site }1;\\
+	%(-1)^l, \ \ \text{there is only one fermion and located at } l;\\
+	%2, \ \ \text{the fermions are at sites }0\text{ and }2;\\
+	%
+	%\end{cases}
+	%\]
+	%Lastly,
+	%\[
+	%\sum_l E^2_{l,l+1} |n_0,n_1,n_2,b_0,b_1,b_2\rangle = 2|n_0,n_1,n_2,b_0,b_1,b_2\rangle.
+	%\]
+	%Now let's see what happens for some specific states. If there's only one fermion, then
+	%\[
+	%H|1,0,0; b_0,b_1,b_2\rangle = |0,0,1; b_0,b_1,b_2+1\rangle + (2\tilde{m}+2)|1,0,0; b_0,b_1,b_2\rangle 
+	%\]
+	%and the rest is rotationally symmetric.
+	%
 	
 	From the letter: in QED fermions (matter) occupy even sites, and anti-fermions (anti-matter) occupy odd sites. The same for QCD, except that fermions in QED are electrons, and fermions in QCD are quarks.
 	
@@ -139,6 +167,21 @@ We see that $b_\ell$ is determined by $b_{\ell-1}$ via
 	\]
 	where $[ \, ]$ denotes the integer part.
 	
+	\begin{proposition}
+Each term in the Hamiltonian defined as in \eqref{eq:1dQEDLatticeHamiltonian} on the chain \eqref{eq:lchain} with a free left link leaves the physical space invariant.
+	\end{proposition}
+	\begin{proof}
+	The first term that shifts a fermion to the left acts according to the formula \ref{eq:ham_fir_t}. If $n_\ell = 0$ and $n_{\ell+1} = 1$, then the term acts non-trivially and the state on $\ell$th link is updated according to
+	\[
+	b_\ell + 1 = b_{-1} + n_0 + n_1 + \cdots + (n_\ell+1) -\left[\frac{\ell+1}{2}\right],
+	\]
+	so we simply add $1$ to both sides. For $k \geq 1$, the equation of states on the other links are also preserved:
+	\[
+	b_{\ell+k} = b_{-1} + n_0 + \cdots + (n_{\ell}-1) + (n_{\ell+1}+1) + \cdots + n_{\ell +k} -\left[\frac{\ell+1}{2}\right].
+	\]
+	Similarly for Hermitian conjugate term (now subtract $1$ from both sides in the equation for $b_{\ell}$).
+	The other terms in the Hamiltonian are diagonal, so they obviously preserve the physical space. Thus the Hamiltonian itself does preserves the physical space.
+	\end{proof}
 	
 	\subsection{Limits}
 	Ercolessi et al \cite{ercolessi} numerically take both limits \emph{first} the $N\rightarrow\infty$ limit
@@ -158,7 +201,7 @@ We see that $b_\ell$ is determined by $b_{\ell-1}$ via
 \[
 	H=-\frac{n}{2\pi} \sum_\ell (\psi_\ell^\dagger U_{\ell,\ell+1}\psi_{\ell+1}+H.c.) + 2m\sqrt{\frac{n}{2\pi}}\sum_\ell (-1)^\ell \psi_\ell^\dagger\psi_\ell+  \sum_{\ell} E_{\ell,\ell+1}^2
 \]
-Specifying the state of a boson on one specific link specifies the states of bosons on all the other links. This suggests that we can consider a family of Hamiltonians parametrized by the state of the marked boson. View the chain as before:
+Specifying the state of a boson on one chosen link assigns the states of bosons to all the other links. This suggests that we can consider a family of Hamiltonians parametrized by the state of the marked boson. View the chain as before:
 	\[
 	\xymatrix{
 	\ar@{-}[r]^{-1} & \bigcirc^0 \ar@{-}[r]^{0} &  \bigcirc^1 \ar@{-}[r]^{1} & \cdots & \ar@{-}[l]_{N-2} \bigcirc^{N-1}
@@ -176,6 +219,42 @@ Specifying the state of a boson on one specific link specifies the states of bos
 	\[
 	P_j = \Sp( |n_0\, n_1\, \ldots \, n_{N-1} \, b_{-1}\, b_0\, \ldots\, b_{N-2}\rangle \in P \ | \ b_{-1} = j).
 	\]
-	Now, let's observe what is the resction of $H$ to each subspace $P_j$. Denote $H_j := H|_{P_j}$.
+	Now, let's observe what is the restriction of $H$ to each subspace $P_j$. Denote $H_j := H|_{P_j}$.
+\begin{idea}
+Does there exist a nice basis in each $P_j$ that allows us to write the action of $H_j$ as if there were no links?
+\end{idea}
 
+\subsubsection{Some observations}
+\begin{statement}
+Let $A_{\ell} := \psi_\ell^\dagger U_{\ell,\ell+1} \psi_{\ell+1}$. Fix the states $\underline{n}_0,\ldots,\hat{n}_{\ell},\hat{n}_{\ell+1},\ldots,\underline{n}_{N-1},\underline{b}_{-1},\underline{b}_0,\ldots,\hat{b}_{\ell},\ldots,\underline{b}_{N-2}$ (the hat means that we skip that site or link and I use the underline to mean that the state is fixed).
+\[\begin{split}
+V:=V(\underline{n}_0,\ldots,\hat{n}_{\ell},\hat{n}_{\ell+1},\ldots,\underline{n}_{N-1},\underline{b}_{-1},\underline{b}_0,\ldots,\hat{b}_{\ell},\ldots,\underline{b}_{N-2}) :=\\= \Sp \{ |n_0\, n_1\, \ldots\, n_{N-1}\, b_{-1}\, b_0\, \ldots\, b_{N-2} \in P \ | \ n_i = \underline{n}_i, \ i \neq \ell, \ell+1; \ b_i = \underline{b}_{i}, \ i \neq \ell; \ n_{\ell} \neq n_{\ell+1}  \}.
+\end{split}
+\]
+Basically, I define a subspace in which everything is fixed except that $b_{\ell}$ can vary and $n_{\ell}$ with $n_{\ell+1}$ cannot be equal. Notice that the dimension of this subspace is equal to $2\cdot n$. We might say about the restriction of $A_{\ell}$ to $V$ the following:
+\begin{enumerate}[1)]
+\item Order the basis of $V$ in the following way: first, the group of kets with $n_{\ell} = 0$ precede the group of kets with $n_{\ell} = 1$; inside of each group, we order according to the natural order of $b_{\ell}$'s. As a matrix, $A_{\ell}$ might be represented as
+\[
+A_{\ell}|_V = \begin{pmatrix}
+0 & 0 \\
+S & 0
+\end{pmatrix}
+\]
+where $S$ is $n \times n$ matrix given by
+\[
+S = \begin{pmatrix}
+0 & \cdots & 0 &0 & 1\\
+1 & & & &\\
+& 1 & & &\\
+& & \ddots && \\
+& & & 1 & 0
+\end{pmatrix}
+\]
+\item We have
+\[
+(A_{\ell} + A_{\ell}^\dagger)^2|_V = AA^\dagger + A^\dagger A= I,
+\]
+where $I$ is the identity matrix. This is a simple computation.
+\end{enumerate}
+\end{statement}
 %\end{document}
