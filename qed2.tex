@@ -196,6 +196,58 @@ Each term in the Hamiltonian defined as in \eqref{eq:1dQEDLatticeHamiltonian} on
 	We say that the model goes through a phase transition at that value of $\tilde{m}$. Obviously, that value will be dependent on $n$,
 	and we are interested in $n\rightarrow\infty$.
 	
+	\subsubsection{Staggered configurations}
+ We define two \emph{staggered} states: $|\st_1(b_{-1})\rangle$ and $|\st_2(b_{-1})\rangle$ in the following way: for the first one, all even sites are occupied and odd are empty; for the second one, all even sites are empty and all odd sites are occupied. The states on the links are determined by $b_{-1}$, which we include in the definition. 
+\begin{statement}
+For $|\st_2(b_{-1})\rangle$, $
+b_{\ell} = b_{-1}$; for $|\st_1(b_{-1})\rangle$, $
+b_{\ell} = \begin{cases}
+b_{-1} + 1, \ \ell = 2k;\\
+b_{-1}, \ \ell = 2k+1.
+\end{cases}$. Pictorially,
+\[
+|\st_2(b_{-1})\rangle =	\xymatrix{
+	\ar@{-}[r]^{b_{-1}} & \bigcirc \ar@{-}[r]^{b_{-1}} &  \bigotimes \ar@{-}[r]^{b_{-1}} & \cdots & \ar@{-}[l]_{b_{-1}} ?
+	}
+\]
+\[
+|\st_1(b_{-1})\rangle =	\xymatrix{
+	\ar@{-}[r]^{b_{-1}} & \bigotimes \ar@{-}[r]^{b_{-1}+1} &  \bigcirc \ar@{-}[r]^{b_{-1}} & \cdots & \ar@{-}[l]_{b_{-1}+?} ?
+	}
+\]
+where $\otimes$ means that the site is occupied. This is a simple computation using aforementioned formulas derived from the Gauss law.
+\end{statement}
+
+\subsubsection{Wilson loop for $m \gg 0$}
+Split the Hamiltonian as $H = A + 2m\sqrt{n/2\pi} D$, where $A$ is the first term of $H$ and $D = \sum_l (-1)^l \psi_l^\dagger \psi_l$.
+\begin{statement}
+We have 
+\[
+\lim_{m \rightarrow \infty}m^{-1} \langle \gs | H| \gs\rangle = \lim_{m \rightarrow \infty} m^{-1}\langle \st_2 | H| \st_2 \rangle =  2\sqrt{\frac{n}{2\pi}} \langle \st_2 | D| \st_2\rangle.
+\]
+\end{statement}
+\begin{proof}
+Notice that the eigen-vectors of $H$ and $m^{-1}H$ are the same (and their natural order is preserved). From the definition of $\gs_2$, we see that
+\[
+m^{-1}\langle \st_2 | H| \st_2 \rangle \geq m^{-1}\langle \gs | H| \gs \rangle = \min_{\|\psi\|=1} \langle \psi |H|\psi\rangle \geq m^{-1}\min_{\|\psi\|=1} A\psi + 2\sqrt{\frac{n}{2\pi}} \langle \st_2 | D| \st_2\rangle.
+\]
+Note that 
+\[
+\lim_{m\rightarrow \infty} m^{-1}\langle \st_2 | H|\st_2 \rangle = 2\sqrt{\frac{n}{2\pi}} \langle \st_2 | D| \st_2\rangle
+\]
+Hence, taking the limit in the above inequality, we obtain the statement.
+\end{proof}
+\begin{quest}
+One might hope to prove a stronger statement: $\lim_{m \rightarrow \infty}|\gs\rangle = |\st_2\rangle$ (or there might be a factor of $m^{-1}$). Alas, $|\gs\rangle$ contains powers of $m$; how to get rid of them -- know not I.
+\end{quest}
+\begin{wrong}
+I needed to prove the following: let $A \in \Mat(n\times n,\mathbb C)$ be a matrix (one might assume $A = A^\dagger$ if needed), $D \in \Mat(n\times n,\mathbb C)$ be diagonal and let $A(m) := A + mD$, $m \in \mathbb C$. Let $\lambda_1(m),\ldots,\lambda_n(m)$ be the list of eigen-values of $A(m)$. Then $\lambda_i(m) = O(m)$ or $\lambda_i(m) \equiv \text{const}$. This is not at all true. I checked numerically in Matlab that $\lambda_i$ may not be even a polynomial and may contain any power of $m$, even fractional.
+\end{wrong}
+%\begin{statement}
+%Assume that we proved $\lim_{m \rightarrow \infty} m^{-1} |\gs\rangle = |\st_2\rangle$. As a consequence, we obtain $\lim_{m \rightarrow \infty}\omega_1(m,n,N) = 
+%\end{statement}
+
+	
 	\subsection{Idea: an equivalent model without links}
 	Consider QED 1+1 with the Hamiltonian specified in Equation \ref{eq:1dQEDLatticeHamiltonian}, which reads 
 \[
