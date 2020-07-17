@@ -223,26 +223,34 @@ Split the Hamiltonian as $H = A + 2m\sqrt{n/2\pi} D$, where $A$ is the first ter
 \begin{statement}
 We have 
 \[
-\lim_{m \rightarrow \infty}m^{-1} \langle \gs | H| \gs\rangle = \lim_{m \rightarrow \infty} m^{-1}\langle \st_2 | H| \st_2 \rangle =  2\sqrt{\frac{n}{2\pi}} \langle \st_2 | D| \st_2\rangle.
+\lim_{m \rightarrow \infty}m^{-1} \langle \gs | H| \gs\rangle = \lim_{m \rightarrow \infty} m^{-1}\langle \st_2 | H| \st_2 \rangle =  2\sqrt{\frac{n}{2\pi}} \langle \st_2 | D| \st_2\rangle = -2\left[\frac{N}{2}\right]\sqrt{\frac{n}{2\pi}}.
+\]
+As a consequence, if $\lambda_1$ is the eigen-value corresponding to $|\gs\rangle$, then $\lambda_1 = O(m)$. More precisely, 
+\[
+\lim_{m \rightarrow \infty} \frac{\lambda_1}{m} = -2\left[\frac{N}{2}\right]\sqrt{\frac{n}{2\pi}}.
+\]
+This implies that for $m \gg 0$ and $N$ even (or large), the lowest energy level can be approximated as 
+\[
+\lambda_1(m) \approx -2 N \sqrt{\frac{n}{2\pi}}m.
 \]
 \end{statement}
 \begin{proof}
 Notice that the eigen-vectors of $H$ and $m^{-1}H$ are the same (and their natural order is preserved). From the definition of $\gs_2$, we see that
 \[
-m^{-1}\langle \st_2 | H| \st_2 \rangle \geq m^{-1}\langle \gs | H| \gs \rangle = \min_{\|\psi\|=1} \langle \psi |H|\psi\rangle \geq m^{-1}\min_{\|\psi\|=1} A\psi + 2\sqrt{\frac{n}{2\pi}} \langle \st_2 | D| \st_2\rangle.
+m^{-1}\langle \st_2 | H| \st_2 \rangle \geq m^{-1}\langle \gs | H| \gs \rangle = \min_{\|\psi\|=1} \langle \psi |H|\psi\rangle \geq m^{-1}\min_{\|\psi\|=1} A\psi + 2\sqrt{\frac{n}{2\pi}} \langle \st_2 | D| \st_2\rangle 
 \]
 Note that 
 \[
 \lim_{m\rightarrow \infty} m^{-1}\langle \st_2 | H|\st_2 \rangle = 2\sqrt{\frac{n}{2\pi}} \langle \st_2 | D| \st_2\rangle
 \]
-Hence, taking the limit in the above inequality, we obtain the statement.
+Hence, taking the limit in the above inequality, we obtain the statement. With regards to $\lambda_1$, we write $\langle \gs | H| \gs \rangle = \lambda_1\langle \gs |\gs\rangle = \lambda_1$.
 \end{proof}
 \begin{quest}
-One might hope to prove a stronger statement: $\lim_{m \rightarrow \infty}|\gs\rangle = |\st_2\rangle$ (or there might be a factor of $m^{-1}$). Alas, $|\gs\rangle$ contains powers of $m$; how to get rid of them -- know not I.
+I want to prove rigorously that $\lim_{m \rightarrow \infty} |\gs \rangle = |\st_2 \rangle$. This statement is corroborated with numerical simulations.
 \end{quest}
-\begin{wrong}
-I needed to prove the following: let $A \in \Mat(n\times n,\mathbb C)$ be a matrix (one might assume $A = A^\dagger$ if needed), $D \in \Mat(n\times n,\mathbb C)$ be diagonal and let $A(m) := A + mD$, $m \in \mathbb C$. Let $\lambda_1(m),\ldots,\lambda_n(m)$ be the list of eigen-values of $A(m)$. Then $\lambda_i(m) = O(m)$ or $\lambda_i(m) \equiv \text{const}$. This is not at all true. I checked numerically in Matlab that $\lambda_i$ may not be even a polynomial and may contain any power of $m$, even fractional.
-\end{wrong}
+%\begin{wrong}
+%I needed to prove the following: let $A \in \Mat(n\times n,\mathbb C)$ be a matrix (one might assume $A = A^\dagger$ if needed), $D \in \Mat(n\times n,\mathbb C)$ be diagonal and let $A(m) := A + mD$, $m \in \mathbb C$. Let $\lambda_1(m),\ldots,\lambda_n(m)$ be the list of eigen-values of $A(m)$. Then $\lambda_i(m) = O(m)$ or $\lambda_i(m) \equiv \text{const}$. This is not at all true. I checked numerically in Matlab that $\lambda_i$ may not be even a polynomial and may contain any power of $m$, even fractional.
+%\end{wrong}
 %\begin{statement}
 %Assume that we proved $\lim_{m \rightarrow \infty} m^{-1} |\gs\rangle = |\st_2\rangle$. As a consequence, we obtain $\lim_{m \rightarrow \infty}\omega_1(m,n,N) = 
 %\end{statement}
@@ -280,9 +288,9 @@ Does there exist a nice basis in each $P_j$ that allows us to write the action o
 I show on an example what the order I choose. For $N=2$ and $n=3$, writing a basic ket as $|n_0\, n_1\, b_{-1}\, b_0\rangle$, we have
 \[
 |0\, 0\, 0\, 2\rangle \prec |0\, 0\, 1\, 0\rangle \prec |0\, 0\, 2\, 1\rangle \prec 
- |0\, 1\, 0\, 2\rangle \prec |0\, 1\, 1\, 0\rangle \prec |0\,1\, 2\, 1\rangle \prec
-\]\[
 \prec |1\, 0\, 0\, 0\rangle \prec |1\, 0\, 1\, 1\rangle \prec |1\, 0\, 2\, 2\rangle \prec
+\]\[
+ |0\, 1\, 0\, 2\rangle \prec |0\, 1\, 1\, 0\rangle \prec |0\,1\, 2\, 1\rangle \prec
 |1\, 1\, 0\, 0\rangle \prec |1\, 1\, 1\, 1\rangle \prec |1\, 1\, 2\, 2\rangle.
 \]
 So the rule is: first, split the basis into groups $F(n_0,\ldots,n_{N-1})$, each of which depends only on the states of the sites. We declare that
@@ -291,7 +299,7 @@ F(n_0,\ldots,n_{N-1}) \prec F(\tilde{n}_0,\ldots,\tilde{n}_{N-1})
 \]
 if and only if, as a binary number,
 \[
-\underline{n_0\cdots n_{N-1}} \leq \underline{\tilde{n}_0\cdots \tilde{n}_{N-1}}.
+\underline{n_{N-1}\cdots n_{0}} \leq \underline{\tilde{n}_{N-1}\cdots \tilde{n}_{0}}.
 \]
 Inside of each group, we order the kets by $b_{-1}$ (the other $b_{\ell}$'s are completely determined by the states on the links and $b_{-1}$).
 
