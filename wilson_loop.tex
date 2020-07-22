@@ -1,0 +1,264 @@
+\subsubsection{Wilson loop for $m \gg 0$}
+Split the Hamiltonian as $H = A + 2m\sqrt{n/2\pi} D$, where $A$ is the sum of the first term and the third terms of $H$ and $D = \sum_l (-1)^l \psi_l^\dagger \psi_l$.
+\begin{proposition}\label{p:lambda_est_pos}
+%No matter what $b_{-1}$ is, we have
+%\[
+%\lim_{m \rightarrow \infty}m^{-1} \langle \gs | H| \gs\rangle = \lim_{m \rightarrow \infty} m^{-1}\langle \st_2 | H| \st_2 \rangle =  2\sqrt{\frac{n}{2\pi}} \langle \st_2 | D| \st_2\rangle = -2\left[\frac{N}{2}\right]\sqrt{\frac{n}{2\pi}}.
+%\]
+%As a consequence, if $\lambda_1$ is the eigen-value corresponding to $|\gs\rangle$, then $\lambda_1 = O(m)$. More precisely, 
+Let $\lambda_1$ be the eigen-value of $H$ that corresponds to a ground state. Then
+\[
+\lim_{m \rightarrow \infty} \frac{\lambda_1}{m} = -2\left[\frac{N}{2}\right]\sqrt{\frac{n}{2\pi}}.
+\]
+Also, for $m > 0$,
+\[
+\lambda_1(m) < -2m\left[\frac{N}{2}\right]\sqrt{\frac{n}{2\pi}}
+\]
+(note: the inequality is strict!). The limit implies that for $m \gg 0$ and $N$ even (or large), the lowest energy level can be approximated as 
+\[
+\lambda_1(m) \approx - Nm \sqrt{\frac{n}{2\pi}}.
+\]
+\end{proposition}
+\begin{proof}
+Let $m > 0$. From the definition of $\gs_2$, we see that
+\[
+m^{-1}\langle \st_2(s) | H| \st_2(s) \rangle \geq m^{-1}\langle \gs | H| \gs \rangle = m^{-1}\min_{\|\psi\|=1} \langle \psi |H|\psi\rangle \geq m^{-1}\min_{\|\psi\|=1} \langle \psi |A |\psi\rangle + 2\sqrt{\frac{n}{2\pi}} \langle \st_2(s) | D| \st_2(s)\rangle 
+\]
+%Note that 
+%\[
+%\lim_{m\rightarrow \infty} m^{-1}\langle \st_2(s) | H|\st_2(s) \rangle = 2\sqrt{\frac{n}{2\pi}} \langle \st_2(s) | D| \st_2(s)\rangle
+%\]
+%and
+Note that
+\[
+\langle \st_2(s) | H|\st_2(s) \rangle = 2m\sqrt{\frac{n}{2\pi}} \langle \st_2(s) | D + \sum_l E_{l,l+1}^2 | \st_2(s)\rangle = -2m\left[\frac{N}{2}\right]\sqrt{\frac{n}{2\pi}}
+\]
+so, taking the limit in the above series of inequalities, we obtain the result.
+%Hence, taking the limit in the above inequality, we obtain the statement. With regards to $\lambda_1$, we write $\langle \gs | H| \gs \rangle = \lambda_1\langle \gs |\gs\rangle = \lambda_1$.
+With regards to the strict inequality for $\lambda_1$, $|\st_2(s)\rangle$ is clearly not an eigen-value of $H$ when $m$ is finite, so $\langle\st_2(s)|H|\st_2(s)\rangle$ cannot equal $\lambda_1$ (see the footnote\footnote{Let $|\psi_k\rangle$ constitute an orthonormal basis of eigen-vectors of $H$ (they can be chosen to have real components with respect to the standard basis for $H$ is hermitian and symmetric). Then $|\st_2(s)\rangle = \sum_{k} \alpha_k |\psi_k\rangle$ and $\sum_{k}\alpha_k^2 = 1$ (all $\alpha_k$'s are real). On the other hand, applying $\langle \st_2 |H$ to both sides yields $\lambda_1 = \sum_{k} \alpha_k^2 \lambda_k$. Since $|\st_2(s)\rangle$ is not an eigen-vector of $H$, there's $\lambda_j > \lambda_1$ such that $\alpha_j \neq 0$. We want to show that the above equality is not possible. Indeed, let $m$ be the index of the last $\lambda_i$ that is equal to $\lambda_1$. We can rewrite the equation as $\lambda_1 = \sum_{k=m+1}^n \frac{\alpha_k^2}{1-\sum_{i=1}^m \alpha_i^2} \lambda_k$, which is again a convex combination, so write $\lambda_1 = \sum_{k=m+1}^n \beta_k\lambda_k$. We know that $\lambda_1 < \lambda_{k}$ for every $k> m$. But then $\beta_k\lambda_1 \leq \beta_k\lambda_k$ for $k > m$, and for $j$ the inequality is strict: $\beta_j\lambda_1 < \beta_j\lambda_j$; summing up, we get $\sum_{k=m+1}^n \beta_k\lambda_1 < \sum_{k=m+1}^n \beta_k \lambda_k$, which contradicts the equality. Thus $\lambda_1 \neq \langle \st_2(s)|H|\st_2(s)\rangle$.
+
+} for a detailed theoretical explanation).
+\end{proof}
+
+\begin{lemma} 
+The following hold:
+\begin{enumerate}
+\item For any basic ket $|\psi\rangle \neq |\st_2(i)\rangle$, we have $\lim_{m \rightarrow \infty} \langle \gs | \psi \rangle = 0$;
+\item For\footnote{By this I mean that there exists $m_0 > 0$ such that for all $m \geq m_0$ the statement is true.} $m \gg 0$, there exists $i \in \mathbb Z_n$ such that $\left\langle \gs | \st_2(i) \right\rangle \neq 0$ (so far, this $i$ might depend on $m$).
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+\begin{enumerate}
+\item Indeed, we see that
+\[
+\langle \psi | \gs \rangle = \frac{1}{\lambda_1} \langle \psi | H|\gs\rangle = \frac{1}{\lambda_1} \langle \psi |A|\gs\rangle + \frac{2m}{\lambda_1} \sqrt{\frac{n}{2\pi}} \langle \psi | D | \gs \rangle = \frac{1}{\lambda_1} \langle \psi |A|\gs\rangle + \frac{2m}{\lambda_1} \sqrt{\frac{n}{2\pi}} \cdot a \langle \psi | \gs \rangle
+\]
+where $a$ is an eigen-value of $D$ (which is not equal to $-[N/2]$ since $\psi \neq |\st_2(b_{-1})\rangle$). The above can be rewritten as
+\[
+\langle \psi | \gs\rangle = \frac{1}{\lambda_1} \frac{1}{1- \frac{2ma}{\lambda_1}\sqrt{\frac{n}{2\pi}} } \langle \psi | A | gs\rangle.
+\]
+We see that 
+\[
+1- \frac{2ma}{\lambda_1}\sqrt{\frac{n}{2\pi}} \rightarrow 1 + a [N/2] \neq 0
+\]
+therefore
+\[
+\lim_{m \rightarrow \infty}\langle \psi | \gs \rangle = 0.
+\]
+\item We can always write the ground state as $|\gs\rangle = \sum_{i \in \mathbb Z_n} \alpha_i |\st_2(i)\rangle + |v\rangle$, where $|v\rangle \perp |\st_2(i)\rangle$ for all $i \in \mathbb Z_n$. Since $\langle \gs|\psi \rangle \rightarrow 0$ for $|\psi\rangle \neq |\st_2(i)\rangle$ and $\langle \gs | \gs\rangle = 1$, we see that
+\[
+\lim_{m \rightarrow \infty} \langle \gs | \gs \rangle - \sum_{i \in \mathbb Z_n} \alpha_i\langle\gs |\st_2(i)\rangle = 0
+\]
+hence
+\[
+\lim_{m \rightarrow \infty} \sum_{i \in \mathbb Z_n} \alpha_i^2 = 1.
+\]
+So, there is $m_0$ such that for all $m \geq m_0$ the sum is at least non-zero. But this means that there's $i \in \mathbb Z_n$ such that $\alpha_i \neq 0$.
+
+\end{enumerate}
+\end{proof}
+
+\begin{conj}
+It is true for any $m > 0$ that $\langle \gs|\st_2(s)\rangle \neq 0$. Numerical experiments suggest even more: $\langle \gs | \st_2(s)\rangle > \langle \gs | \psi \rangle$ for any other basic ket $\psi$.
+\end{conj}
+
+\begin{lemma}\label{l:gs_dec}
+Let $|\gs\rangle$ be a ground state such that $\langle \st_2(s)|\gs \rangle > 0$ and $\lambda_1 \neq - \alpha_s^{-2} -2m[N/2]\sqrt{n/2\pi}$. Then it admits a decomposition
+\[
+|gs\rangle = \alpha |\st_2(s) \rangle + | v\rangle
+\]
+where $|v\rangle$ is orthogonal to $|\st_2(b_{-1})\rangle$ for any $b_{-1} \in \mathbb Z_n$ and $s$ is such that $n = 2s + 1$. In other words, the only staggered configuration (of second type) that might be present in $|\gs\rangle$ corresponds to $b_{-1} = s$. 
+%If $|\gs \rangle$ is a ground state and $|\gs \rangle = \sum \langle \psi | \gs \rangle |\psi\rangle$ in terms of the basic kets $|\psi\rangle$, then $\langle \psi | \gs \rangle = 0$ for any $|\psi\rangle$ that has $b_{-1} \neq s$ (where $s$ is from $n = 2s+1$). In other words, the ground state corresponds to the situation when $b_{-1} = s$. 
+\end{lemma}
+%There is no need to think about alleviating the mild condition $\lambda_1 \neq -\langle \st_2(s) | \gs\rangle^{-2}$, for this is vacuous when the mass is large, and the lemma itself is needed only to prove that $\lim_{m \rightarrow \infty}|\gs\rangle = |\st_2(s)\rangle$.
+\begin{proof}
+Only for this proof, write $H$ as $H = U + D + E$, where $U$, $D$ and $E$ correspond to respectively the first, the second and the third terms of the Hamiltonian (so, $D$ is as before except that I absorbed the constant into it). Pick a ground state and decompose it as 
+\[
+|\gs \rangle = \sum_{i \in \mathbb Z_n} \alpha_i |\st_2(i)\rangle + |v\rangle,
+\]
+where $|v\rangle \perp |\st_2(i)\rangle$ for all $i \in \mathbb Z_n$. Note that $H$ is not only Hermitian but also symmetric, so we can assume $\alpha_i$'s are real\footnote{In more detail, the ground state can be decomposed into its real and imaginary parts: $|\gs\rangle = \Re|\gs\rangle + i \Im |\gs\rangle$. Then, with an appropriate scaling, both parts are also ground states, but now with real components. Proving the result for the real parts, we prove the result for $|\gs\rangle$ as well (but then $\alpha$ might be complex).}. The condition $\langle \st_2(s)|\gs \rangle > 0$ ensures that $\alpha \neq 0$. Define additionally a state $|\phi \rangle$ such that
+\[
+|\phi\rangle = \sum_{i \in \mathbb Z_n} \beta_i | \st_2(i)\rangle + |v\rangle, \ \beta_i \in \mathbb R, \ \sum_{i\in \mathbb Z_n}\beta_i^2 = \sum_{i\in \mathbb Z_n} \alpha_i^2 =: \alpha^2.
+\]
+So, $\langle \phi | \phi \rangle = 1$. The idea is to find a nice objective function to formulate a minimization problem for $\beta_i$'s on the $(n-1)$-dimensional sphere of radius $|\alpha|$, whose solution has to be the ground state $|\gs\rangle$. Notice that $U$ sends $|\st_2(j)\rangle$ to a vector that is ortogonal to all $|\st_2(i)\rangle$. This implies that
+\begin{equation}\label{eq:sthst}
+\langle \st_2(j) | H| \st_2(i) \rangle = \langle \st_2(j)|D+E|\st_2(i)\rangle = \delta_{ij}(-2m\sqrt{\frac{n}{2\pi}}[N/2] + (j-s)^2) =:\delta_{ij}c_j
+\end{equation}
+where $\delta_{ij}$ is the Kronecker symbol.  Next, since $|\gs\rangle$ is an eigen-vector,
+\[
+H|\gs\rangle = \lambda_1 |\gs\rangle = \sum_{i \in \mathbb Z_n} \alpha_i H|\st_2(i)\rangle + H|v\rangle
+\]
+hence
+%\begin{equation}\label{eq:hv}
+\[
+H|v\rangle = \sum_{i \in \mathbb Z_n}\left(\lambda_1\alpha_i |\st_2(i)\rangle - \alpha_iH|\st_2(i)\rangle\right) +\lambda_1|v\rangle;
+\]
+Combining this with \eqref{eq:sthst}, we see that
+\[
+\langle \st_2(j) | H|v \rangle = \alpha_j(\lambda_1 - c_j).
+\]
+Consider $\langle \st_2(j) |H|\phi\rangle$.
+\[\begin{split}
+\langle \st_2(j) |H|\phi\rangle& = \sum_{i \in \mathbb Z_n}\beta_i\langle \st_2(j) |H|\st_2(i)\rangle + \langle \st_2(j) | H | v \rangle = \\ &= \beta_jc_j + \alpha_j(\lambda_1-c_j).
+\end{split}
+\]
+For $\langle v | H |\phi \rangle$ we have
+\[\begin{split}
+\langle v | H | \phi \rangle& = \sum_{i \in \mathbb Z_n}\beta_i\langle v | H|\st_2(i)\rangle + \langle v |H|v \rangle = \\ &= \sum_{i \in \mathbb Z_n}\beta_i\alpha_i(\lambda_1 - c_i) + \langle v |H|v \rangle.
+\end{split}
+\]
+Now we can evaluate $\langle \phi | H| \phi \rangle$:
+\[
+\langle \phi | H| \phi \rangle = \sum_{j \in \mathbb Z_n} \left(\beta_j^2 c_j + 2\beta_j\alpha_j(\lambda_1-c_j) \right) + \langle v |H|v \rangle 
+\]
+We are ready to define an objective function $f: S^{n-1} \rightarrow \mathbb R$,
+\[
+f(\vec{\beta}) := f(\beta_0,\ldots,\beta_{n-1}) := \sum_{j \in \mathbb Z_n} (\beta_j^2 c_j + 2\beta_j\alpha_j(\lambda_1-c_j))
+, \ \ \sum_{j\in \mathbb Z_n} \beta_j^2 = \alpha^2.
+\]
+Let's look at the chart given by $\beta_s := \sqrt{\alpha^2 - \sum_{j \neq s} \beta_j^2}$. Notice that $\alpha_j$'s represent a point in this chart, for we assumed $\langle \st_2(s)|\gs \rangle > 0$. The coordinate representation of $f$ is 
+\[
+f(\vec{\beta}) = \sum_{j\neq s} (\beta_j^2 c_j + 2\beta_j \alpha_j(\lambda_1 - c_j)) + c_s\beta_s^2 + 2\frac{\alpha_s}{\beta_s}.%{\sqrt{\alpha^2 - \sum_{j \neq s} \beta_j^2}}
+\]
+The partial derivative with respect to $\beta_j$ for $j \neq s$ is
+\[
+\frac{\partial f}{\partial \beta_j} = -2\beta_jc_s + 2\beta_j c_j + 2\alpha_j(\lambda_1-c_j) + 2\frac{\beta_j\alpha_s}{\beta_s^3};
+\]
+Now the trick. By the very definition of $|\gs\rangle$, the collection $\beta_j := \alpha_j$ has to minimize $f$. Therefore, the partial derivatives of $f$ with respect to $\beta_j$'s (for $j \neq s$) in this chart at $\beta_j = \alpha_j$ are zero:
+\[
+-2\alpha_jc_s + 2\alpha_j c_j + 2\alpha_j(\lambda_1-c_j) + 2\frac{\alpha_j\alpha_s}{\alpha_s^3} = 0.
+\]
+One of the solutions of the above equation is $\alpha_j = 0$. If $\lambda_1 = - \alpha_s^{-2} -2m[N/2]\sqrt{n/2\pi}$, there might be something else, but we assumed $\lambda_1 \neq - \alpha_s^{-2}-[N/2]$ from the beginning. So, since $\alpha_j = 0$ ($j \neq s$) is the unique solution, it's the one that corresponds to the decomposition of $|\gs \rangle$. Thus $|\gs\rangle = \alpha_s |\st_2(s)\rangle + |v\rangle$.
+\end{proof}
+
+%\noindent \textbf{Things to clarify:} 1. Why the sphere has a non-zero radius? 2. To switch to the chart $\beta_s$, we need to make sure $\beta_s \neq 0$.
+
+\noindent \textbf{Caution}. Without saying a few words beforehand, we can't talk about $\lim_{m\rightarrow \infty} |\gs\rangle = |\st_2(s)\rangle$, for this limit depends on the way we choose $|\gs\rangle$ for every value of mass. We can be whimsical and choose $|\gs \rangle = \alpha |\st_2\rangle + |v\rangle$ with $\arg \alpha$ (the argument of the complex number) running around $[0,2\pi)$. Then the limiting vector is not unique. A limiting value might be $|\st_2(s)\rangle$, but it also might be something like $e^{i\pi/3} |\st_2(s)\rangle$. One natural way to avoid this is to assume $\langle \gs | \st_2(s) \rangle > 0$, i.e. we normalize the argument of the component of $\gs$ corresponding to the configuration $|\st_2(s)\rangle$.
+
+
+\begin{proposition}
+Assume that the choice of the ground state for every mass is made in such a way that $\langle \gs|\st_2(s)\rangle > 0$. Then
+the limit exists and is given by $\lim_{m\rightarrow \infty} |\gs\rangle = |\st_2(s)\rangle$.
+\end{proposition}
+%What's left to show is that we don't need to pass to a subsequence of masses and that $\lim_{m \rightarrow \infty} \langle \st_2 | \gs\rangle = 1$.
+\begin{proof}
+By Lemma \ref{l:gs_dec}, $|\gs\rangle$ admits a decomposition $|\gs\rangle = \alpha|\st_2(s)\rangle + |v\rangle$ ($\alpha$ might be complex in general). Clearly, for $\psi = |\st_2(b_{-1})\rangle$ with $b_{-1}$, the value $\langle \psi | \gs_2\rangle$ tends to zero as well. Therefore,
+\[
+|\alpha|^2 = |\langle \st_2(s) | \gs \rangle|^2 \rightarrow |\langle \gs | \gs \rangle|^2 =1.
+\]
+Now the assumptiong $\alpha > 0$ comes into play. The only possible value is then $\alpha = 1$. Thus the limit exists and is equal to $|\st_2(s)\rangle$.
+%Now, 
+%\[
+%1 = \langle \gs|\gs\rangle = \sum_{b_{-1} \in \mathbb Z_n}|\langle \st_2(b_{-1}) | \gs \rangle|^2 + \sum_{\psi \ \text{basic}, \ \psi \neq |\st_2\rangle} |\langle \psi | \gs\rangle|^2.
+%\]
+%Since the second sum goes to zero, as shown above, we see that 
+%\[
+%\lim_{m \rightarrow \infty} (1 - \sum_{b_{-1} \in \mathbb Z_n}
+%|\langle \st_2(b_{-1}) | \gs \rangle|^2) = 0;
+%\]
+%....
+%to which staggered configuration does $\gs$ converge?
+%but this implies $\langle \st_2 | \gs \rangle \rightarrow 1$. Therefore, all coefficients of $|\gs\rangle$ converge to some numbers, which is enough to conclude (by observing those numbers) that $\lim_{m \rightarrow \infty} |\gs \rangle = |\st_2\rangle$.
+\end{proof}
+\begin{corp}
+Let $\Sigma = N^{-1}\sum \langle E_{l,l+1} \rangle$ be the electric field operator. Then\footnote{No matter how we choose the ground states for every value of mass since we're under the Hermitian inner product.} $\lim_{m \rightarrow \infty} \Sigma = 0$.
+\end{corp}
+\begin{proof}
+Indeed, we can assume that $\lim_{m \rightarrow \infty} |\gs\rangle = |\st_2(s)\rangle$. Then 
+\[
+\langle \gs | E_{l,l+1} | \gs \rangle \rightarrow \langle \st_2(s) | E_{l,l+1}|\st_2(s)\rangle = 0.\qedhere
+\]
+\end{proof}
+%\begin{corp}
+%Let $\Sigma$ be again an electric field operator. If the mass $m$ is large, then $\Sigma$ is bounded for \emph{any} $N$ and $n$. In particular, for large $m$ there's a sequence $N_k \rightarrow \infty$ and $n_k \rightarrow \infty$ such that $\Sigma$ converges to a number.
+%\end{corp}
+%\begin{proof}
+%This follows right from the definition of the limit. For $\varepsilon = 1$, there is $m_0$ such that for all $m \geq m_0$ we have $|\Sigma| < 1$. So, $\Sigma$ is bounded by $1$ for all $N$, $n$ and $m \geq m_0$. A compactness argument then gives us subsequences $N_k \rightarrow \infty$ and $n_k \rightarrow \infty$ such that $\lim_{k \rightarrow \infty} \Sigma$ is a number.
+%\end{proof}
+We do not specify the order of the limits in the previous proposition. Whatever order we choose (or whatever fancy subsequences we choose, may be $N$ depending on $n$) -- there is still a subsequence for which $\Sigma$ does converge. 
+%Let me use Erolessi's notation $\Sigma$ for the expectation value of the Wilson loop. I will denote $\Sigma_{\infty} := \lim_{m\rightarrow \infty} \Sigma$. These depend on $n$ and $N$, but let me not drag those numbers along our way. Clearly, the limit exists, for we proved that the ground state converges to the staggered configuration $|\st_2\rangle$.
+
+\begin{quest}
+I make an assumption $\langle \st_2(s)|\gs \rangle > 0$. Is it true that for any value of $m > 0$, and for any choice of the ground state we have $\langle \st_2(s)|\gs \rangle \neq 0$?
+\end{quest}
+
+\subsection{Wilson loop for $m \ll 0$}
+\begin{proposition}
+We have
+\[
+\lim_{m \rightarrow -\infty} \frac{\lambda_1}{m} = 2\left[\frac{N}{2}\right]\sqrt{\frac{n}{2\pi}}.
+\]
+\end{proposition}
+\begin{proof}
+As in Proposition \ref{p:lambda_est_pos}, we always have an inequality by the very definition of $|\gs\rangle$, but now, since the coefficient in front of $D$ is negative, we refer to $\st_1$:
+\[
+\langle \st_1 | H|\st_1 \rangle \geq \langle \gs | H|\gs\rangle \geq \min_{\|\psi\| = 1} A\psi + 2m \sqrt{\frac{n}{2\pi}} \langle \st_1 |D|\st_1\rangle.
+\]
+Multiplying by $m^{-1}$ for $m$ negative flips the inequality:
+\[
+m^{-1}\langle \st_1 | H|\st_1 \rangle \leq m^{-1}\langle \gs | H|\gs\rangle \leq m^{-1}\min_{\|\psi\| = 1} A\psi + 2 \sqrt{\frac{n}{2\pi}} \langle \st_1 |D|\st_1\rangle.
+\]
+Obviously,
+\[
+\lim_{m\rightarrow -\infty} m^{-1}\langle \st_1 | H|\st_1\rangle = 2 \sqrt{\frac{n}{2\pi}} \langle \st_1 |D|\st_1\rangle;
+\]
+therefore, passing to the limit as $m \rightarrow -\infty$ sandwiches $m^{-1}\langle \gs | H|\gs\rangle$ and yields
+\[
+\lim_{m \rightarrow -\infty} m^{-1}\langle \gs |H|\gs \rangle = 2 \sqrt{\frac{n}{2\pi}} \langle \st_1 |D|\st_1\rangle = 2\left[\frac{N}{2}\right]\sqrt{\frac{n}{2\pi}}.
+\]
+In particular, 
+\[
+\lim_{m \rightarrow -\infty} \frac{\lambda_1}{m} = 2\left[\frac{N}{2}\right]\sqrt{\frac{n}{2\pi}}.
+\]
+\end{proof}
+\begin{lemma}\label{l:gs_dec1}
+If $\langle \st_1(s)|\gs \rangle > 0$ and $\lambda_1 \neq -\langle \st_1(s)|\gs\rangle^{-2} + 2[N/2]$, the ground state admits a decomposition
+\[
+|\gs \rangle = \alpha \st_1(s)\rangle + |v \rangle
+\]
+where $|v\rangle$ is orthogonal to $|\st_1(i)\rangle$ for all $i$.
+\end{lemma}
+\begin{proof}
+We use the same idea as in \ref{l:gs_dec} except that now the coefficients $c_j$ are taken with respect to $|\st_1(j)\rangle$:
+\[\begin{split}
+c_j& = \langle\st_1(j) | H | \st_1(j) \rangle =\langle\st_1(j) | D+E | \st_1(j) \rangle=\\&= (j+1-s)^2[N/2] + (j-s)^2[(N-1)/2] + [N/2].
+\end{split}
+\]
+The resulting objective function is the same. When $\lambda_1 \neq -\langle \st_1(s)|\gs\rangle^{-2} + 2[N/2]$, we obtain a unique solution for the components of $|\gs\rangle$ with respect to $|\st_1(i)\rangle$'s.
+\end{proof}
+
+\begin{proposition}
+Assume that the choice of the ground state for every negative mass is made in such a way that $\langle \gs | \st_1(s)\rangle > 0$. Then the limit exists and is given by $\lim_{m \rightarrow -\infty} |\gs\rangle = |\st_1(s)\rangle$.
+\end{proposition}
+\begin{corp}
+Let $\Sigma$ be the electric field operator. Then
+\[
+\lim_{m \rightarrow -\infty} \Sigma = \frac{1}{N}\left[\frac{N}{2}\right].
+\]
+\end{corp}
+\begin{proof}
+The proposition tells us that
+\[
+\lim_{m \rightarrow -\infty} \left\langle \gs |W|\gs \right\rangle = \langle \st_1(s) |N^{-1}\sum_l E_{l,l+1} | \st_1(s)\rangle = \frac{1}{N}\left[\frac{N}{2}\right].\qedhere
+\]
+\end{proof}
