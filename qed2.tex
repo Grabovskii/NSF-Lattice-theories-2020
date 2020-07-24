@@ -196,7 +196,7 @@ Each term in the Hamiltonian defined as in \eqref{eq:1dQEDLatticeHamiltonian} on
 	We say that the model goes through a phase transition at that value of $\tilde{m}$. Obviously, that value will be dependent on $n$,
 	and we are interested in $n\rightarrow\infty$.
 	
-	\subsubsection{Staggered configurations}
+	\subsection{Staggered configurations}
  We define two \emph{staggered} states: $|\st_1(b_{-1})\rangle$ and $|\st_2(b_{-1})\rangle$ in the following way: for the first one, all even sites are occupied and odd are empty; for the second one, all even sites are empty and all odd sites are occupied. The states on the links are determined by $b_{-1}$, which we include in the definition. 
 \begin{statement}
 For $|\st_2(b_{-1})\rangle$, $
@@ -267,38 +267,38 @@ if and only if, as a binary number,
 \]
 Inside of each group, we order the kets by $b_{-1}$ (the other $b_{\ell}$'s are completely determined by the states on the links and $b_{-1}$).
 
-\subsubsection{Some observations}
-\begin{statement}
-Let $A_{\ell} := \psi_\ell^\dagger U_{\ell,\ell+1} \psi_{\ell+1}$. Fix the states $\underline{n}_0,\ldots,\hat{n}_{\ell},\hat{n}_{\ell+1},\ldots,\underline{n}_{N-1},\underline{b}_{-1},\underline{b}_0,\ldots,\hat{b}_{\ell},\ldots,\underline{b}_{N-2}$ (the hat means that we skip that site or link and I use the underline to mean that the state is fixed).
-\[\begin{split}
-V:=V(\underline{n}_0,\ldots,\hat{n}_{\ell},\hat{n}_{\ell+1},\ldots,\underline{n}_{N-1},\underline{b}_{-1},\underline{b}_0,\ldots,\hat{b}_{\ell},\ldots,\underline{b}_{N-2}) :=\\= \Sp \{ |n_0\, n_1\, \ldots\, n_{N-1}\, b_{-1}\, b_0\, \ldots\, b_{N-2} \in P \ | \ n_i = \underline{n}_i, \ i \neq \ell, \ell+1; \ b_i = \underline{b}_{i}, \ i \neq \ell; \ n_{\ell} \neq n_{\ell+1}  \}.
-\end{split}
-\]
-Basically, I define a subspace in which everything is fixed except that $b_{\ell}$ can vary and $n_{\ell}$ with $n_{\ell+1}$ cannot be equal. Notice that the dimension of this subspace is equal to $2\cdot n$. We might say about the restriction of $A_{\ell}$ to $V$ the following:
-\begin{enumerate}[1)]
-\item As a matrix, the restriction of $A_{\ell}$ to $V$ might be represented as
-\[
-A_{\ell}|_V = \begin{pmatrix}
-0 & 0 \\
-I & 0
-\end{pmatrix}
-\]
-where $I$ is the identity $n \times n$ matrix.
-%where $S$ is $n \times n$ matrix given by
+%\subsubsection{Some observations}
+%\begin{statement}
+%Let $A_{\ell} := \psi_\ell^\dagger U_{\ell,\ell+1} \psi_{\ell+1}$. Fix the states $\underline{n}_0,\ldots,\hat{n}_{\ell},\hat{n}_{\ell+1},\ldots,\underline{n}_{N-1},\underline{b}_{-1},\underline{b}_0,\ldots,\hat{b}_{\ell},\ldots,\underline{b}_{N-2}$ (the hat means that we skip that site or link and I use the underline to mean that the state is fixed).
+%\[\begin{split}
+%V:=V(\underline{n}_0,\ldots,\hat{n}_{\ell},\hat{n}_{\ell+1},\ldots,\underline{n}_{N-1},\underline{b}_{-1},\underline{b}_0,\ldots,\hat{b}_{\ell},\ldots,\underline{b}_{N-2}) :=\\= \Sp \{ |n_0\, n_1\, \ldots\, n_{N-1}\, b_{-1}\, b_0\, \ldots\, b_{N-2} \in P \ | \ n_i = \underline{n}_i, \ i \neq \ell, \ell+1; \ b_i = \underline{b}_{i}, \ i \neq \ell; \ n_{\ell} \neq n_{\ell+1}  \}.
+%\end{split}
+%\]
+%Basically, I define a subspace in which everything is fixed except that $b_{\ell}$ can vary and $n_{\ell}$ with $n_{\ell+1}$ cannot be equal. Notice that the dimension of this subspace is equal to $2\cdot n$. We might say about the restriction of $A_{\ell}$ to $V$ the following:
+%\begin{enumerate}[1)]
+%\item As a matrix, the restriction of $A_{\ell}$ to $V$ might be represented as
 %\[
-%S = \begin{pmatrix}
-%0 & \cdots & 0 &0 & 1\\
-%1 & & & &\\
-%& 1 & & &\\
-%& & \ddots && \\
-%& & & 1 & 0
+%A_{\ell}|_V = \begin{pmatrix}
+%0 & 0 \\
+%I & 0
 %\end{pmatrix}
 %\]
-\item We have
-\[
-(A_{\ell} + A_{\ell}^\dagger)^2|_V = AA^\dagger + A^\dagger A= I,
-\]
-where $I$ is the identity matrix. This is a simple computation.
-\end{enumerate}
-\end{statement}
-%\end{document}
+%where $I$ is the identity $n \times n$ matrix.
+%%where $S$ is $n \times n$ matrix given by
+%%\[
+%%S = \begin{pmatrix}
+%%0 & \cdots & 0 &0 & 1\\
+%%1 & & & &\\
+%%& 1 & & &\\
+%%& & \ddots && \\
+%%& & & 1 & 0
+%%\end{pmatrix}
+%%\]
+%\item We have
+%\[
+%(A_{\ell} + A_{\ell}^\dagger)^2|_V = AA^\dagger + A^\dagger A= I,
+%\]
+%where $I$ is the identity matrix. This is a simple computation.
+%\end{enumerate}
+%\end{statement}
+%%\end{document}
