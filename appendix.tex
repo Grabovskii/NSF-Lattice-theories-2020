@@ -115,3 +115,28 @@ where $s$ is the least upper bound of eigenvalues of $S_z$ (then $-s$ is the gre
 S_x^2 + S_y^2 + S_z^2 = s(s+1) I,
 \]
 where $I$ is the identity operator, though it is not clear why we have such an equation. Depending on $s$, the components are realized as square matrices of different sizes. If $s = 1/2$, then the components are $2 \times 2$ matrices (Pauli matrices). For $s = 1$, they are $3 \times 3$ matrices. One can find a relation between $s$ and their sizes. Also, I don't think that the relation between $S^2$ and $s$ can be derived from the commutation relations between components of $S$.
+
+\subsection{Perturbation theory}
+I mention a few results from Rellich's \cite{rellich} book.
+\begin{proposition}\label{p:conv_le}
+Let $A$ and $B$ be Hermitian operators on a finite-dimensional space, and consider an operator $A + \varepsilon B$ for some $\varepsilon \in \mathbb R$. Let $\lambda(\varepsilon)$ be the least eigen-value of $A+\varepsilon B$. Then $\lambda$ is a convex function of $\varepsilon$.
+\end{proposition}
+\begin{proof}
+Recall that a function is convex iff its epigraph is convex. We basically show that the epigraph is the intersection of a family of half-subspaces, which is convex.
+
+So, fix $\varepsilon_0$ and let $f_0$ be a normalized eigen-vector that corresponds to $\lambda(\varepsilon_0)$. Then $(f_0,Af_0) + \varepsilon (f_0, Bf_0) = \lambda(\varepsilon_0)$. For any other normalized vector $f$, the property of being the least eigen-value also yields
+\[
+(f,Af) + \varepsilon (f, Bf) \geq \lambda(\varepsilon)
+\]
+for any $\varepsilon > 0$. In particular, for $a = (f_0,Af_0)$, $b = (f_0,Bf_0)$ and any $\varepsilon > 0$
+\[
+a + \varepsilon b \geq \lambda(\varepsilon).
+\]
+So, we have a line $\varepsilon \mapsto a+\varepsilon b$ intersects the graph of $\lambda$ at $\varepsilon = \varepsilon_0$ and which defines a half-subspace that contains the graph of $\lambda$. Varying $\varepsilon_0$, we obtain a family of such lines, which intersect into the epigraph of $\lambda$, which henceforth convex.
+\end{proof}
+
+The following theorem is also from \cite{rellich} and is of special interest to us:
+\begin{theorem}\label{thm:pert}
+Let $I$ be an open interval and $A : I \rightarrow \End(V)$ be a $C^1$-family of Hermitian operators on a finite-dimensional space $V$. Assume that $A^\prime : I \rightarrow \End(V)$ is also a Hermitian family. Then there exist a family of $C^1$ functions $\lambda_i : I \rightarrow \mathbb R$ and a family of vectors $f_i : I \rightarrow V$ such that $\lambda_i \leq \lambda_{i+1}$, $\{f_i(\varepsilon)\}$ is orthonormal for every $\varepsilon \in I$, and $A(\varepsilon) f_i(\varepsilon) = \lambda_i(\varepsilon)f_i(\varepsilon)$.
+\end{theorem}
+Note that I do not claim that the family of vectors is $C^1$, for this is not explicitly stated in \cite{rellich}. I found it in the book by Kato \cite{kato}, pp. 121-122.

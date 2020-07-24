@@ -1,5 +1,13 @@
 \subsection{Wilson loop for $m \gg 0$}
 Split the Hamiltonian as $H = A + 2m\sqrt{n/2\pi} D$, where $A$ is the sum of the first term and the third terms of $H$ and $D = \sum_l (-1)^l \psi_l^\dagger \psi_l$.
+\subsubsection{Dependence on $m$}
+\begin{proposition}\label{p:dep_m}
+Let $\lambda_1$ be the eigen-value of $H$ that corresponds to a ground state. Then $\lambda_1$ is a convex $C^1$-function of the mass. The ground state, as a function, can be chosen so that it's $C^1$.
+\end{proposition}
+\begin{proof}
+Convexity is a consequence of Proposition \ref{p:conv_le}; differentiability of $\lambda_1$ is a consequence of Theorem \ref{thm:pert}. Differentiability of $|\gs\rangle$ is a result from Kato \cite{kato}, pp. 121-122 (more is stated there: for Hermitian differentiable operators we can choose differentiable orthonormal systems of eigen-vectors).
+\end{proof}
+
 \subsubsection{Estimate for $\lambda_1$}
 \begin{proposition}\label{p:lambda_est_pos}
 Let $\lambda_1$ be the eigen-value of $H$ that corresponds to a ground state. Then
@@ -111,9 +119,16 @@ It is supposed to be always negative. However, we can make $O(\beta)$ as small a
 \begin{conj}
 It is true for any $m > 0$ that $\langle \gs|\st_2(s)\rangle \neq 0$. Numerical experiments suggest even more: $\langle \gs | \st_2(s)\rangle > \langle \gs | \psi \rangle$ for any other basic ket $\psi$.
 \end{conj}
-\begin{proof}[Heuristic evidence]
-I believe that $|\gs\rangle$, if chosen so that $\langle \gs | \st_2(s)\rangle \in [0,1]$, is a continuous function of $m$. The eigen-value $\lambda_1$ is continuous as well. But recall that $P = P_1 \oplus \cdots \oplus P_n$. The sets $S^{\dim P} \cap P_i$ (an intersection of the unit sphere with a subspace) are disjoint, and since $|\gs\rangle$ is continuous, it maps the whole real line $\mathbb R$ into only one such intersection, i.e. into $S^{\dim P} \cap P_s$. So $b_{-1} = s$ always has to be the bosonic state for $|\gs\rangle$.
+
+\begin{proposition}
+Choose a family of ground states $|\gs\rangle$ that have $C^1$-dependence on $m$. Then $|\gs\rangle \in P_s$ for \emph{any} $m$, and $N|\gs\rangle = [N/2] |\gs\rangle$.
+\end{proposition}
+\begin{proof}
+This is pure general topology. The image of the ground state curve lies in the disjoint union $P_1 \cap S^{\dim P} \cup \cdots \cup P_n \cap S^{\dim P}$. Since $|\gs\rangle$ is in particular continuous in $m$, the image of $\mathbb R$ lies only in one of the components of the union. Since for $m \gg 0$ it happens in $P_s\cap S^{\dim P}$, it's there for \emph{any} $m$.
 \end{proof}
+%\begin{proof}[Heuristic evidence]
+%I believe that $|\gs\rangle$, if chosen so that $\langle \gs | \st_2(s)\rangle \in [0,1]$, is a continuous function of $m$. The eigen-value $\lambda_1$ is continuous as well. But recall that $P = P_1 \oplus \cdots \oplus P_n$. The sets $S^{\dim P} \cap P_i$ (an intersection of the unit sphere with a subspace) are disjoint, and since $|\gs\rangle$ is continuous, it maps the whole real line $\mathbb R$ into only one such intersection, i.e. into $S^{\dim P} \cap P_s$. So $b_{-1} = s$ always has to be the bosonic state for $|\gs\rangle$.
+%\end{proof}
 
 \begin{proposition}
 Let $\Sigma = N^{-1}\sum \langle E_{l,l+1} \rangle$ be the electric field operator. Then\footnote{No matter how we choose the ground states for every value of mass since we're under the Hermitian inner product.} $\lim_{m \rightarrow \infty} \Sigma = 0$.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.21)  23 JUL 2020 22:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.21)  24 JUL 2020 12:31
 entering extended mode
 **./nsf.tex
 (nsf.tex
@@ -764,18 +764,26 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\lambda' on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `subscript' on input line 3.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 3.
 
 
-Overfull \hbox (37.19775pt too wide) detected at line 22
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 11.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\lambda' on input line 11.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 11.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 11.
+
+[23]
+Overfull \hbox (37.19775pt too wide) detected at line 30
 \OML/cmm/m/it/10.95 m[]\OMS/cmsy/m/n/10.95 h[][]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 s\OT1/cmr/m/n/10.95 )\OMS/cmsy/m
 /n/10.95 j\OML/cmm/m/it/10.95 H\OMS/cmsy/m/n/10.95 j [][]\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 s\OT1/cmr/m/n/10.95 )\O
 MS/cmsy/m/n/10.95 i  \OML/cmm/m/it/10.95 m[]\OMS/cmsy/m/n/10.95 h[] j\OML/cmm/m/it/10.95 H\OMS/cmsy/m/n/10.95 j []i \OT
@@ -787,36 +795,35 @@ MS/cmsy/m/n/10.95 j\OML/cmm/m/it/10.95 D\OMS/cmsy/m/n/10.95 j [][]\OT1/cmr/m/n/1
 10.95 )\OMS/cmsy/m/n/10.95 i
  []
 
-[23]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 38.
+(hyperref)                removing `math shift' on input line 46.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 38.
+(hyperref)                removing `math shift' on input line 46.
 
 [24] [25]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 128.
+(hyperref)                removing `math shift' on input line 143.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\ll' on input line 128.
+(hyperref)                removing `\ll' on input line 143.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 128.
+(hyperref)                removing `math shift' on input line 143.
 
-) <xymatrix 5x1 186> [26]) (qedAdditional.tex [27] [28]
+) <xymatrix 5x1 186> [26]) (qedAdditional.tex [27] [28] [29]
 Overfull \hbox (23.50166pt too wide) in paragraph at lines 112--123
 \T2A/cmr/m/n/10.95 Let me de-fine an-other op-er-a-tor called $\OML/cmm/m/it/10.95 U[]\OMS/cmsy/m/n/10.95 j\OML/cmm/m/it
 /10.95 k\OMS/cmsy/m/n/10.95 i \OT1/cmr/m/n/10.95 = []$ \T2A/cmr/m/n/10.95 and I also de-fine $\OML/cmm/m/it/10.95 U[]\OM
 S/cmsy/m/n/10.95 j\OML/cmm/m/it/10.95 k\OMS/cmsy/m/n/10.95 i \OT1/cmr/m/n/10.95 = []$\T2A/cmr/m/n/10.95 ,
  []
 
-[29]) (quest.tex [30]) (appendix.tex
+) (quest.tex [30]) (appendix.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 2.
@@ -829,29 +836,25 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 2.
 
-[31] [32] [33] [34]) [35]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 168.
- [36]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 168.
+[31] [32] [33] [34] [35]) [36]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 170.
+ [37]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 170.
  (nsf.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 168.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 168.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 170.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 170.
 Package rerunfilecheck Info: File `nsf.out' has not changed.
-(rerunfilecheck)             Checksum: 943A0770E72F4F290304152260FE5372;5157.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 168.
+(rerunfilecheck)             Checksum: 29DAEBFE28E63255335E0049B0042177;5305.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 170.
  ) 
 Here is how much of TeX's memory you used:
- 10338 strings out of 492430
- 143650 string characters out of 3102276
- 281194 words of memory out of 3000000
- 14279 multiletter control sequences out of 15000+200000
+ 10354 strings out of 492430
+ 143848 string characters out of 3102276
+ 281333 words of memory out of 3000000
+ 14286 multiletter control sequences out of 15000+200000
  29985 words of font info for 91 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 31i,16n,35p,3216b,480s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 31i,16n,35p,3216b,492s stack positions out of 5000i,500n,10000p,200000b,50000s
  <C:\Users\ДмитрийАлександрович\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\latt1000
 .pk> <C:\Users\ДмитрийАлександрович\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\lati08
 00.pk> <C:\Users\ДмитрийАлександрович\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/lh/lh-t2a/dpi600\larm
@@ -888,9 +891,9 @@ s/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/ДмитрийАлександр�
 /MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/ДмитрийАлександрович/AppData/Lo
 cal/Programs/MiKTeX 2.9/fonts/type1/public/xypic/xycmat10.pfb><C:/Users/ДмитрийАлександрович/AppData
 /Local/Programs/MiKTeX 2.9/fonts/type1/public/xypic/xycmbt10.pfb>
-Output written on nsf.pdf (36 pages, 631063 bytes).
+Output written on nsf.pdf (37 pages, 639199 bytes).
 PDF statistics:
- 1324 PDF objects out of 1440 (max. 8388607)
- 225 named destinations out of 1000 (max. 500000)
- 561 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1356 PDF objects out of 1440 (max. 8388607)
+ 234 named destinations out of 1000 (max. 500000)
+ 577 words of extra memory for PDF output out of 10000 (max. 10000000)
 

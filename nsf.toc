@@ -39,9 +39,10 @@
 \contentsline {subsection}{\numberline {11.3}Limits}{23}{subsection.11.3}% 
 \contentsline {subsection}{\numberline {11.4}Staggered configurations}{23}{subsection.11.4}% 
 \contentsline {subsection}{\numberline {11.5}Wilson loop for $m \gg 0$}{23}{subsection.11.5}% 
-\contentsline {subsubsection}{\numberline {11.5.1}Estimate for $\lambda _1$}{23}{subsubsection.11.5.1}% 
-\contentsline {subsubsection}{\numberline {11.5.2}Invariance properties of $H$}{24}{subsubsection.11.5.2}% 
-\contentsline {subsubsection}{\numberline {11.5.3}Ground states for large mass}{24}{subsubsection.11.5.3}% 
+\contentsline {subsubsection}{\numberline {11.5.1}Dependence on $m$}{23}{subsubsection.11.5.1}% 
+\contentsline {subsubsection}{\numberline {11.5.2}Estimate for $\lambda _1$}{24}{subsubsection.11.5.2}% 
+\contentsline {subsubsection}{\numberline {11.5.3}Invariance properties of $H$}{24}{subsubsection.11.5.3}% 
+\contentsline {subsubsection}{\numberline {11.5.4}Ground states for large mass}{25}{subsubsection.11.5.4}% 
 \contentsline {subsection}{\numberline {11.6}Wilson loop for $m \ll 0$}{26}{subsection.11.6}% 
 \contentsline {subsection}{\numberline {11.7}Idea: an equivalent model without links}{26}{subsection.11.7}% 
 \contentsline {subsubsection}{\numberline {11.7.1}Order of basis}{27}{subsubsection.11.7.1}% 
@@ -68,3 +69,4 @@
 \contentsline {subsection}{\numberline {17.2}Hilbert-Schmidt operators}{34}{subsection.17.2}% 
 \contentsline {subsection}{\numberline {17.3}Quantum physics}{35}{subsection.17.3}% 
 \contentsline {subsubsection}{\numberline {17.3.1}Spin}{35}{subsubsection.17.3.1}% 
+\contentsline {subsection}{\numberline {17.4}Perturbation theory}{36}{subsection.17.4}% 
