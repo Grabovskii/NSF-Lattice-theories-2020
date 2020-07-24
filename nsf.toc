@@ -48,14 +48,14 @@
 \contentsline {subsubsection}{\numberline {11.7.1}Order of basis}{27}{subsubsection.11.7.1}% 
 \contentsline {section}{\numberline {12}Additional comments}{27}{section.12}% 
 \contentsline {subsection}{\numberline {12.1}Commutators and Anti-commutators}{27}{subsection.12.1}% 
-\contentsline {subsection}{\numberline {12.2}Quantum Field Theory}{27}{subsection.12.2}% 
+\contentsline {subsection}{\numberline {12.2}Quantum Field Theory}{28}{subsection.12.2}% 
 \contentsline {subsection}{\numberline {12.3}Hamiltonian versus Lagrangian}{28}{subsection.12.3}% 
 \contentsline {subsection}{\numberline {12.4}Mapping from First Quantization to Second Quantization}{28}{subsection.12.4}% 
 \contentsline {section}{\numberline {13}Pure Gauge in 1D}{28}{section.13}% 
 \contentsline {subsection}{\numberline {13.1}Gauge Symmetry}{29}{subsection.13.1}% 
 \contentsline {subsection}{\numberline {13.2}Algebra of Operators}{30}{subsection.13.2}% 
 \contentsline {section}{\numberline {14}Pure Gauge in 2D}{30}{section.14}% 
-\contentsline {section}{\numberline {15}Gauge and Matter in 1D}{30}{section.15}% 
+\contentsline {section}{\numberline {15}Gauge and Matter in 1D}{31}{section.15}% 
 \contentsline {section}{\numberline {16}Questions}{31}{section.16}% 
 \contentsline {subsection}{\numberline {16.1}For a discussion}{31}{subsection.16.1}% 
 \contentsline {subsection}{\numberline {16.2}Just for myself}{31}{subsection.16.2}% 

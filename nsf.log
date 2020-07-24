@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.21)  24 JUL 2020 12:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7200 64-bit) (preloaded format=pdflatex 2019.10.21)  24 JUL 2020 15:16
 entering extended mode
 **./nsf.tex
 (nsf.tex
@@ -806,15 +806,15 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 [24] [25]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 143.
+(hyperref)                removing `math shift' on input line 150.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `\ll' on input line 143.
+(hyperref)                removing `\ll' on input line 150.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 143.
+(hyperref)                removing `math shift' on input line 150.
 
 ) <xymatrix 5x1 186> [26]) (qedAdditional.tex [27] [28] [29]
 Overfull \hbox (23.50166pt too wide) in paragraph at lines 112--123
@@ -845,11 +845,15 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 170.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 170.
 Package rerunfilecheck Info: File `nsf.out' has not changed.
 (rerunfilecheck)             Checksum: 29DAEBFE28E63255335E0049B0042177;5305.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 170.
  ) 
 Here is how much of TeX's memory you used:
- 10354 strings out of 492430
- 143848 string characters out of 3102276
+ 10355 strings out of 492430
+ 143862 string characters out of 3102276
  281333 words of memory out of 3000000
  14286 multiletter control sequences out of 15000+200000
  29985 words of font info for 91 fonts, out of 3000000 for 9000
@@ -891,9 +895,9 @@ s/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/ДмитрийАлександр�
 /MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/ДмитрийАлександрович/AppData/Lo
 cal/Programs/MiKTeX 2.9/fonts/type1/public/xypic/xycmat10.pfb><C:/Users/ДмитрийАлександрович/AppData
 /Local/Programs/MiKTeX 2.9/fonts/type1/public/xypic/xycmbt10.pfb>
-Output written on nsf.pdf (37 pages, 639199 bytes).
+Output written on nsf.pdf (37 pages, 639923 bytes).
 PDF statistics:
- 1356 PDF objects out of 1440 (max. 8388607)
- 234 named destinations out of 1000 (max. 500000)
+ 1358 PDF objects out of 1440 (max. 8388607)
+ 235 named destinations out of 1000 (max. 500000)
  577 words of extra memory for PDF output out of 10000 (max. 10000000)
 

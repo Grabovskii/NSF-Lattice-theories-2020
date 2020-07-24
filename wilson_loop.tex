@@ -126,6 +126,13 @@ Choose a family of ground states $|\gs\rangle$ that have $C^1$-dependence on $m$
 \begin{proof}
 This is pure general topology. The image of the ground state curve lies in the disjoint union $P_1 \cap S^{\dim P} \cup \cdots \cup P_n \cap S^{\dim P}$. Since $|\gs\rangle$ is in particular continuous in $m$, the image of $\mathbb R$ lies only in one of the components of the union. Since for $m \gg 0$ it happens in $P_s\cap S^{\dim P}$, it's there for \emph{any} $m$.
 \end{proof}
+
+\begin{proposition}
+For $m \gg 0$, a ground state is non-degenerate.
+\end{proposition}
+\begin{proof}
+Assume on the contrary that it is degenerate for $m \gg 0$. This means there's a sequence of values of mass $m_k \rightarrow \infty$ and sequences of ground states $|\gs_k\rangle$ and $|\gs^\prime_k\rangle$ such that $\langle\gs_k^\prime|\gs_k\rangle = 0$. However, passing to the limit in the slots of the Hermitian product yields $\langle \st_2(s) | \st_2(s) \rangle \neq 0$. This is a contradiction, and thus the ground state is unique for large $m$.
+\end{proof}
 %\begin{proof}[Heuristic evidence]
 %I believe that $|\gs\rangle$, if chosen so that $\langle \gs | \st_2(s)\rangle \in [0,1]$, is a continuous function of $m$. The eigen-value $\lambda_1$ is continuous as well. But recall that $P = P_1 \oplus \cdots \oplus P_n$. The sets $S^{\dim P} \cap P_i$ (an intersection of the unit sphere with a subspace) are disjoint, and since $|\gs\rangle$ is continuous, it maps the whole real line $\mathbb R$ into only one such intersection, i.e. into $S^{\dim P} \cap P_s$. So $b_{-1} = s$ always has to be the bosonic state for $|\gs\rangle$.
 %\end{proof}
