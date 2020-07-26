@@ -119,10 +119,11 @@ where $I$ is the identity operator, though it is not clear why we have such an e
 \subsection{Perturbation theory}
 I mention a few results from Rellich's \cite{rellich} book.
 \begin{proposition}\label{p:conv_le}
-Let $A$ and $B$ be Hermitian operators on a finite-dimensional space, and consider an operator $A + \varepsilon B$ for some $\varepsilon \in \mathbb R$. Let $\lambda(\varepsilon)$ be the least eigen-value of $A+\varepsilon B$. Then $\lambda$ is a convex function of $\varepsilon$.
+Let $A$ and $B$ be Hermitian operators on a finite-dimensional space, and consider an operator $A + \varepsilon B$ for some $\varepsilon \in \mathbb R$. Let $\lambda(\varepsilon)$ be the least eigen-value of $A+\varepsilon B$. Then $\lambda$ is a concave function of $\varepsilon$.
 \end{proposition}
+There's a typo in the Rellich's book. The least eigen-value is concave, not convex!
 \begin{proof}
-Recall that a function is convex iff its epigraph is convex. We basically show that the epigraph is the intersection of a family of half-subspaces, which is convex.
+Recall that a function is convex iff its epigraph is convex. For $-\lambda(\varepsilon)$, we basically show that the epigraph is the intersection of a family of half-subspaces, which is convex.
 
 So, fix $\varepsilon_0$ and let $f_0$ be a normalized eigen-vector that corresponds to $\lambda(\varepsilon_0)$. Then $(f_0,Af_0) + \varepsilon (f_0, Bf_0) = \lambda(\varepsilon_0)$. For any other normalized vector $f$, the property of being the least eigen-value also yields
 \[
@@ -132,11 +133,15 @@ for any $\varepsilon > 0$. In particular, for $a = (f_0,Af_0)$, $b = (f_0,Bf_0)$
 \[
 a + \varepsilon b \geq \lambda(\varepsilon).
 \]
-So, we have a line $\varepsilon \mapsto a+\varepsilon b$ intersects the graph of $\lambda$ at $\varepsilon = \varepsilon_0$ and which defines a half-subspace that contains the graph of $\lambda$. Varying $\varepsilon_0$, we obtain a family of such lines, which intersect into the epigraph of $\lambda$, which henceforth convex.
+So, we have a line $\varepsilon \mapsto a+\varepsilon b$ intersects the graph of $\lambda$ at $\varepsilon = \varepsilon_0$ and which defines a half-subspace that contains the graph of $\lambda$. Varying $\varepsilon_0$, we obtain a family of such lines, which intersect into the epigraph of $-\lambda$, which henceforth convex.
 \end{proof}
 
 The following theorem is also from \cite{rellich} and is of special interest to us:
 \begin{theorem}\label{thm:pert}
 Let $I$ be an open interval and $A : I \rightarrow \End(V)$ be a $C^1$-family of Hermitian operators on a finite-dimensional space $V$. Assume that $A^\prime : I \rightarrow \End(V)$ is also a Hermitian family. Then there exist a family of $C^1$ functions $\lambda_i : I \rightarrow \mathbb R$ and a family of vectors $f_i : I \rightarrow V$ such that $\lambda_i \leq \lambda_{i+1}$, $\{f_i(\varepsilon)\}$ is orthonormal for every $\varepsilon \in I$, and $A(\varepsilon) f_i(\varepsilon) = \lambda_i(\varepsilon)f_i(\varepsilon)$.
 \end{theorem}
-Note that I do not claim that the family of vectors is $C^1$, for this is not explicitly stated in \cite{rellich}. I found it in the book by Kato \cite{kato}, pp. 121-122.
+Note that I do not claim that the family of vectors is $C^1$, for this is not explicitly stated in \cite{rellich}. 
+I found it in the book by Kato \cite{kato}, pp. 121-122, but it's true only if we have a holomorphic family. On p. 111 of Kato's book there is an example of a $C^{\infty}$-family of Hermitian matrices on a real line such that there are no continuous choices of eigen-vectors on $\mathbb R$. In our case (Lattice $\mathbb Z_n$-QED 1+1), the Hamiltonian is holomorphic, but for complex values of $m$ it's not Hermitian, so the theorem is not applicable. And if it was, we would get a contradiction with the continuity of the ground state. In case $N=3$ one can easily see that that there's no continuous choice of the ground state.
+\begin{theorem} (\cite{kato}, p. 121)
+Let $D \subseteq \mathbb C$ be a domain in $\mathbb C$ that intersects the real axis. Let $A : D \rightarrow \Mat_{n\times n}(\mathbb C)$ be a holomorphic family of Hermitian matrices. Then there's a choice of orthonormal family of eigen-vectors of $A$ that is holomorphic on $D \cap \mathbb R$.
+\end{theorem}

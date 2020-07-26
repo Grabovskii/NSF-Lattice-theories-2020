@@ -2,11 +2,13 @@
 Split the Hamiltonian as $H = A + 2m\sqrt{n/2\pi} D$, where $A$ is the sum of the first term and the third terms of $H$ and $D = \sum_l (-1)^l \psi_l^\dagger \psi_l$.
 \subsubsection{Dependence on $m$}
 \begin{proposition}\label{p:dep_m}
-Let $\lambda_1$ be the eigen-value of $H$ that corresponds to a ground state. Then $\lambda_1$ is a convex $C^1$-function of the mass. The ground state, as a function, can be chosen so that it's $C^1$.
+Let $\lambda_1$ be the eigen-value of $H$ that corresponds to a ground state. Then $\lambda_1$ is a concave $C^1$-function of the mass. The ground state, as a function, can be chosen so that it's $C^1$.
 \end{proposition}
 \begin{proof}
-Convexity is a consequence of Proposition \ref{p:conv_le}; differentiability of $\lambda_1$ is a consequence of Theorem \ref{thm:pert}. Differentiability of $|\gs\rangle$ is a result from Kato \cite{kato}, pp. 121-122 (more is stated there: for Hermitian differentiable operators we can choose differentiable orthonormal systems of eigen-vectors).
+Concavity is a consequence of Proposition \ref{p:conv_le}; differentiability of $\lambda_1$ is a consequence of Theorem \ref{thm:pert}.
 \end{proof}
+
+\noindent \textbf{Caution:} one cannot choose ground states continuously (with respect to the mass). It's easy to see for odd $N$ (say, $N=3$): take limits $m\rightarrow \pm \infty$ and see that the number of fermions is not preserved. If a continuous choice was possible, it would be preserved. Also, a theorem that guarantees continuity of eigen-vectors requires holomorphicity of $H$. The Hamiltonian is indeed holomorphic, but for complex values of $m$ it's not Hermitian, so that theorem is not applicable.
 
 \subsubsection{Estimate for $\lambda_1$}
 \begin{proposition}\label{p:lambda_est_pos}
@@ -43,6 +45,11 @@ With regards to the strict inequality for $\lambda_1$, $|\st_2(s)\rangle$ is cle
 
 } for a detailed theoretical explanation).
 \end{proof}
+\noindent \textbf{Remark.} Notice that L'Hopitals rule gives us an estimate for the derivative $\lambda_1^\prime$ with respect to $m$:
+\[
+\lim_{m \rightarrow \infty} \lambda_1^\prime(m) = -2\left[\frac{N}{2}\right] \sqrt{\frac{n}{2\pi}}.
+\]
+
 \subsubsection{Invariance properties of $H$}
 Recall that the physical space (determined by the Gauss law) is given by
 	\[
@@ -74,7 +81,8 @@ The following lemma is an obvious but very useful observation:
 The following hold:
 \begin{enumerate}
 \item For any basic ket $|\psi\rangle$ such that $\langle \psi |D|\psi\rangle > -[N/2]$ (i.e., $|\psi\rangle \neq |\st_2(i)\rangle$ for any $i$), we have $\lim_{m \rightarrow \infty} \langle \gs | \psi \rangle = 0$;
-\item For\footnote{By this I mean that there exists $m_0 > 0$ such that for all $m \geq m_0$ the statement is true.} $m \gg 0$ we have $\left\langle \gs | \st_2(s) \right\rangle \neq 0$. In particular, if for every large enough mass we choose $|\gs\rangle$ so that $\langle \gs | \st_2(s) \rangle > 0$ (which is possible), then $\lim_{m \rightarrow \infty} |\gs\rangle = |\st_2(s)\rangle$.
+\item For\footnote{By this I mean that there exists $m_0 > 0$ such that for all $m \geq m_0$ the statement is true.} $m \gg 0$ we have $\left\langle \gs | \st_2(s) \right\rangle \neq 0$. In particular, if for every large enough mass we choose $|\gs\rangle$ so that $\langle \gs | \st_2(s) \rangle > 0$ (which is possible), then $\lim_{m \rightarrow \infty} |\gs\rangle = |\st_2(s)\rangle$. 
+\item As a consequence of the above, for $m \gg 0$, $|\gs\rangle \in P_s$, and the number of fermions in each non-zero component of $|\gs\rangle$ is equal to $[N/2]$.
 \end{enumerate}
 \end{lemma}
 \begin{proof}
@@ -120,12 +128,12 @@ It is supposed to be always negative. However, we can make $O(\beta)$ as small a
 It is true for any $m > 0$ that $\langle \gs|\st_2(s)\rangle \neq 0$. Numerical experiments suggest even more: $\langle \gs | \st_2(s)\rangle > \langle \gs | \psi \rangle$ for any other basic ket $\psi$.
 \end{conj}
 
-\begin{proposition}
-Choose a family of ground states $|\gs\rangle$ that have $C^1$-dependence on $m$. Then $|\gs\rangle \in P_s$ for \emph{any} $m$, and $N|\gs\rangle = [N/2] |\gs\rangle$.
-\end{proposition}
-\begin{proof}
-This is pure general topology. The image of the ground state curve lies in the disjoint union $P_1 \cap S^{\dim P} \cup \cdots \cup P_n \cap S^{\dim P}$. Since $|\gs\rangle$ is in particular continuous in $m$, the image of $\mathbb R$ lies only in one of the components of the union. Since for $m \gg 0$ it happens in $P_s\cap S^{\dim P}$, it's there for \emph{any} $m$.
-\end{proof}
+%\begin{proposition}
+%We have $|\gs\rangle \in P_s$ for \emph{any} $m$, and $N|\gs\rangle = [N/2] |\gs\rangle$.
+%\end{proposition}
+%\begin{proof}
+%This is pure general topology. For any fixed ground state at a particular mass, we can find a $C^1$-curve $m \mapsto |\gs\rangle$ that passes through it. The image of the ground state curve lies in the disjoint union $P_1 \cap S^{\dim P} \cup \cdots \cup P_n \cap S^{\dim P}$. Since $|\gs\rangle$ is in particular continuous in $m$, the image of $\mathbb R$ lies only in one of the components of the union. Since for $m \gg 0$ it happens in $P_s\cap S^{\dim P}$, it's there for \emph{any} $m$.
+%\end{proof}
 
 \begin{proposition}
 For $m \gg 0$, a ground state is non-degenerate.
@@ -207,3 +215,6 @@ Indeed, by Lemma \ref{l:gs_conv_pos} we can assume that $\lim_{m \rightarrow \in
 %\lim_{m \rightarrow -\infty} \left\langle \gs |W|\gs \right\rangle = \langle \st_1(s) |N^{-1}\sum_l E_{l,l+1} | \st_1(s)\rangle = \frac{1}{N}\left[\frac{N}{2}\right].\qedhere
 %\]
 %\end{proof}
+
+\subsection{Numerical records}
+For $n = 9$, $N = 6$, the space given by $3$ fermions and $b_{-1} = 4$ is $C_6^3 = 20$ dimensional. For $m = 0$ checked that all $20$ vectors are in the decomposition of $|\gs\rangle$. For $m=1$, I can say there are $19$ vectors. For $m = 10$, there are $12$ vectors.
