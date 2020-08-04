@@ -145,3 +145,32 @@ I found it in the book by Kato \cite{kato}, pp. 121-122, but it's true only if w
 \begin{theorem} (\cite{kato}, p. 121)
 Let $D \subseteq \mathbb C$ be a domain in $\mathbb C$ that intersects the real axis. Let $A : D \rightarrow \Mat_{n\times n}(\mathbb C)$ be a holomorphic family of Hermitian matrices. Then there's a choice of orthonormal family of eigen-vectors of $A$ that is holomorphic on $D \cap \mathbb R$.
 \end{theorem}
+
+\subsection{Gershgorin theorem}
+I'd like to adjust the following theorem for our situation. It might help us to determine the non-degeneracy of the ground state. A reference is Horn's book on Matrix Analysis \cite{horn}. I've read the theorems in the chapter on locating eigen-values and don't think that anything else could be of interest to us.
+
+Let $A = (a_{ij})_{i,j=1}^n$ be a matrix with complex entries. Define $R_i:=R_i(A) := \sum_{j\neq i} |a_{ij}|$. A \emph{Gershgorin disc} is the closed disc $D(a_{ii},R_i)$ on the complex plane with the center at $a_{ii}$ and radius $R_i$.
+\begin{theorem}
+All eigenvalues of $A$ are contained in the union of Gershgorin discs of $A$. Moreover, if $k$ discs are disjoint from the other $n-k$, then exactly $k$ eigen-values of $A$ (counting multiplicities) are contained in the union of $k$ discs.
+\end{theorem}
+\begin{proof}
+Let $\lambda$ be an arbitrary eigen-value of $A$, and let $x\in \mathbb C^n$ be an eigen-vector. We can choose $x$ in such a way that $x_i = 1$ for some $i$, and for the rest $|x_j| \leq 1$ (just pick any $x$ and divide by $\max_{1\leq j\leq n}|x_j|$). Now, by the very definition of $x$,
+\[
+\sum_{j=1}^n a_{ij}x_j = \lambda
+\]
+or
+\[
+\sum_{j \neq i} a_{ij}x_j + a_{ii} = \lambda.
+\]
+It follows from the triangle inequality that
+\[
+|\lambda-a_{ii}| \leq \sum_{j \neq i} |a_{ij}x_j| \leq R_{i}.
+\]
+Thus $\lambda \in D(a_{ii}, R_i)$.
+
+Let's prove the second part. WLOG, assume that the union of the first $k$ discs is disjoint from the other $n-k$. Write $A = B + D$, where $D$ is the diagonal of $A$. Define a continuous family of matrices $A_{\varepsilon}:= \varepsilon B + D$, $\varepsilon \in [0,1]$. Notice that $R_i(A_{\varepsilon}) = \varepsilon R_i(A)$ and the Gershgorin discs for the whole family have the same centers. Therefore, for any $\varepsilon \in [0,1]$, the first $k$ discs are disjoint from the other $n-k$. Let $\Gamma$ be a simple smooth curve that encompasses the first $k$ discs, and let $p_{\varepsilon}$ be the characteristic polynomial of $A$. By the argument principle, the number of roots of $p_{\varepsilon}$ (counting multiplicites) inside $\Gamma$ is 
+\[
+N_{\varepsilon} := \frac{1}{2\pi i}\int_{\Gamma} \frac{p^\prime_{\varepsilon}(z)}{p_{\varepsilon}(z)}\, dz.
+\]
+Note that $N_{\varepsilon}$ is a continuous function of $\varepsilon$. Since it's integer valued and $N_0 = k$, we conclude that $N_1 = k$ as well. Thus there are exactly $k$ eigen-values in the union of the first $k$ discs.
+\end{proof}

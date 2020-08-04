@@ -7,7 +7,7 @@
 \contentsline {subsection}{\numberline {1.4}Relation between classical and quantum lattices}{5}{subsection.1.4}% 
 \contentsline {subsection}{\numberline {1.5}Continuous spins: general principles}{6}{subsection.1.5}% 
 \contentsline {subsection}{\numberline {1.6}Rigged Hilbert spaces}{6}{subsection.1.6}% 
-\contentsline {section}{\numberline {2}The Main Stage}{7}{section.2}% 
+\contentsline {section}{\numberline {2}$C^*$-algebras stage}{7}{section.2}% 
 \contentsline {subsection}{\numberline {2.1}Statement of the problem and ideas}{7}{subsection.2.1}% 
 \contentsline {subsection}{\numberline {2.2}Tests on quantum Ising model}{8}{subsection.2.2}% 
 \contentsline {subsubsection}{\numberline {2.2.1}The issue with the infinite tensor product}{8}{subsubsection.2.2.1}% 
@@ -38,36 +38,40 @@
 \contentsline {subsection}{\numberline {11.2}Gauss Law and Physical Space}{22}{subsection.11.2}% 
 \contentsline {subsection}{\numberline {11.3}Limits}{23}{subsection.11.3}% 
 \contentsline {subsection}{\numberline {11.4}Staggered configurations}{23}{subsection.11.4}% 
-\contentsline {subsection}{\numberline {11.5}Wilson loop for $m \gg 0$}{23}{subsection.11.5}% 
-\contentsline {subsubsection}{\numberline {11.5.1}Dependence on $m$}{23}{subsubsection.11.5.1}% 
-\contentsline {subsubsection}{\numberline {11.5.2}Estimate for $\lambda _1$}{24}{subsubsection.11.5.2}% 
-\contentsline {subsubsection}{\numberline {11.5.3}Invariance properties of $H$}{24}{subsubsection.11.5.3}% 
-\contentsline {subsubsection}{\numberline {11.5.4}Ground states for large mass}{25}{subsubsection.11.5.4}% 
-\contentsline {subsection}{\numberline {11.6}Wilson loop for $m \ll 0$}{26}{subsection.11.6}% 
-\contentsline {subsection}{\numberline {11.7}Numerical records}{26}{subsection.11.7}% 
-\contentsline {subsection}{\numberline {11.8}Idea: an equivalent model without links}{26}{subsection.11.8}% 
-\contentsline {subsubsection}{\numberline {11.8.1}Order of basis}{27}{subsubsection.11.8.1}% 
-\contentsline {section}{\numberline {12}Additional comments}{27}{section.12}% 
-\contentsline {subsection}{\numberline {12.1}Commutators and Anti-commutators}{27}{subsection.12.1}% 
-\contentsline {subsection}{\numberline {12.2}Quantum Field Theory}{28}{subsection.12.2}% 
-\contentsline {subsection}{\numberline {12.3}Hamiltonian versus Lagrangian}{28}{subsection.12.3}% 
-\contentsline {subsection}{\numberline {12.4}Mapping from First Quantization to Second Quantization}{29}{subsection.12.4}% 
-\contentsline {section}{\numberline {13}Pure Gauge in 1D}{29}{section.13}% 
-\contentsline {subsection}{\numberline {13.1}Gauge Symmetry}{30}{subsection.13.1}% 
-\contentsline {subsection}{\numberline {13.2}Algebra of Operators}{30}{subsection.13.2}% 
-\contentsline {section}{\numberline {14}Pure Gauge in 2D}{31}{section.14}% 
-\contentsline {section}{\numberline {15}Gauge and Matter in 1D}{31}{section.15}% 
-\contentsline {section}{\numberline {16}Questions}{31}{section.16}% 
-\contentsline {subsection}{\numberline {16.1}For a discussion}{31}{subsection.16.1}% 
-\contentsline {subsection}{\numberline {16.2}Just for myself}{31}{subsection.16.2}% 
-\contentsline {subsection}{\numberline {16.3}Notes from conversations}{31}{subsection.16.3}% 
-\contentsline {subsubsection}{\numberline {16.3.1}07/08}{31}{subsubsection.16.3.1}% 
-\contentsline {section}{\numberline {17}Appendix}{32}{section.17}% 
-\contentsline {subsection}{\numberline {17.1}$C^*$-algebras}{32}{subsection.17.1}% 
-\contentsline {subsubsection}{\numberline {17.1.1}Gelfand-Naymark: commutative case}{32}{subsubsection.17.1.1}% 
-\contentsline {subsubsection}{\numberline {17.1.2}Gelfand-Naymark: non-commutative case}{33}{subsubsection.17.1.2}% 
-\contentsline {subsubsection}{\numberline {17.1.3}Properties of AF algebras (not finished)}{34}{subsubsection.17.1.3}% 
-\contentsline {subsection}{\numberline {17.2}Hilbert-Schmidt operators}{35}{subsection.17.2}% 
-\contentsline {subsection}{\numberline {17.3}Quantum physics}{35}{subsection.17.3}% 
-\contentsline {subsubsection}{\numberline {17.3.1}Spin}{35}{subsubsection.17.3.1}% 
-\contentsline {subsection}{\numberline {17.4}Perturbation theory}{36}{subsection.17.4}% 
+\contentsline {subsection}{\numberline {11.5}Invariance properties of $H$}{23}{subsection.11.5}% 
+\contentsline {subsection}{\numberline {11.6}Dependence on $m$}{24}{subsection.11.6}% 
+\contentsline {subsection}{\numberline {11.7}Wilson loop for $m \gg 0$}{24}{subsection.11.7}% 
+\contentsline {subsubsection}{\numberline {11.7.1}Estimate for $\lambda _1$}{24}{subsubsection.11.7.1}% 
+\contentsline {subsubsection}{\numberline {11.7.2}Ground states}{25}{subsubsection.11.7.2}% 
+\contentsline {subsubsection}{\numberline {11.7.3}Non-degeneracy of $|\gs \rangle $}{27}{subsubsection.11.7.3}% 
+\contentsline {subsection}{\numberline {11.8}Wilson loop for $m \ll 0$}{29}{subsection.11.8}% 
+\contentsline {subsubsection}{\numberline {11.8.1}Estimate for $\lambda _1$}{30}{subsubsection.11.8.1}% 
+\contentsline {subsubsection}{\numberline {11.8.2}Ground states}{30}{subsubsection.11.8.2}% 
+\contentsline {subsection}{\numberline {11.9}Conjectures}{32}{subsection.11.9}% 
+\contentsline {subsection}{\numberline {11.10}Idea: an equivalent model without links}{32}{subsection.11.10}% 
+\contentsline {subsubsection}{\numberline {11.10.1}Order of basis}{33}{subsubsection.11.10.1}% 
+\contentsline {section}{\numberline {12}Additional comments}{33}{section.12}% 
+\contentsline {subsection}{\numberline {12.1}Commutators and Anti-commutators}{33}{subsection.12.1}% 
+\contentsline {subsection}{\numberline {12.2}Quantum Field Theory}{33}{subsection.12.2}% 
+\contentsline {subsection}{\numberline {12.3}Hamiltonian versus Lagrangian}{34}{subsection.12.3}% 
+\contentsline {subsection}{\numberline {12.4}Mapping from First Quantization to Second Quantization}{34}{subsection.12.4}% 
+\contentsline {section}{\numberline {13}Pure Gauge in 1D}{34}{section.13}% 
+\contentsline {subsection}{\numberline {13.1}Gauge Symmetry}{35}{subsection.13.1}% 
+\contentsline {subsection}{\numberline {13.2}Algebra of Operators}{36}{subsection.13.2}% 
+\contentsline {section}{\numberline {14}Pure Gauge in 2D}{36}{section.14}% 
+\contentsline {section}{\numberline {15}Gauge and Matter in 1D}{36}{section.15}% 
+\contentsline {section}{\numberline {16}Questions}{37}{section.16}% 
+\contentsline {subsection}{\numberline {16.1}For a discussion}{37}{subsection.16.1}% 
+\contentsline {subsection}{\numberline {16.2}Just for myself}{37}{subsection.16.2}% 
+\contentsline {subsection}{\numberline {16.3}Notes from conversations}{37}{subsection.16.3}% 
+\contentsline {subsubsection}{\numberline {16.3.1}07/08}{37}{subsubsection.16.3.1}% 
+\contentsline {section}{\numberline {17}Appendix}{37}{section.17}% 
+\contentsline {subsection}{\numberline {17.1}$C^*$-algebras}{37}{subsection.17.1}% 
+\contentsline {subsubsection}{\numberline {17.1.1}Gelfand-Naymark: commutative case}{38}{subsubsection.17.1.1}% 
+\contentsline {subsubsection}{\numberline {17.1.2}Gelfand-Naymark: non-commutative case}{39}{subsubsection.17.1.2}% 
+\contentsline {subsubsection}{\numberline {17.1.3}Properties of AF algebras (not finished)}{40}{subsubsection.17.1.3}% 
+\contentsline {subsection}{\numberline {17.2}Hilbert-Schmidt operators}{40}{subsection.17.2}% 
+\contentsline {subsection}{\numberline {17.3}Quantum physics}{41}{subsection.17.3}% 
+\contentsline {subsubsection}{\numberline {17.3.1}Spin}{41}{subsubsection.17.3.1}% 
+\contentsline {subsection}{\numberline {17.4}Perturbation theory}{42}{subsection.17.4}% 
+\contentsline {subsection}{\numberline {17.5}Gershgorin theorem}{42}{subsection.17.5}% 
